@@ -227,6 +227,46 @@ body {
   pointer-events: none;
 }
 
+.highlights {
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.highlights article {
+  padding: 1rem;
+}
+
+.highlight-icon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.highlights h3 {
+  margin-bottom: 0.5rem;
+}
+
+.highlights p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
 .grid-section,
 .process-section,
 .case-section {
