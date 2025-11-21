@@ -52,6 +52,7 @@ const defaultLandingData = {
       description:
         "Resell your underused robots to trusted buyers, unlock capital and keep your fleet up to date.",
     },
+  ],
   cta: {
     heading: "RoboCollective.ai is your strategic partner in AI-driven operations.",
     body: "Share your most strategic ambition, and we'll co-create a roadmap that combines automation, intelligence, and creative rigor.",
@@ -60,6 +61,7 @@ const defaultLandingData = {
     secondaryLabel: "Contact Us",
     secondaryUrl: "Form",
   },
+};
 
 let heroPhrases = [];
 let heroPhraseIndex = 0;
