@@ -54,9 +54,6 @@ const defaultLandingData = {
     },
   ],
   metrics: [
-    { value: "3.2x", description: "More runbooks automated within three months" },
-    { value: "94%", description: "Stakeholder confidence after first sprint" },
-    { value: "48", description: "Dashboards kept in sync with live AI insights" },
   ],
   cases: [
     {
