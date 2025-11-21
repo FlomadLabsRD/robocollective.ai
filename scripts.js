@@ -338,23 +338,28 @@ const getInitialTheme = () => {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 };
 
+const getThemeFile = (element, datasetKey, theme) => {
+  const variantKey = `${datasetKey}${theme === "light" ? "Light" : "Dark"}`;
+  return element.dataset[variantKey] || element.dataset[datasetKey];
+};
+
 const syncThemeMedia = (theme) => {
   const directory = themeAssetDirectories[theme] || themeAssetDirectories.dark;
   themeAssetGroups.forEach(({ attribute, datasetKey, elements }) => {
     elements.forEach((element) => {
-      const baseFile = element.dataset[datasetKey];
-      if (!baseFile) {
+      const file = getThemeFile(element, datasetKey, theme);
+      if (!file) {
         return;
       }
-      element.setAttribute(attribute, `${directory}/${baseFile}`);
+      element.setAttribute(attribute, `${directory}/${file}`);
     });
   });
   themeHrefElements.forEach((link) => {
-    const baseFile = link.dataset.themeHref;
-    if (!baseFile) {
+    const file = getThemeFile(link, "themeHref", theme);
+    if (!file) {
       return;
     }
-    link.setAttribute("href", `${directory}/${baseFile}`);
+    link.setAttribute("href", `${directory}/${file}`);
   });
   if (heroVideoEl) {
     heroVideoEl.load();
