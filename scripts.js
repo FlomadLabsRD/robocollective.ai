@@ -14,10 +14,15 @@ const ctaSecondaryAction = document.querySelector("[data-cta-action-secondary]")
 
 const defaultLandingData = {
   hero: {
-    headingPrefix: "Exclusive Brands & Models",
-    headingSuffix: "Explore Our Most Advanced Robots at RoboCollective.ai",
+    headingPrefix: "RoboCollective.ai orchestrates ",
+    headingSuffix: " workflows so you can scale with confidence.",
     lede:
-      "Buy robots for sale from trusted makers worldwide – delivered, professionally set up, and fully supported wherever you are. Explore industrial, service, and educational robots all in one place at RoboCollective.ai",
+      "We bridge strategic vision and operational precision through AI-native systems, data synthesis, and human-centered design.",
+    dynamicWords: ["intelligent", "adaptive", "human-centered"],
+    meta: [
+      "Trusted by engineering, product, and operations teams",
+      "Dynamic pricing, predictable ROI",
+    ],
   },
   services: [
     {
@@ -38,22 +43,25 @@ const defaultLandingData = {
   ],
   process: [
     {
-      title: "Buy",
+      title: "Immersion",
       description:
-        "Buy cutting-edge robots, from industrial arms to service and educational platforms, with expert support from selection to deployment.",
+        "We shadow your teams, catalog signals, and map outcomes before proposing workflows.",
     },
     {
-      title: "Rent",
+      title: "System design",
       description:
-        "Rent the robots you need for pilots, events or seasonal peaks, and scale your automation without long-term commitments.",
+        "Our architects build automation blueprints, integration fabrics, and measurement suites.",
     },
     {
-      title: "Resell",
+      title: "Launch + learn",
       description:
-        "Resell your underused robots to trusted buyers, unlock capital and keep your fleet up to date.",
+        "We ship targeted experiences, monitor results, and evolve the systems with your team.",
     },
   ],
   metrics: [
+    { value: "3.2x", description: "More runbooks automated within three months" },
+    { value: "94%", description: "Stakeholder confidence after first sprint" },
+    { value: "48", description: "Dashboards kept in sync with live AI insights" },
   ],
   cases: [
     {
@@ -73,12 +81,12 @@ const defaultLandingData = {
     },
   ],
   cta: {
-    heading: "RoboCollective.ai is your strategic partner in AI-driven operations.",
+    heading: "Embed RoboCollective.ai inside your next launch.",
     body: "Share your most strategic ambition, and we'll co-create a roadmap that combines automation, intelligence, and creative rigor.",
-    primaryLabel: "Go to Shop",
-    primaryUrl: "robocollective.ai/shop",
-    secondaryLabel: "Contact Us",
-    secondaryUrl: "Form",
+    primaryLabel: "Plan a discovery call",
+    primaryUrl: "mailto:hello@robocollective.ai",
+    secondaryLabel: "Download capability overview",
+    secondaryUrl: "#",
   },
 };
 
@@ -312,114 +320,4 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((section) => {
   observer.observe(section);
-});
-
-const renderContactPopup = () => {
-  if (document.getElementById("contactModal")) {
-    return;
-  }
-
-  const markup = `
-    <div class="contact-fab" id="contactFab" aria-haspopup="dialog" aria-expanded="false">
-      <button type="button" aria-label="Open contact form">Contact us</button>
-    </div>
-    <div class="contact-modal" id="contactModal" hidden>
-      <div class="contact-modal__backdrop" data-contact-modal-close tabindex="-1"></div>
-      <div class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" tabindex="-1">
-        <button class="contact-modal__close" type="button" data-contact-modal-close aria-label="Close contact form">&times;</button>
-        <h3 id="contactModalTitle">Start the conversation</h3>
-        <form class="contact-form contact-form--popup">
-          <label>
-            <span>Name</span>
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            <span>Organization</span>
-            <input type="text" name="company">
-          </label>
-          <label class="full">
-            <span>Project details</span>
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <button type="submit" class="btn primary">Send inquiry</button>
-        </form>
-      </div>
-    </div>
-  `;
-
-  document.body.insertAdjacentHTML("beforeend", markup);
-
-  const fab = document.getElementById("contactFab");
-  const modal = document.getElementById("contactModal");
-  const dialog = modal?.querySelector(".contact-modal__dialog");
-  const closeButtons = modal?.querySelectorAll("[data-contact-modal-close]") ?? [];
-
-  const toggleModal = (show) => {
-    if (!modal) {
-      return;
-    }
-    if (show) {
-      modal.removeAttribute("hidden");
-      modal.setAttribute("aria-hidden", "false");
-      fab?.setAttribute("aria-expanded", "true");
-      document.documentElement.classList.add("contact-modal-open");
-      dialog?.focus();
-    } else {
-      modal.setAttribute("hidden", "");
-      modal.setAttribute("aria-hidden", "true");
-      fab?.setAttribute("aria-expanded", "false");
-      document.documentElement.classList.remove("contact-modal-open");
-      fab?.querySelector("button")?.focus();
-    }
-  };
-
-  fab?.addEventListener("click", () => toggleModal(true));
-  closeButtons.forEach((node) => node.addEventListener("click", () => toggleModal(false)));
-  modal?.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      toggleModal(false);
-    }
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && modal && !modal.hasAttribute("hidden")) {
-      toggleModal(false);
-    }
-  });
-};
-
-renderContactPopup();
-
-const THEME_KEY = "robocollective-theme";
-const themeToggleButton = document.querySelector("[data-theme-toggle]");
-const getPreferredTheme = () => {
-  const stored = window.localStorage.getItem(THEME_KEY);
-  if (stored === "light" || stored === "dark") {
-    return stored;
-  }
-  if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-    return "light";
-  }
-  return "dark";
-};
-
-const applyTheme = (theme) => {
-  const isLight = theme === "light";
-  document.documentElement.classList.toggle("theme-light", isLight);
-  if (themeToggleButton) {
-    themeToggleButton.setAttribute("aria-pressed", String(isLight));
-    themeToggleButton.querySelector("span").textContent = isLight ? "☀️" : "🌙";
-  }
-  window.localStorage.setItem(THEME_KEY, theme);
-};
-
-let currentTheme = getPreferredTheme();
-applyTheme(currentTheme);
-
-themeToggleButton?.addEventListener("click", () => {
-  currentTheme = currentTheme === "dark" ? "light" : "dark";
-  applyTheme(currentTheme);
 });

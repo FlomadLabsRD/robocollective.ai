@@ -7,8 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/site-icon-512_home_page.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/site-icon-512_home_page.png">
+  <link rel="icon" href="assets/site-icon-512_home_page.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -40,9 +39,6 @@
         <a href="#">Blog</a>
         <a href="#cta">Contact</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
-        <span>🌙</span>
-      </button>
     </header>
     <header class="hero hero--video">
       <div class="hero-video" aria-hidden="true">
@@ -60,13 +56,14 @@
         <div class="hero-video__overlay"></div>
       </div>
       <div class="hero-content">
-        <p class="eyebrow">EXCLUSIVE BRANDS</p>
+        <p class="eyebrow">Future-ready automation</p>
         <h1>
-          <span data-hero-heading-prefix>Exclusive Brands & Models</span>
-          <span data-hero-heading-suffix>Explore Our Most Advanced Robots at RoboCollective.ai</span>
+          <span data-hero-heading-prefix>RoboCollective.ai orchestrates </span>
+          <span class="hero-dynamic">intelligent</span>
+          <span data-hero-heading-suffix> workflows so you can scale with confidence.</span>
         </h1>
         <p class="hero-lede" data-hero-lede>
-          Buy robots for sale from trusted makers worldwide – delivered, professionally set up, and fully supported wherever you are. Explore industrial, service, and educational robots all in one place at RoboCollective.ai
+          We bridge strategic vision and operational precision through AI-native systems, data synthesis, and human-centered design.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#services" data-cta-action-primary>See our expertise</a>
@@ -80,53 +77,28 @@
       </div>
     </header>
 
-    <section class="highlights reveal">
-      <article>
-        <span class="highlight-icon" aria-hidden="true">♦</span>
-        <h3>Premium Robots</h3>
-        <p>We offer high-quality robots and accessories built for real work.</p>
-      </article>
-      <article>
-        <span class="highlight-icon" aria-hidden="true">♡</span>
-        <h3>Expert Support</h3>
-        <p>Talk to a specialist. We'll help you compare models and plan deployment.</p>
-      </article>
-      <article>
-        <span class="highlight-icon" aria-hidden="true">▣</span>
-        <h3>We Deliver To You</h3>
-        <p>Global shipping, customs guidance, and on-site or remote setup.</p>
-      </article>
-    </section>
-
     <main>
       <section id="services" class="grid-section reveal">
+        <div class="section-heading">
+          <h2>Core services designed for modern teams</h2>
+          <p>We mix strategic intelligence, automation tooling, and creative execution to accelerate outcomes across the org.</p>
+        </div>
         <div class="grid" data-services-grid>
           <article class="grid-card" data-service-card="0">
-            <h3>Reseller</h3>
+            <h3>Intelligent automation</h3>
             <p>Design, launch, and monitor AI agents that augment your existing platforms without compromising compliance.</p>
           </article>
           <article class="grid-card" data-service-card="1">
-            <h3>Renter</h3>
+            <h3>Data storytelling</h3>
             <p>Translate complex signals into narratives that keep product, marketing, and ops aligned on next steps.</p>
           </article>
           <article class="grid-card" data-service-card="2">
-            <h3>Buyer</h3>
+            <h3>Operational UX</h3>
             <p>Architect human-centered dashboards, notifications, and playbooks for faster alignment during critical launches.</p>
           </article>
         </div>
       </section>
-      <section class="meet-caipo reveal">
-        <div class="meet-caipo__frame">
-          <p class="eyebrow">We’ve Got The Greatest Of All Time</p>
-          <h2>Meet CAIPO</h2>
-          <p>CAIPO combines tactile sensors, gesture intelligence, and a holographic interface to help teams experience next-generation robotic presence.</p>
-        </div>
-        <div class="meet-caipo__visual">
-          <a href="https://caipo-new-website.vercel.app/" target="_blank" rel="noopener">
-            <img src="assets/meet caipo_home_page.png" alt="Meet CAIPO" loading="lazy" />
-          </a>
-        </div>
-      </section>
+
       <section class="shop-showcase reveal">
         <div class="section-heading">
           <h2>Explore our robotics families</h2>
@@ -134,33 +106,25 @@
         </div>
         <div class="shop-cards">
           <article class="shop-card" aria-label="Educational Robots">
-            <div class="shop-card-figure">
-              <img src="assets/Educational_Robots.webp" alt="Educational robots" loading="lazy" />
-            </div>
+            <div class="shop-card-figure">👩‍🏫</div>
             <h3>Educational</h3>
             <p>Engaging robots for demos, classes, and R&amp;D. Wonderful for campuses, exhibitions, and welcoming visitors.</p>
             <a class="btn primary" href="educational.html">Explore Educational Robots</a>
           </article>
           <article class="shop-card" aria-label="Industrial Robots">
-            <div class="shop-card-figure">
-              <img src="assets/Industrial_Robots.webp" alt="Industrial robots" loading="lazy" />
-            </div>
+            <div class="shop-card-figure">🏭</div>
             <h3>Industrial</h3>
             <p>High-reliability welding, palletizing, assembly, and precision handling. Integration ready for every plant.</p>
             <a class="btn primary" href="industrial.html">Explore Industrial Robots</a>
           </article>
           <article class="shop-card" aria-label="Service Robots">
-            <div class="shop-card-figure">
-              <img src="assets/Service_Robots.webp" alt="Service robots" loading="lazy" />
-            </div>
+            <div class="shop-card-figure">🧹</div>
             <h3>Services</h3>
             <p>Delivery, cleaning, and concierge assistant robots that cut wait times and free teams for higher-value work.</p>
             <a class="btn primary" href="service.html">Explore Services Robots</a>
           </article>
           <article class="shop-card" aria-label="Specialty Robots">
-            <div class="shop-card-figure">
-              <img src="assets/Speciality_Robots.webp" alt="Specialty robots" loading="lazy" />
-            </div>
+            <div class="shop-card-figure">🤖</div>
             <h3>Specialty</h3>
             <p>Agile platforms for inspection, patrol, research, and training with modular payloads and sensors.</p>
             <a class="btn primary" href="specialty.html">Explore Specialty Robots</a>
@@ -171,24 +135,60 @@
       <section class="process-section reveal">
         <div class="section-heading">
           <h2>How we partner</h2>
-          <p>Choose what fits your needs.</p>
+          <p>Clear rhythm, measurable progress, and shared ownership fuel every engagement.</p>
         </div>
         <div class="process-steps" data-process-steps>
           <div class="process-step" data-process-step="0">
             <span class="step-index">01</span>
-            <h3>Buy</h3>
-            <p></p>
+            <h3>Immersion</h3>
+            <p>We shadow your teams, catalog signals, and map outcomes before proposing workflows.</p>
           </div>
           <div class="process-step" data-process-step="1">
             <span class="step-index">02</span>
-            <h3>Rent</h3>
+            <h3>System design</h3>
             <p>Our architects build automation blueprints, integration fabrics, and measurement suites.</p>
           </div>
           <div class="process-step" data-process-step="2">
             <span class="step-index">03</span>
-            <h3>Resell</h3>
+            <h3>Launch + learn</h3>
             <p>We ship targeted experiences, monitor results, and evolve the systems with your team.</p>
           </div>
+        </div>
+      </section>
+
+      <section class="metrics-section reveal" data-metrics>
+        <div class="metric" data-metric="0">
+          <strong>3.2x</strong>
+          <p>More runbooks automated within three months</p>
+        </div>
+        <div class="metric" data-metric="1">
+          <strong>94%</strong>
+          <p>Stakeholder confidence after first sprint</p>
+        </div>
+        <div class="metric" data-metric="2">
+          <strong>48</strong>
+          <p>Dashboards kept in sync with live AI insights</p>
+        </div>
+      </section>
+
+      <section class="case-section reveal" id="case-studies">
+        <div class="section-heading">
+          <h2>Highlighted engagements</h2>
+          <p>High-impact work that balances rigor with imagination.</p>
+        </div>
+        <div class="case-grid" data-case-grid>
+          <article class="case-card" data-case-card="0">
+            <h3>Launch intelligence for a new AI product</h3>
+            <p>United product/ops teams around shared North Stars, built predictive routing for feedback, and launched a self-service control tower.</p>
+          </article>
+          <article class="case-card case-card--glow" data-case-card="1" data-case-highlight="true">
+            <h3>Automation for global research</h3>
+            <p>Scaled collaboration across continents by automating status capture, knowledge transfer, and insights distribution.</p>
+          </article>
+          <article class="case-card" data-case-card="2">
+            <h3>Operations pulse for fintech teams</h3>
+            <p>Crafted a resilient operating system that respects controls while enabling creative sprints across product squads.</p>
+          </article>
         </div>
       </section>
 
