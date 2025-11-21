@@ -126,6 +126,10 @@ body {
   color: var(--secondary);
   text-decoration: none;
 }
+.logo-copy:visited {
+  color: var(--secondary);
+  text-decoration: none;
+}
 
 .nav-links {
   display: flex;
