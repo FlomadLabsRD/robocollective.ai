@@ -52,6 +52,26 @@ const defaultLandingData = {
       description:
         "Resell your underused robots to trusted buyers, unlock capital and keep your fleet up to date.",
     },
+  ],
+  metrics: [
+  ],
+  cases: [
+    {
+      title: "Launch intelligence for a new AI product",
+      body: "United product/ops teams around shared North Stars, built predictive routing for feedback, and launched a self-service control tower.",
+      highlight: false,
+    },
+    {
+      title: "Automation for global research",
+      body: "Scaled collaboration across continents by automating status capture, knowledge transfer, and insights distribution.",
+      highlight: true,
+    },
+    {
+      title: "Operations pulse for fintech teams",
+      body: "Crafted a resilient operating system that respects controls while enabling creative sprints across product squads.",
+      highlight: false,
+    },
+  ],
   cta: {
     heading: "RoboCollective.ai is your strategic partner in AI-driven operations.",
     body: "Share your most strategic ambition, and we'll co-create a roadmap that combines automation, intelligence, and creative rigor.",
@@ -60,6 +80,7 @@ const defaultLandingData = {
     secondaryLabel: "Contact Us",
     secondaryUrl: "Form",
   },
+};
 
 let heroPhrases = [];
 let heroPhraseIndex = 0;
