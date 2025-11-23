@@ -950,8 +950,20 @@ html.contact-modal-open {
 .robotics-cards {
   margin-top: 1.75rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .robotics-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .robotics-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 .shop-card {
@@ -1066,18 +1078,6 @@ html.contact-modal-open {
   display: none;
 }
 
-
-@media (max-width: 960px) {
-  .robotics-cards {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .robotics-cards {
-    grid-template-columns: 1fr;
-  }
-}
 
 .shop-card-body h3 {
   margin: 0;
