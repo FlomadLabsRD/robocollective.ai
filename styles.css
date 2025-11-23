@@ -947,11 +947,11 @@ html.contact-modal-open {
   color: rgba(15, 23, 42, 0.65);
 }
 
-.shop-cards {
+.robotics-cards {
   margin-top: 1.75rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 1.25rem;
 }
 
 .shop-card {
@@ -1000,6 +1000,65 @@ html.contact-modal-open {
   background: linear-gradient(135deg, #f97316, #e11d48);
 }
 
+.robotics-card {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.robotics-card-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.65);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 255, 0.95));
+}
+
+.robotics-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.robotics-card p {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.65);
+  line-height: 1.6;
+}
+
+.robotics-card-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.robotics-card-btn::after {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .robotics-cards {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .robotics-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .shop-card-body h3 {
   margin: 0;
   font-size: 1.35rem;
@@ -1037,30 +1096,6 @@ html.contact-modal-open {
   color: #fff;
   border-color: transparent;
   box-shadow: none;
-}
-
-@media (max-width: 1280px) {
-  .shop-cards {
-    grid-template-columns: repeat(3, minmax(240px, 1fr));
-  }
-}
-
-@media (max-width: 980px) {
-  .shop-cards {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-  }
-  .shop-card {
-    padding: 1.75rem;
-  }
-}
-
-@media (max-width: 720px) {
-  .shop-cards {
-    grid-template-columns: 1fr;
-  }
-  .shop-card-figure {
-    height: 220px;
-  }
 }
 
 .page-article {
