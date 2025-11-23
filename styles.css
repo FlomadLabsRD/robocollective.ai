@@ -950,8 +950,8 @@ html.contact-modal-open {
 .robotics-cards {
   margin-top: 1.75rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 1.25rem;
 }
 
 .shop-card {
@@ -1067,9 +1067,9 @@ html.contact-modal-open {
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 960px) {
   .robotics-cards {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
 }
 
