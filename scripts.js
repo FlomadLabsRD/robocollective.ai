@@ -407,3 +407,43 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((section) => {
   observer.observe(section);
 });
+
+const COOKIE_CONSENT_STORAGE_KEY = "robocollective-cookie-consent";
+const cookieConsentEl = document.querySelector("[data-cookie-consent]");
+const cookieAcceptButton = document.querySelector("[data-cookie-accept]");
+
+const readCookieConsent = () => {
+  try {
+    return localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
+  } catch {
+    return null;
+  }
+};
+
+const persistCookieConsent = () => {
+  try {
+    localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, "accepted");
+  } catch {
+    // ignore when storage is unavailable
+  }
+};
+
+const hideCookieConsent = () => {
+  if (cookieConsentEl) {
+    cookieConsentEl.hidden = true;
+  }
+};
+
+if (cookieConsentEl && cookieAcceptButton) {
+  const consentStatus = readCookieConsent();
+  if (consentStatus === "accepted") {
+    hideCookieConsent();
+  } else {
+    cookieConsentEl.hidden = false;
+  }
+
+  cookieAcceptButton.addEventListener("click", () => {
+    persistCookieConsent();
+    hideCookieConsent();
+  });
+}
