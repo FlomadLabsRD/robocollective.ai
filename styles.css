@@ -925,47 +925,6 @@ html.contact-modal-open {
   }
 }
 
-.robotics-section {
-  margin: 3rem auto 0;
-  max-width: 1100px;
-  padding: 2.75rem;
-  border-radius: 28px;
-  background: #f3f4f8;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
-  text-align: left;
-}
-
-.robotics-section .section-heading h2 {
-  margin-bottom: 0.25rem;
-  font-size: 2rem;
-  font-weight: 600;
-  color: rgba(15, 23, 42, 0.9);
-}
-
-.robotics-section .section-heading p {
-  color: rgba(15, 23, 42, 0.65);
-}
-
-.robotics-cards {
-  margin-top: 1.75rem;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
-@media (max-width: 1200px) {
-  .robotics-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .robotics-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
 .shop-card {
   border: 1px solid rgba(14, 22, 33, 0.08);
   border-radius: 28px;
@@ -1010,72 +969,6 @@ html.contact-modal-open {
 
 .shop-card-divider--specialty {
   background: linear-gradient(135deg, #f97316, #e11d48);
-}
-
-.robotics-card {
-  background: #fff;
-  border-radius: 20px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  text-align: center;
-}
-
-.robotics-card-figure {
-  width: 100%;
-  height: 220px;
-  border-radius: 18px;
-  background: var(--card-figure-background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: inset 0 0 0 1px var(--card-figure-border);
-}
-
-.robotics-card-figure img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.robotics-card-number {
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: rgba(15, 23, 42, 0.65);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 255, 0.95));
-}
-
-.robotics-card h3 {
-  margin: 0;
-  font-size: 1.35rem;
-}
-
-.robotics-card p {
-  margin: 0;
-  color: rgba(15, 23, 42, 0.65);
-  line-height: 1.6;
-}
-
-.robotics-card-btn {
-  width: 100%;
-  justify-content: center;
-}
-
-.robotics-card-btn::after {
-  display: none;
 }
 
 
