@@ -28,6 +28,8 @@
   --modal-backdrop: rgba(0, 0, 0, 0.65);
   --modal-shadow: rgba(0, 0, 0, 0.8);
   --cta-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  --step-badge-background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.82));
+  --step-badge-color: rgba(255, 255, 255, 0.9);
   color-scheme: dark;
 }
 
@@ -61,6 +63,8 @@
   --modal-backdrop: rgba(0, 0, 0, 0.15);
   --modal-shadow: rgba(0, 0, 0, 0.15);
   --cta-gradient: linear-gradient(145deg, rgba(15, 23, 42, 0.05), rgba(15, 23, 42, 0.01));
+  --step-badge-background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 255, 0.9));
+  --step-badge-color: #0f172a;
   color-scheme: light;
 }
 
@@ -740,8 +744,8 @@ html.contact-modal-open {
   justify-content: center;
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--text-muted);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 255, 0.9));
+  color: var(--step-badge-color);
+  background: var(--step-badge-background);
 }
 
 @media (max-width: 1024px) {
