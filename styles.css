@@ -666,8 +666,8 @@ html.contact-modal-open {
   margin: 3rem auto 0;
   padding: 3rem;
   border-radius: 28px;
-  background: #f3f4f8;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: var(--panel-background);
+  border: var(--panel-border);
   box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
   max-width: 1100px;
   text-align: left;
@@ -686,7 +686,7 @@ html.contact-modal-open {
 }
 
 .process-card {
-  background: #fff;
+  background: var(--surface);
   border-radius: 18px;
   padding: 2rem 1.5rem;
   border: 1px solid rgba(15, 23, 42, 0.12);
@@ -726,7 +726,7 @@ html.contact-modal-open {
 
 .process-card p {
   margin: 0;
-  color: rgba(15, 23, 42, 0.65);
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -734,13 +734,13 @@ html.contact-modal-open {
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: var(--panel-border);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 0.95rem;
-  color: rgba(15, 23, 42, 0.65);
+  color: var(--text-muted);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 255, 0.9));
 }
 
@@ -990,17 +990,17 @@ html.contact-modal-open {
 }
 
 .shop-card {
-  border: 1px solid rgba(14, 22, 33, 0.08);
+  border: var(--panel-border);
   border-radius: 28px;
   padding: 2rem;
-  background: #fff;
+  background: var(--panel-background);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   align-items: center;
   text-align: center;
   box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .shop-card-body {
