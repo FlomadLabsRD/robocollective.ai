@@ -303,9 +303,14 @@ fetchLandingData();
 
 const themeToggleButtons = document.querySelectorAll("[data-theme-toggle]");
 const THEME_STORAGE_KEY = "robocollective-theme";
+const assetSegments = window.location.pathname
+  .split("/")
+  .filter(Boolean);
+const assetDepth = Math.max(0, assetSegments.length - 2);
+const assetBase = "../".repeat(assetDepth);
 const themeAssetDirectories = {
-  dark: "/assets/dark",
-  light: "/assets/light",
+  dark: `${assetBase}assets/dark`,
+  light: `${assetBase}assets/light`,
 };
 const themeAssetGroups = [
   {
