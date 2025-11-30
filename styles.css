@@ -417,8 +417,8 @@ a:focus-visible {
 .btn.secondary,
 .btn.ghost {
   background: transparent;
-  color: var(--secondary);
-  border: none;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.82);
   box-shadow: none;
 }
 
@@ -426,7 +426,7 @@ a:focus-visible {
 .btn.secondary:hover,
 .btn.ghost:hover {
   background: transparent;
-  border: none;
+  border-color: #ffffff;
 }
 
 .button--secondary:active,
@@ -434,6 +434,45 @@ a:focus-visible {
 .btn.ghost:active {
   background: transparent;
   transform: translateY(1px);
+}
+
+.button--secondary:focus-visible,
+.btn.secondary:focus-visible,
+.btn.ghost:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.button--secondary:hover,
+.btn.secondary:hover,
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.button--secondary:active,
+.btn.secondary:active,
+.btn.ghost:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.theme-light .button--secondary,
+.theme-light .btn.secondary,
+.theme-light .btn.ghost {
+  color: var(--accent);
+  border: 1px solid rgba(17, 24, 39, 0.6);
+}
+
+.theme-light .button--secondary:hover,
+.theme-light .btn.secondary:hover,
+.theme-light .btn.ghost:hover {
+  background: rgba(17, 24, 39, 0.08);
+  border-color: rgba(17, 24, 39, 0.75);
+}
+
+.theme-light .button--secondary:active,
+.theme-light .btn.secondary:active,
+.theme-light .btn.ghost:active {
+  background: rgba(17, 24, 39, 0.12);
 }
 
 .button--destructive {
@@ -1394,46 +1433,7 @@ html.contact-modal-open {
 }
 
 .category-grid-wrapper {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 1.5rem;
-}
-
-.filter-panel {
-  border-radius: 20px;
-  background: var(--panel-background);
-  border: 1px solid var(--panel-border);
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  min-height: min-content;
-}
-
-.filter-panel h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: var(--secondary);
-}
-
-.filter-panel .filter-group-label {
-  margin: 0.5rem 0 0.25rem;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-.filter-panel label {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.95rem;
-  color: var(--secondary);
-}
-
-.filter-panel input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: #0f766e;
+  display: block;
 }
 
 .product-grid {
@@ -1495,17 +1495,11 @@ html.contact-modal-open {
 }
 
 @media (max-width: 960px) {
-  .category-grid-wrapper {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
   .category-page {
     padding: 1.75rem;
-  }
-  .category-grid-wrapper {
-    grid-template-columns: 1fr;
   }
   .category-search-wrapper {
     flex-direction: column;
