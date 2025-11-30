@@ -416,24 +416,24 @@ a:focus-visible {
 .button--secondary,
 .btn.secondary,
 .btn.ghost {
-  background: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
-  box-shadow: 0 10px 24px rgba(230, 138, 0, 0.28);
+  background: transparent;
+  color: var(--secondary);
+  border-color: var(--btn-secondary-bg);
+  box-shadow: none;
 }
 
 .button--secondary:hover,
 .btn.secondary:hover,
 .btn.ghost:hover {
-  background: var(--btn-secondary-bg-hover);
-  box-shadow: 0 12px 26px rgba(230, 138, 0, 0.3);
+  background: rgba(230, 138, 0, 0.12);
+  border-color: var(--btn-secondary-bg-hover);
 }
 
 .button--secondary:active,
 .btn.secondary:active,
 .btn.ghost:active {
-  background: var(--btn-secondary-bg-active);
+  background: rgba(230, 138, 0, 0.16);
   transform: translateY(1px);
-  box-shadow: 0 8px 18px rgba(230, 138, 0, 0.28);
 }
 
 .button--destructive {
