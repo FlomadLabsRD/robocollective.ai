@@ -33,13 +33,17 @@
   --green-500: #22c55e;
   --green-600: #16a34a;
   --green-700: #15803d;
+  --green-800: #166534;
 
-  --orange-500: #f59e0b;
-  --orange-600: #d97706;
-  --orange-700: #b45309;
+  --orange-450: #f2a23a;
+  --orange-500: #e68a00;
+  --orange-600: #cf7a00;
+  --orange-700: #b56400;
 
   --amber-500: #d97706;
   --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
 
   --red-500: #ef4444;
   --red-600: #dc2626;
@@ -48,14 +52,15 @@
   --gray-50: #f9fafb;
   --gray-900: #111827;
 
-  --btn-primary-bg: var(--green-600);
-  --btn-primary-bg-hover: var(--green-700);
-  --btn-primary-bg-active: var(--green-700);
+  --btn-primary-bg: var(--green-700);
+  --btn-primary-bg-hover: var(--green-800);
+  --btn-primary-bg-active: var(--green-800);
   --btn-primary-text: #ffffff;
 
-  --btn-secondary-bg: var(--amber-500);
-  --btn-secondary-bg-hover: var(--orange-700);
-  --btn-secondary-bg-active: var(--orange-700);
+  /* Secondary: gentle orange by default; swap to teal by setting bg to var(--teal-700) and text to #ffffff if desired. */
+  --btn-secondary-bg: var(--orange-500);
+  --btn-secondary-bg-hover: var(--orange-600);
+  --btn-secondary-bg-active: var(--orange-600);
   --btn-secondary-text: var(--gray-900);
 
   --btn-destructive-bg: var(--red-600);
@@ -375,14 +380,14 @@ a:focus-visible {
 .btn.ghost {
   background: var(--btn-secondary-bg);
   color: var(--btn-secondary-text);
-  box-shadow: 0 10px 24px rgba(217, 119, 6, 0.28);
+  box-shadow: 0 10px 24px rgba(230, 138, 0, 0.28);
 }
 
 .button--secondary:hover,
 .btn.secondary:hover,
 .btn.ghost:hover {
   background: var(--btn-secondary-bg-hover);
-  box-shadow: 0 12px 26px rgba(217, 119, 6, 0.32);
+  box-shadow: 0 12px 26px rgba(230, 138, 0, 0.3);
 }
 
 .button--secondary:active,
@@ -390,7 +395,7 @@ a:focus-visible {
 .btn.ghost:active {
   background: var(--btn-secondary-bg-active);
   transform: translateY(1px);
-  box-shadow: 0 8px 18px rgba(217, 119, 6, 0.3);
+  box-shadow: 0 8px 18px rgba(230, 138, 0, 0.28);
 }
 
 .button--destructive {
@@ -1086,7 +1091,7 @@ html.contact-modal-open {
 }
 
 .cta-banner__actions .button--secondary {
-  box-shadow: 0 12px 28px rgba(217, 119, 6, 0.28);
+  box-shadow: 0 12px 28px rgba(230, 138, 0, 0.28);
 }
 
 @media (max-width: 768px) {
