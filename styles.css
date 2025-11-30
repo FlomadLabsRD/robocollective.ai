@@ -1394,6 +1394,43 @@ html.contact-modal-open {
   gap: 1.25rem;
 }
 
+.category-nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0.25rem;
+  border-radius: 14px;
+  background: var(--panel-background);
+  border: 1px solid var(--panel-border);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.category-nav__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  color: var(--secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.category-nav__link:hover,
+.category-nav__link:focus-visible {
+  background: var(--soft);
+  border-color: var(--dropdown-border);
+}
+
+.category-nav__link.is-active {
+  background: var(--surface);
+  border-color: var(--panel-border);
+  color: var(--secondary);
+}
+
 .category-search-wrapper {
   display: flex;
   justify-content: space-between;
