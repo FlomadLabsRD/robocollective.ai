@@ -1115,7 +1115,20 @@ html.contact-modal-open {
 }
 
 .cta-banner__actions .button--secondary {
-  box-shadow: 0 12px 28px rgba(230, 138, 0, 0.28);
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: none;
+}
+
+.cta-banner__actions .button--secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-banner__actions .button--secondary:active {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(1px);
 }
 
 @media (max-width: 768px) {
