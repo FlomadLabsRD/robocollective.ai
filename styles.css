@@ -455,6 +455,49 @@ a:focus-visible {
   background: rgba(255, 255, 255, 0.12);
 }
 
+.shop-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  color: #ffffff;
+  background: transparent;
+  font-weight: 700;
+  gap: 0.4rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+
+.shop-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #ffffff;
+}
+
+.shop-button:active {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(1px);
+}
+
+.shop-button:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.theme-light .shop-button {
+  color: var(--accent);
+  border-color: rgba(17, 24, 39, 0.7);
+}
+
+.theme-light .shop-button:hover {
+  background: rgba(17, 24, 39, 0.08);
+  border-color: rgba(17, 24, 39, 0.85);
+}
+
+.theme-light .shop-button:active {
+  background: rgba(17, 24, 39, 0.12);
+}
+
 .theme-light .button--secondary,
 .theme-light .btn.secondary,
 .theme-light .btn.ghost {
