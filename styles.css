@@ -418,21 +418,21 @@ a:focus-visible {
 .btn.ghost {
   background: transparent;
   color: var(--secondary);
-  border-color: var(--btn-secondary-bg);
+  border: none;
   box-shadow: none;
 }
 
 .button--secondary:hover,
 .btn.secondary:hover,
 .btn.ghost:hover {
-  background: rgba(230, 138, 0, 0.12);
-  border-color: var(--btn-secondary-bg-hover);
+  background: transparent;
+  border: none;
 }
 
 .button--secondary:active,
 .btn.secondary:active,
 .btn.ghost:active {
-  background: rgba(230, 138, 0, 0.16);
+  background: transparent;
   transform: translateY(1px);
 }
 
@@ -1237,7 +1237,7 @@ html.contact-modal-open {
 }
 
 .shop-card-divider--educational {
-  background: linear-gradient(135deg, #ec4899, #f59e0b);
+  background: transparent;
 }
 
 .shop-card-divider--industrial {
