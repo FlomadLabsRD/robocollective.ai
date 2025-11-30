@@ -139,6 +139,12 @@ a:focus-visible {
   text-decoration: none;
 }
 
+a:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 .site-shell {
   max-width: 1200px;
   margin: 0 auto;
@@ -1628,6 +1634,21 @@ html.contact-modal-open {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-video__source {
+    animation: none !important;
+  }
 }
 
 @media (max-width: 768px) {
