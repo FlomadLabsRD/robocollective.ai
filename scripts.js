@@ -329,6 +329,19 @@ const themeAssetGroups = [
 const themeHrefElements = document.querySelectorAll("[data-theme-href]");
 const heroVideoEl = document.querySelector(".hero-video__source");
 
+const updateThemeToggleControls = (theme) => {
+  const isLight = theme === "light";
+  themeToggleButtons.forEach((button) => {
+    button.dataset.theme = theme;
+    button.setAttribute("aria-pressed", isLight ? "true" : "false");
+    button.setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} mode`);
+    const textEl = button.querySelector("[data-theme-toggle-text]");
+    if (textEl) {
+      textEl.textContent = isLight ? "Light" : "Dark";
+    }
+  });
+};
+
 const readStoredTheme = () => {
   try {
     return localStorage.getItem(THEME_STORAGE_KEY);
@@ -376,9 +389,7 @@ const syncThemeMedia = (theme) => {
 const applyColorTheme = (theme) => {
   const useLight = theme === "light";
   document.documentElement.classList.toggle("theme-light", useLight);
-  themeToggleButtons.forEach((button) => {
-    button.setAttribute("aria-pressed", useLight);
-  });
+  updateThemeToggleControls(theme);
   syncThemeMedia(theme);
   try {
     localStorage.setItem(THEME_STORAGE_KEY, theme);

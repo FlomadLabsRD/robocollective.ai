@@ -42,19 +42,20 @@
         <a href="index.html">Blog</a>
         <a href="#cta">Contact</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
-        <span class="theme-toggle-icon" aria-hidden="true">
-          <img
-            src="assets/light/icons8-partly-cloudy-day-94.png"
-            alt=""
-            loading="lazy"
-            data-theme-img="icons8-partly-cloudy-day-94.png"
-            data-theme-img-dark="icons8-night-94.png"
-            data-theme-img-light="icons8-partly-cloudy-day-94.png"
-          >
-        </span>
-        <span class="sr-only">Switch between light and dark mode</span>
-      </button>
+      
+<button class="theme-toggle" type="button" data-theme-toggle data-theme="dark" aria-label="Switch to light mode" aria-pressed="false">
+  <span class="theme-toggle-icon" aria-hidden="true">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.5 7.5-1.4-1.4M7.9 7.9 6.5 6.5m12 0-1.4 1.4M7.9 16.1 6.5 17.5"></path>
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"></path>
+    </svg>
+  </span>
+  <span class="theme-toggle-text" data-theme-toggle-text>Dark</span>
+</button>
+
     </header>
 
     <main class="page-article">
