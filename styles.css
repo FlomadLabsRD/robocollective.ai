@@ -479,6 +479,13 @@ a:focus-visible {
   transform: translateY(1px);
 }
 
+.shop-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.5rem 0 1rem;
+}
+
 .shop-button:focus-visible {
   outline: var(--focus-ring);
   outline-offset: 2px;
