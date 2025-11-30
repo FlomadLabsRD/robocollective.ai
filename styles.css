@@ -897,20 +897,6 @@ html.contact-modal-open {
   border-radius: 999px;
 }
 
-.process-step-badge {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  border: var(--panel-border);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--step-badge-color);
-  background: var(--step-badge-background);
-}
-
 @media (max-width: 1024px) {
   .process-cards {
     grid-template-columns: repeat(4, minmax(220px, 1fr));
