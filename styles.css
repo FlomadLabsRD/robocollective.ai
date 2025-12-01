@@ -69,6 +69,8 @@
   --btn-destructive-text: #ffffff;
 
   --focus-ring: 2px solid #2563eb;
+  --btn-height: 54px;
+  --btn-min-width: 210px;
   color-scheme: dark;
 }
 
@@ -390,8 +392,11 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.625rem 1rem;
-  border-radius: 0.75rem;
+  padding: 0.75rem 1.35rem;
+  height: var(--btn-height);
+  min-width: var(--btn-min-width);
+  max-width: 100%;
+  border-radius: 999px;
   font-size: 0.95rem;
   font-weight: 600;
   border: 1px solid transparent;
@@ -399,7 +404,9 @@ a:focus-visible {
   background: transparent;
   color: inherit;
   text-decoration: none;
-  line-height: 1.1;
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
   transition: transform 0.08s ease, background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
 }
 
@@ -465,17 +472,28 @@ a:focus-visible {
   background: rgba(255, 255, 255, 0.12);
 }
 
+.button--fluid {
+  width: 100%;
+  min-width: 0;
+}
+
 .shop-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 1.25rem;
+  padding: 0.75rem 1.35rem;
+  height: var(--btn-height);
+  min-width: var(--btn-min-width);
+  max-width: 100%;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.82);
   color: #ffffff;
   background: transparent;
   font-weight: 700;
   gap: 0.4rem;
+  text-align: center;
+  line-height: 1.2;
+  white-space: normal;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.12s ease;
 }
 
@@ -1207,6 +1225,9 @@ html.contact-modal-open {
 .cta-banner__actions .button {
   border-radius: 999px;
   padding: 0.85rem 1.75rem;
+  height: var(--btn-height);
+  min-width: var(--btn-min-width);
+  max-width: 100%;
 }
 
 .cta-banner__actions .button--primary {
@@ -1582,9 +1603,12 @@ html.contact-modal-open {
 
 .product-card__footer .product-cta {
   width: 100%;
+  max-width: none;
+  min-width: 0;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 999px;
   padding: 0.85rem;
+  height: var(--btn-height);
 }
 
 .product-card__footer .product-cta:hover {
