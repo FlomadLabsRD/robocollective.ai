@@ -308,7 +308,7 @@ const THEME_STORAGE_KEY = "robocollective-theme";
 const assetSegments = window.location.pathname
   .split("/")
   .filter(Boolean);
-const assetDepth = Math.max(0, assetSegments.length - 2);
+const assetDepth = Math.max(0, assetSegments.length - 1);
 const assetBase = "../".repeat(assetDepth);
 const themeAssetDirectories = {
   dark: `${assetBase}assets/dark`,
