@@ -1,0 +1,29 @@
+[embed]https://youtu.be/y9qW7khaztU?si=RyRmSVf3P9cLtnFG[/embed]
+
+<strong data-start="1371" data-end="1415">RoboCo Factory Delivery Robot – D Series</strong>
+<p data-start="1419" data-end="1763">The <strong data-start="1423" data-end="1467">D Series Industrial Smart Delivery Robot</strong> is a next-generation logistics solution that improves efficiency, cuts labor costs, and streamlines workflows. Built for rapid deployment, this robot can be set up in minutes and immediately delivers <strong data-start="1668" data-end="1709">reliable, automated material handling</strong> across production lines, warehouses, and factories.</p>
+
+<h4 data-start="1765" data-end="1809">Flexible Models for Every Application</h4>
+<p data-start="1810" data-end="1846">Choose from three D Series models:</p>
+
+<ul data-start="1847" data-end="2118">
+ 	<li data-start="1847" data-end="1942">
+<p data-start="1849" data-end="1942"><strong data-start="1849" data-end="1857">D-80</strong> – Compact design for <strong data-start="1879" data-end="1902">light item handling</strong> and agile operation in narrow spaces.</p>
+</li>
+ 	<li data-start="1943" data-end="2011">
+<p data-start="1945" data-end="2011"><strong data-start="1945" data-end="1954">D-300</strong> – Handles <strong data-start="1965" data-end="1981">up to 300 kg</strong> with customizable carriers.</p>
+</li>
+ 	<li data-start="2012" data-end="2118">
+<p data-start="2014" data-end="2118"><strong data-start="2014" data-end="2024">D-300E</strong> – Combines <strong data-start="2036" data-end="2063">extended cargo capacity</strong> with advanced flexibility for heavy-duty operations.</p>
+</li>
+</ul>
+<h4 data-start="2120" data-end="2161">Precision Navigation and Endurance</h4>
+<p data-start="2162" data-end="2481">The D Series supports <strong data-start="2184" data-end="2236">free, track, hybrid, and follow navigation modes</strong>. As a result, it adapts easily to complex layouts. With <strong data-start="2293" data-end="2323">10 mm positioning accuracy</strong>, a <strong data-start="2327" data-end="2355">maximum speed of 1.2 m/s</strong>, and a <strong data-start="2363" data-end="2406">12-hour endurance battery (5h charging)</strong>, it ensures consistent performance in demanding industrial environments.</p>
+
+<h4 data-start="2483" data-end="2517">Seamless System Integration</h4>
+<p data-start="2518" data-end="2862">This delivery robot integrates smoothly with <strong data-start="2563" data-end="2597">MES, ERP, WMS, and RCS systems</strong>. In addition, <strong data-start="2612" data-end="2638">multi-robot scheduling</strong>, elevator compatibility, and auto-charging make it a scalable choice for large facilities. Businesses can expand capabilities further with <strong data-start="2778" data-end="2859">IoT devices, RFID, barcode scanners, call buttons, and cloud-based monitoring</strong>.</p>
+
+<h4 data-start="2864" data-end="2888">Trusted Worldwide</h4>
+<p data-start="2889" data-end="3147">The D Series meets <strong data-start="2908" data-end="2952">CE, FCC, KC, NCC, and EMC certifications</strong> for global compliance. Already <strong data-start="2984" data-end="3017">exported to over 50 countries</strong> and trusted by <strong data-start="3033" data-end="3055">1,500+ enterprises</strong>, it is a proven solution for <strong data-start="3085" data-end="3144">logistics, industrial production, and smart warehousing</strong>.</p>
+<p data-start="3149" data-end="3328">With its <strong data-start="3158" data-end="3214">efficiency, scalability, and future-proof automation</strong>, the RoboCo Factory Delivery Robot D Series helps companies stay competitive in the era of smart manufacturing.</p>
+&nbsp;

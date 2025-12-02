@@ -1,0 +1,22 @@
+[embed]https://youtu.be/6JQIY-_7C8E?si=N8yJ4W10X0nMzM5M[/embed]
+
+RoboCo's Robot Chassis offers high‑quality, durable, and versatile robot bases and accessories for custom or DIY robotics applications.
+
+Application Scenarios:
+-Hotel Delivery
+-Restaurant Delivery
+-Office Building Delivery
+-Supermarket Inspection
+-Hotel Disinfection
+-Government Building Display
+
+Rich API Interface
+Complete Development Documentation
+
+1. Supports multiple connection/communication methods, including internet access, serial port, USB, HTTP, etc.
+2. RestAPI, simple and easy to use
+3. Support platform development of Windows/Linux/Android/iOS
+4. No network using limits, supports Wifi and Bluetooth
+5. Cloud-based remote debugging management
+
+&nbsp;

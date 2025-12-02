@@ -1,0 +1,15 @@
+https://youtube.com/shorts/30uSF74C9hU?si=mNB8j1gJ6kScWhB0
+<h1 data-start="688" data-end="764">RealMan Single Arm Compound Robot – Precision, Mobility, and Versatility</h1>
+<p data-start="766" data-end="1082">The <strong data-start="770" data-end="807">RealMan Single Arm Compound Robot</strong> is a next-generation automation solution that combines a high-performance robotic arm with a mobile platform. Designed for industries that demand flexibility and accuracy, it delivers unmatched efficiency for logistics, manufacturing, healthcare, and service applications.</p>
+
+<h2 data-start="1084" data-end="1117">High-Performance Robotic Arm</h2>
+<p data-start="1118" data-end="1406">Built on RealMan’s humanoid arm technology, the robot features <strong data-start="1181" data-end="1215">six degrees of freedom (6-DOF)</strong>, exceptional repeatability of <strong data-start="1246" data-end="1258">±0.05 mm</strong>, and a <strong data-start="1266" data-end="1291">high payload capacity</strong>. As a result, it performs precision tasks such as inspection, handling, and human-robot collaboration with ease.</p>
+
+<h2 data-start="1408" data-end="1442">Smart Mobility and Navigation</h2>
+<p data-start="1443" data-end="1703">Mounted on a <strong data-start="1456" data-end="1495">highly maneuverable autonomous base</strong>, the robot adapts to dynamic environments without requiring infrastructure changes. Moreover, its compact footprint allows smooth operation in limited spaces while maintaining energy-efficient performance.</p>
+
+<h2 data-start="1705" data-end="1738">Easy Integration and Control</h2>
+<p data-start="1739" data-end="2037">The modular design supports <strong data-start="1767" data-end="1842">drag-and-drop teaching, API/JSON integration, and wireless connectivity</strong> via Wi-Fi, Bluetooth, and RS485. Therefore, deployment is fast, and integration with existing workflows is simple. In addition, its modular joints make it scalable for evolving business needs.</p>
+
+<h2 data-start="2039" data-end="2071">Scalable and Cost-Effective</h2>
+<p data-start="2072" data-end="2336">By combining mobility with robotic dexterity, the <strong data-start="2122" data-end="2159">RealMan Single Arm Compound Robot</strong> helps companies reduce labor costs, increase productivity, and future-proof their operations. Trusted for its adaptability, it sets a new benchmark in collaborative robotics.</p>
