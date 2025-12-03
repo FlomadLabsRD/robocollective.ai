@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us – RoboCollective.ai</title>
+  <title>Contact Us â€“ RoboCollective.ai</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -63,8 +63,8 @@
       <section class="contact-hero reveal">
         <div class="contact-hero__copy">
           <p class="eyebrow">Contact Us</p>
-          <h1>Contact Us – RoboCollective.ai</h1>
-          <p>Questions? We’ve got answers! We make it easy to find the perfect robot or accessories for your home or business. Whether you’re curious about products, orders, shipping, or new innovations, we’re here to help.</p>
+          <h1>Contact Us â€“ RoboCollective.ai</h1>
+          <p>Questions? Weâ€™ve got answers! We make it easy to find the perfect robot or accessories for your home or business. Whether youâ€™re curious about products, orders, shipping, or new innovations, weâ€™re here to help.</p>
           <h3>Use the contact form</h3>
           <p>Please fill out the form below with as much detail as possible so we can respond quickly and accurately.</p>
           <h3>Why contact RoboCollective.ai?</h3>
@@ -75,10 +75,10 @@
           </ul>
           <h3>What happens next?</h3>
           <ul>
-            <li>Our team typically responds within 24–48 business hours.</li>
-            <li>You’ll receive an automatic confirmation email letting you know we’ve received your message.</li>
+            <li>Our team typically responds within 24â€“48 business hours.</li>
+            <li>Youâ€™ll receive an automatic confirmation email letting you know weâ€™ve received your message.</li>
           </ul>
-          <p>Don’t wait – contact us today and let us make your robotics experience seamless and enjoyable!</p>
+          <p>Donâ€™t wait â€“ contact us today and let us make your robotics experience seamless and enjoyable!</p>
           <div class="hero-actions">
             <a class="button button--primary" href="mailto:hello@robocollective.ai">Email our team</a>
             <a class="button button--secondary" href="tel:+14155550123">Book a call</a>
@@ -114,7 +114,7 @@
           </div>
           <button type="submit" class="submit-button">
             <span class="submit-label">Send message</span>
-            <span class="submit-loading" aria-hidden="true">Sending…</span>
+            <span class="submit-loading" aria-hidden="true">Sendingâ€¦</span>
           </button>
           <p class="form-confirmation" role="status" aria-live="polite" hidden>
             Thanks! We received your message and will reply soon.
@@ -136,7 +136,14 @@
       const loadingLabel = contactForm.querySelector(".submit-loading");
       const submitLabel = contactForm.querySelector(".submit-label");
 
-      contactForm.addEventListener("submit", (event) => {
+      const setStatus = (text, isError = false) => {
+        if (!confirmation) return;
+        confirmation.textContent = text;
+        confirmation.hidden = false;
+        confirmation.style.color = isError ? "#f87171" : "inherit";
+      };
+
+      contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
         if (!contactForm.reportValidity()) {
           return;
@@ -146,18 +153,37 @@
         if (submitLabel) submitLabel.style.display = "none";
         if (loadingLabel) loadingLabel.style.display = "inline";
 
-        setTimeout(() => {
+        const payload = {
+          name: contactForm.elements["name"]?.value?.trim(),
+          email: contactForm.elements["email"]?.value?.trim(),
+          message: contactForm.elements["message"]?.value?.trim(),
+          company: contactForm.elements["company"]?.value?.trim(),
+          role: contactForm.elements["role"]?.value?.trim(),
+          source: "contact-us",
+        };
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok || !data.ok) {
+            throw new Error(data.error || "We could not send your message.");
+          }
+          setStatus("Thanks! We received your message and will reply soon.");
+          contactForm.reset();
+        } catch (error) {
+          setStatus(error.message || "We could not send your message.", true);
+        } finally {
           submitButton.disabled = false;
           submitButton.classList.remove("is-loading");
           if (submitLabel) submitLabel.style.display = "inline";
           if (loadingLabel) loadingLabel.style.display = "none";
-          if (confirmation) confirmation.hidden = false;
-          contactForm.reset();
-        }, 1200);
+        }
       });
     }
   </script>
 </body>
 </html>
-
-

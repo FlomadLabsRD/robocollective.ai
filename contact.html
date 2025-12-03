@@ -65,7 +65,7 @@
       <section class="contact-hero reveal">
         <div class="contact-hero__copy">
           <p class="eyebrow">Reach out</p>
-          <h1>Let’s define your next robotics move</h1>
+          <h1>Letâ€™s define your next robotics move</h1>
           <p>
             Share your ambitions, timelines, or even curiosity. Our engineers, strategists, and delivery partners will assemble a response that outlines what next-gen robotics can do for your people.
           </p>
@@ -104,7 +104,7 @@
           </div>
           <button type="submit" class="submit-button">
             <span class="submit-label">Send message</span>
-            <span class="submit-loading" aria-hidden="true">Sending…</span>
+            <span class="submit-loading" aria-hidden="true">Sendingâ€¦</span>
           </button>
           <p class="form-confirmation" role="status" aria-live="polite" hidden>
             Thanks! We received your message and will reply soon.
@@ -126,7 +126,14 @@
       const loadingLabel = contactForm.querySelector(".submit-loading");
       const submitLabel = contactForm.querySelector(".submit-label");
 
-      contactForm.addEventListener("submit", (event) => {
+      const setStatus = (text, isError = false) => {
+        if (!confirmation) return;
+        confirmation.textContent = text;
+        confirmation.hidden = false;
+        confirmation.style.color = isError ? "#f87171" : "inherit";
+      };
+
+      contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
         if (!contactForm.reportValidity()) {
           return;
@@ -136,18 +143,37 @@
         if (submitLabel) submitLabel.style.display = "none";
         if (loadingLabel) loadingLabel.style.display = "inline";
 
-        setTimeout(() => {
+        const payload = {
+          name: contactForm.elements["name"]?.value?.trim(),
+          email: contactForm.elements["email"]?.value?.trim(),
+          message: contactForm.elements["message"]?.value?.trim(),
+          company: contactForm.elements["company"]?.value?.trim(),
+          role: contactForm.elements["role"]?.value?.trim(),
+          source: "contact",
+        };
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok || !data.ok) {
+            throw new Error(data.error || "We could not send your message.");
+          }
+          setStatus("Thanks! We received your message and will reply soon.");
+          contactForm.reset();
+        } catch (error) {
+          setStatus(error.message || "We could not send your message.", true);
+        } finally {
           submitButton.disabled = false;
           submitButton.classList.remove("is-loading");
           if (submitLabel) submitLabel.style.display = "inline";
           if (loadingLabel) loadingLabel.style.display = "none";
-          if (confirmation) confirmation.hidden = false;
-          contactForm.reset();
-        }, 1200);
+        }
       });
     }
   </script>
 </body>
 </html>
-
-

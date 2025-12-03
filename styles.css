@@ -1010,12 +1010,12 @@ html.contact-modal-open {
 
 .process-section {
   margin: 3rem auto 0;
-  padding: 3rem;
+  padding: 3.25rem;
   border-radius: 28px;
   background: var(--panel-background);
   border: var(--panel-border);
   box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
-  max-width: 1100px;
+  max-width: 1200px;
   text-align: left;
 }
 
@@ -1110,13 +1110,13 @@ html.contact-modal-open {
 }
 
 .process-section--families .process-card {
-  min-height: 280px;
+  min-height: 300px;
   justify-content: space-between;
 }
 
 .process-section--partner .process-cards {
   grid-template-columns: repeat(3, minmax(220px, 1fr));
-  max-width: 900px;
+  max-width: 1040px;
   gap: 1.25rem;
 }
 
