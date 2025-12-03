@@ -1121,9 +1121,9 @@ html.contact-modal-open {
 }
 
 .process-section--families .process-cards {
-  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
   max-width: 2000px;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .process-section--families .process-card {
@@ -1166,8 +1166,8 @@ html.contact-modal-open {
 @media (min-width: 1200px) {
   .process-section--families .process-cards {
     max-width: none;
-    grid-template-columns: repeat(5, minmax(230px, 1fr));
-    gap: 1.75rem;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    gap: 1.25rem;
   }
 }
 
