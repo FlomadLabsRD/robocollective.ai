@@ -680,7 +680,10 @@ if (productsData.length && productGrids.length) {
 // Normalize rich content layouts on product pages
 document.querySelectorAll(".product-rich-content__body").forEach((body) => {
   // Wrap direct child iframes into responsive video containers if not already
-  body.querySelectorAll(":scope > iframe").forEach((iframe) => {
+  body.querySelectorAll("iframe").forEach((iframe) => {
+    if (iframe.closest(".product-video")) {
+      return;
+    }
     const wrapper = document.createElement("div");
     wrapper.className = "product-video";
     iframe.parentNode.insertBefore(wrapper, iframe);
