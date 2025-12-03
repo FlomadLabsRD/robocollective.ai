@@ -22,7 +22,7 @@ window.productsData = [
   { name: "Hotel Robot", image: "assets/products_shop_images/Hotel_Robot_1.png", category: "Service", url: "hotel-robot.html" },
   { name: "Healthcare Robot", image: "assets/products_shop_images/Healthcare_Robot.png", category: "Service", url: "healthcare-robot.html" },
   { name: "Heavy Load AMR", image: "assets/products_shop_images/Heavy_Load_AMR_1.png", category: "Industrial", url: "heavy-load-amr.html" },
-  { name: "L Lift AMR", image: "assets/products_shop_images/L Lift AMR_2.jpg", category: "Industrial", url: "l-lift-amr.html" },
+  { name: "L Lift AMR", image: "assets/products_shop_images/Factory_Delivery_Robot_1.png", category: "Industrial", url: "l-lift-amr.html" },
   { name: "Smart Forklift", image: "assets/products_shop_images/Smart_Forklift.png", category: "Industrial", url: "smart-forklift.html" },
   { name: "Sub Lift Robot", image: "assets/products_shop_images/Sub_Lift_Robot_1.png", category: "Industrial", url: "sub-lift-robot.html" },
   { name: "Water 2", image: "assets/products_shop_images/Water 2_1.png", category: "Service", url: "water-2.html" },
