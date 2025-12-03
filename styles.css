@@ -1903,6 +1903,22 @@ html.contact-modal-open {
   display: block;
 }
 
+.product-gallery {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.product-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  background: var(--card-figure-background);
+  border: 1px solid var(--card-figure-border);
+  padding: 0.5rem;
+  object-fit: contain;
+}
+
 .product-detail__info h1 {
   margin: 0.2rem 0 0.65rem;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
