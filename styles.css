@@ -2030,6 +2030,7 @@ html.contact-modal-open {
   color: var(--text-muted);
   font-size: 1.2rem;
   cursor: pointer;
+  display: none;
 }
 
 .product-modal__close:focus-visible {
