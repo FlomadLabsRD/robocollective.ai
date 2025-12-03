@@ -1620,6 +1620,19 @@ html.contact-modal-open {
   transform: translateY(-1px);
 }
 
+.shop-section-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.shop-section-buttons .button {
+  min-width: 0;
+  padding: 0.65rem 1.2rem;
+  height: auto;
+}
+
 .shop-collection {
   padding: 2.25rem;
   border-radius: 28px;
