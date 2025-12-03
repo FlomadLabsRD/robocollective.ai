@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nimble Drones | RoboCollective.ai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-nav">
+      <a class="logo-mark site-logo" href="index.html" aria-label="RoboCollective.ai home">
+        <img
+          src="assets/light/Logo 4 light.png"
+          alt="RoboCollective.ai logo"
+          data-theme-img="Logo 4 light.png"
+          data-theme-img-dark="Logo 4 dark.png"
+          data-theme-img-light="Logo 4 light.png"
+        >
+      </a>
+      <a class="logo-copy" href="index.html">
+        <strong>RoboCollective.ai</strong>
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <div class="shop-menu">
+          <a class="nav-link" href="shop.html">
+            Shop
+
+          </a>
+          <div class="shop-dropdown">
+            <a href="shop.html">Main shop</a>
+            <a href="nimble-drones.html">Nimble Drones</a>
+            <a href="educational.html">Educational Robots</a>
+            <a href="industrial.html">Industrial Robots</a>
+            <a href="service.html">Service Robots</a>
+            <a href="specialty.html">Specialty Robots</a>
+          </div>
+        </div>
+        <a href="index.html">Blog</a>
+        <a href="contact-us.html">Contact</a>
+        <a class="nav-link" href="https://flolabs.international/" target="_blank" rel="noopener">Internships</a>
+      </nav>
+      
+<button class="theme-toggle" type="button" data-theme-toggle data-theme="dark" aria-label="Switch to light mode" aria-pressed="false">
+  <span class="theme-toggle-icon" aria-hidden="true">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.5 7.5-1.4-1.4M7.9 7.9 6.5 6.5m12 0-1.4 1.4M7.9 16.1 6.5 17.5"></path>
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"></path>
+    </svg>
+  </span>
+  <span class="theme-toggle-text" data-theme-toggle-text>Dark</span>
+</button>
+
+    </header>
+
+    <nav class="shop-section-buttons" aria-label="Shop sections">
+      <a class="button button--secondary" href="nimble-drones.html">Nimble Drones</a>
+      <a class="button button--secondary" href="educational.html">Educational Robots</a>
+      <a class="button button--secondary" href="industrial.html">Industrial Robots</a>
+      <a class="button button--secondary" href="service.html">Service Robots</a>
+      <a class="button button--secondary" href="specialty.html">Specialty Robots</a>
+    </nav>
+
+    <main class="shop-page">
+      <section class="shop-hero reveal" id="shop">
+        <div class="shop-hero__content">
+          <p class="eyebrow">Nimble ecosystem</p>
+          <h1>Shop the flapping wing drones built for research, demos, and swarms</h1>
+          <p class="shop-hero__lede">Ready-to-fly Nimble kits, bundles, and accessories inspired by the Flapper Drones store. Ship the same configurations labs use for indoor flight testing, motion capture, and live showcases.</p>
+          <div class="shop-hero__meta">
+            <span class="shop-pill">EU and worldwide shipping</span>
+            <span class="shop-pill">Flight-ready out of the box</span>
+            <span class="shop-pill">Open-source control</span>
+          </div>
+          <div class="shop-hero__bullets">
+            <div class="shop-bullet">
+              <strong>Research ready</strong>
+              <p>Open APIs, ROS 2 friendly, and tunable for motion capture labs.</p>
+            </div>
+            <div class="shop-bullet">
+              <strong>Swarm capable</strong>
+              <p>Lighthouse positioning and Crazyradio 2.0 for accurate indoor fleets.</p>
+            </div>
+            <div class="shop-bullet">
+              <strong>Durable by design</strong>
+              <p>Replaceable wings, shells, and batteries keep fleets flying.</p>
+            </div>
+          </div>
+          <div class="shop-hero__actions">
+            <a class="button button--primary" href="#kits">Shop kits</a>
+            <a class="button button--secondary" href="#swarms">Swarm packs</a>
+            <a class="button button--secondary" href="#accessories">Accessories</a>
+          </div>
+        </div>
+        <div class="shop-hero__media">
+          <div class="shop-hero__frame">
+            <img src="assets/products_shop_images/flapper-nimble-lighthouse-bundle_1.png" alt="Nimble Lighthouse Bundle drone kit">
+          </div>
+          <div class="shop-hero__note">
+            <strong>Lighthouse-ready out of the box</strong>
+            <p>Pair with base stations and Crazyradio 2.0 for repeatable indoor positioning.</p>
+          </div>
+        </div>
+      </section>
+
+      <nav class="shop-section-buttons" aria-label="Nimble sections">
+        <a class="button button--secondary" href="#kits">Kits & bundles</a>
+        <a class="button button--secondary" href="#swarms">Swarm packs</a>
+        <a class="button button--secondary" href="#accessories">Accessories</a>
+      </nav>
+
+      <section class="shop-collection reveal" id="kits">
+        <div class="section-heading">
+          <p class="eyebrow">Kits</p>
+          <h2>Start flying in minutes</h2>
+          <p>Base kits and bundles that mirror the Flapper Drones store lineup, tuned for first flights and demos.</p>
+        </div>
+        <div class="shop-collection__grid">
+          <article class="shop-product-card">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/flapper-nimble-base-kit_2.png" alt="Nimble Base Kit">
+            </div>
+            <div class="shop-product__details">
+              <div class="shop-product__header">
+                <div>
+                  <p class="shop-label">Flight ready</p>
+                  <h3>Nimble Base Kit</h3>
+                </div>
+                <span class="shop-price">Ships in 3-5 business days</span>
+              </div>
+              <p>Flight-ready Nimble drone with charger and spare wings. Perfect for live demos, outreach, and immediate takeoff.</p>
+              <ul class="shop-product__meta">
+                <li>Includes charger, spare set of wings, and protective shells</li>
+                <li>Factory tuned hover with minimal setup</li>
+              </ul>
+              <div class="shop-product__actions">
+                <a class="button button--primary" href="nimble-base-kit.html">Read more</a>
+                <span class="shop-tag">Most popular</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/flapper-nimble-starter-kit_1.png" alt="Nimble Starter Kit with spares">
+            </div>
+            <div class="shop-product__details">
+              <div class="shop-product__header">
+                <div>
+                  <p class="shop-label">For labs</p>
+                  <h3>Nimble Starter Kit</h3>
+                </div>
+                <span class="shop-price">Rapid deployment</span>
+              </div>
+              <p>Everything in the base kit plus more wings and shells so teams can experiment longer between maintenance cycles.</p>
+              <ul class="shop-product__meta">
+                <li>Extra wing set and body shells included</li>
+                <li>Ready for campus demos and small swarm pilots</li>
+              </ul>
+              <div class="shop-product__actions">
+                <a class="button button--primary" href="nimble-starter-kit.html">Read more</a>
+                <span class="shop-tag">Lab favorite</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/flapper-nimble-lighthouse-bundle_2.png" alt="Nimble Lighthouse Bundle components">
+            </div>
+            <div class="shop-product__details">
+              <div class="shop-product__header">
+                <div>
+                  <p class="shop-label">Indoor positioning</p>
+                  <h3>Nimble Lighthouse Bundle</h3>
+                </div>
+                <span class="shop-price">Best for motion capture labs</span>
+              </div>
+              <p>Complete bundle with Lighthouse deck and base stations for precise indoor positioning and repeatable trajectories.</p>
+              <ul class="shop-product__meta">
+                <li>Includes Lighthouse deck and dual base stations</li>
+                <li>Great for swarm coordination and waypoint flight</li>
+              </ul>
+              <div class="shop-product__actions">
+                <a class="button button--primary" href="nimble-lighthouse-bundle.html">Read more</a>
+                <span class="shop-tag">Positioning ready</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shop-collection reveal" id="swarms">
+        <div class="section-heading">
+          <p class="eyebrow">Swarm and multi-kit bundles</p>
+          <h2>Scale to fleets and teaching labs</h2>
+          <p>Everything you need to stand up multi-vehicle experiments and workshops without piecing together extras.</p>
+        </div>
+        <div class="shop-collection__grid">
+          <article class="shop-product-card">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/base-multi-kit-2x_1.png" alt="Nimble Base Multi Kit 2x">
+            </div>
+            <div class="shop-product__details">
+              <div class="shop-product__header">
+                <div>
+                  <p class="shop-label">Bundle</p>
+                  <h3>Base Multi Kit (2x)</h3>
+                </div>
+                <span class="shop-price">Two-flight bundle</span>
+              </div>
+              <p>Two flight-ready Nimbles with spare wings, chargers, and shells so pairs can prototype quickly.</p>
+              <ul class="shop-product__meta">
+                <li>Matched pair for mirrored experiments</li>
+                <li>Includes shared tools for fast turnaround</li>
+              </ul>
+              <div class="shop-product__actions">
+                <a class="button button--primary" href="base-multi-kit-2x.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/base-multi-kit-3x_1.png" alt="Nimble Base Multi Kit 3x">
+            </div>
+            <div class="shop-product__details">
+              <div class="shop-product__header">
+                <div>
+                  <p class="shop-label">Bundle</p>
+                  <h3>Base Multi Kit (3x)</h3>
+                </div>
+                <span class="shop-price">Ready for formations</span>
+              </div>
+              <p>Three drones, spare wings, and chargers for small teams and formation trials.</p>
+              <ul class="shop-product__meta">
+                <li>Great starter pack for lab courses</li>
+                <li>Ships with extra wings and shells</li>
+              </ul>
+              <div class="shop-product__actions">
+                <a class="button button--primary" href="base-multi-kit-3x.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/flapper-nimble-swarm-bundlex4_2.png" alt="Nimble Swarm Bundle x4">
+            </div>
+            <div class="shop-product__details">
+              <div class="shop-product__header">
+                <div>
+                  <p class="shop-label">Swarm bundle</p>
+                  <h3>Nimble Swarm Bundle x4</h3>
+                </div>
+                <span class="shop-price">Fleet setup</span>
+              </div>
+              <p>Four Nimbles, Lighthouse positioning gear, radios, and spares for swarm choreographies and indoor fleets.</p>
+              <ul class="shop-product__meta">
+                <li>Includes Lighthouse positioning stack</li>
+                <li>Four Crazyradio 2.0 links for multi-operator control</li>
+              </ul>
+              <div class="shop-product__actions">
+                <a class="button button--primary" href="nimble-swarm-bundle-x4.html">Read more</a>
+                <span class="shop-tag">Swarm ready</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shop-collection reveal" id="accessories">
+        <div class="section-heading">
+          <p class="eyebrow">Accessories and spares</p>
+          <h2>Keep fleets flying</h2>
+          <p>Radios, Lighthouse hardware, wings, and power systems that match the kits above.</p>
+        </div>
+        <div class="shop-collection__grid shop-collection__grid--compact">
+          <article class="shop-product-card shop-product-card--compact">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/crazyradio-2-usb-dongle_1.png" alt="Crazyradio 2.0 USB dongle">
+            </div>
+            <div class="shop-product__details">
+              <h3>Crazyradio 2.0</h3>
+              <p>Low-latency radio link for commanding single drones or swarms.</p>
+              <div class="shop-product__actions">
+                <a class="button button--secondary" href="crazyradio-2-0.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card shop-product-card--compact">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/lighthouse-base-station.png" alt="Lighthouse base station">
+            </div>
+            <div class="shop-product__details">
+              <h3>Lighthouse Base Station</h3>
+              <p>Indoor positioning beacons for centimeter-level tracking.</p>
+              <div class="shop-product__actions">
+                <a class="button button--secondary" href="lighthouse-base-station.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card shop-product-card--compact">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/lighthouse-support-kit-for-nimble_1.png" alt="Lighthouse support kit for Nimble">
+            </div>
+            <div class="shop-product__details">
+              <h3>Lighthouse Support Kit</h3>
+              <p>Mounts, plates, and wiring to attach Lighthouse decks securely.</p>
+              <div class="shop-product__actions">
+                <a class="button button--secondary" href="lighthouse-support-kit.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card shop-product-card--compact">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/battery-for-nimble.png" alt="Battery for Nimble">
+            </div>
+            <div class="shop-product__details">
+              <h3>Nimble Battery</h3>
+              <p>Stock up on extra flight packs to extend sorties.</p>
+              <div class="shop-product__actions">
+                <a class="button button--secondary" href="nimble-battery.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card shop-product-card--compact">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/butterfly-wing-set-for-nimble_1.png" alt="Butterfly wing set for Nimble">
+            </div>
+            <div class="shop-product__details">
+              <h3>Wing Set</h3>
+              <p>Replacement wings to keep every airframe ready for flight.</p>
+              <div class="shop-product__actions">
+                <a class="button button--secondary" href="wing-set.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card shop-product-card--compact">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/24-ghz-transmitter-with-edge-tx_1.png" alt="2.4 GHz transmitter with EdgeTX">
+            </div>
+            <div class="shop-product__details">
+              <h3>2.4 GHz Transmitter</h3>
+              <p>EdgeTX handheld transmitter for manual flight and training.</p>
+              <div class="shop-product__actions">
+                <a class="button button--secondary" href="transmitter-2-4ghz.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card shop-product-card--compact">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/frsky-receiver.png" alt="FrSky receiver">
+            </div>
+            <div class="shop-product__details">
+              <h3>FrSky Receiver</h3>
+              <p>Bind to your preferred transmitter for manual modes.</p>
+              <div class="shop-product__actions">
+                <a class="button button--secondary" href="frsky-receiver.html">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-product-card shop-product-card--compact">
+            <div class="shop-product__figure">
+              <img src="assets/products_shop_images/set-of-body-shells-for-nimble.png" alt="Nimble body shells">
+            </div>
+            <div class="shop-product__details">
+              <h3>Nimble Shells</h3>
+              <p>Fresh shells to refresh fleets after heavy use.</p>
+              <div class="shop-product__actions">
+                <a class="button button--secondary" href="nimble-shells.html">Read more</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shop-cta reveal">
+        <div class="shop-cta__content">
+          <h3>Need a formal quote or a PO?</h3>
+          <p>We can mirror any configuration from the Flapper Drones store and support academic procurement.</p>
+        </div>
+        <div class="shop-cta__actions">
+          <a class="button button--primary" href="contact-us.html">Talk to our team</a>
+          <a class="button button--secondary" href="mailto:hello@robocollective.ai">Email us</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
