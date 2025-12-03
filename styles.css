@@ -1961,8 +1961,8 @@ html.contact-modal-open {
 
 .product-fab {
   position: fixed;
-  right: 1.25rem;
-  bottom: 1.25rem;
+  right: min(4vw, 1.25rem);
+  bottom: min(4vw, 1.25rem);
   z-index: 200;
 }
 
