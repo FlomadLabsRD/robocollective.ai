@@ -1873,7 +1873,8 @@ html.contact-modal-open {
 }
 
 .product-page {
-  margin-top: 3rem;
+  margin: 3rem auto 0;
+  max-width: 1200px;
 }
 
 .product-detail {
@@ -1882,9 +1883,9 @@ html.contact-modal-open {
   background: var(--panel-background);
   border: 1px solid var(--panel-border);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  align-items: center;
+  grid-template-columns: minmax(320px, 460px) minmax(280px, 1fr);
+  gap: 2rem;
+  align-items: start;
 }
 
 .product-detail__media {
@@ -1894,11 +1895,14 @@ html.contact-modal-open {
   border-radius: 20px;
   border: 1px solid var(--card-figure-border);
   padding: 1.25rem;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .product-detail__media img {
-  max-width: 86%;
-  max-height: 86%;
+  max-width: 100%;
+  max-height: 420px;
   width: auto;
   height: auto;
   object-fit: contain;
