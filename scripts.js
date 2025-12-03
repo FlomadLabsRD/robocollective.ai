@@ -668,7 +668,7 @@ if (productsData.length && productGrids.length) {
               <h3>${item.name}</h3>
             </div>
             <div class="product-card__footer">
-              <a class="button button--primary product-cta" href="contact-us.html">Request info</a>
+              <a class="button button--primary product-cta" href="${item.url || item.href || item.link || "contact-us.html"}">Read more</a>
             </div>
           </article>
         `
