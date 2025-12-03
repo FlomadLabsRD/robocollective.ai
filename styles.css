@@ -1022,12 +1022,12 @@ html.contact-modal-open {
 .process-cards {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  justify-items: stretch;
-  justify-content: center;
+  place-items: stretch;
+  place-content: center;
   width: 100%;
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
