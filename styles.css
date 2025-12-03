@@ -1183,8 +1183,13 @@ html.contact-modal-open {
   }
 }
 
-.process-section--families {
+.process-section--families,
+.process-section-families {
+  background: transparent !important;
   border: none;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none;
 }
 
 
