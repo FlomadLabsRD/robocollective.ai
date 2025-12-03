@@ -1975,6 +1975,12 @@ html.contact-modal-open {
   box-shadow: 0 16px 28px rgba(15, 23, 42, 0.18);
 }
 
+.product-fab button:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.22);
+}
+
 .product-modal {
   position: fixed;
   inset: 0;
@@ -2005,6 +2011,8 @@ html.contact-modal-open {
   z-index: 1;
   display: grid;
   gap: 0.75rem;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .product-modal__dialog h3 {
@@ -2020,6 +2028,11 @@ html.contact-modal-open {
   color: var(--text-muted);
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.product-modal__close:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
 }
 
 .product-form {

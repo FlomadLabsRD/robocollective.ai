@@ -470,29 +470,50 @@ const hideCookieConsent = () => {
     });
   }
 
+const productPage = document.querySelector("main.product-page");
 const productDetail = document.querySelector(".product-detail");
 
-if (productDetail) {
-  const productName =
-    productDetail.querySelector(".product-detail__info h1")?.textContent?.trim() ||
-    "Product";
+if (productPage && productDetail) {
+  const productTitle =
+    productDetail.querySelector(".product-detail__info h1") ||
+    productDetail.querySelector("h1");
+  const productName = productTitle?.textContent?.trim() || "Product";
+  const modalId = "product-inquiry-modal";
 
   const fabContainer = document.createElement("div");
   fabContainer.className = "product-fab";
-  fabContainer.innerHTML = `<button type="button" data-product-fab>Request info</button>`;
+  fabContainer.innerHTML = `
+    <button
+      type="button"
+      class="product-fab__trigger"
+      data-product-fab
+      aria-haspopup="dialog"
+      aria-controls="${modalId}"
+      aria-expanded="false"
+    >
+      Get info
+    </button>
+  `;
   document.body.appendChild(fabContainer);
 
   const modal = document.createElement("div");
   modal.className = "product-modal";
   modal.setAttribute("aria-hidden", "true");
+  modal.dataset.productModal = "true";
   modal.innerHTML = `
     <div class="product-modal__backdrop" data-product-modal-close></div>
-    <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
-      <button class="product-modal__close" type="button" data-product-modal-close aria-label="Close form">×</button>
-      <h3 id="product-modal-title">Request info</h3>
+    <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="${modalId}-title" id="${modalId}" tabindex="-1">
+      <button class="product-modal__close" type="button" data-product-modal-close aria-label="Close form">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <h3 id="${modalId}-title">Request info</h3>
       <p class="product-form__note">Product: ${productName}</p>
       <form class="product-form" data-product-form>
-        <input type="hidden" name="product" value="${productName}">
+        <label>
+          Product
+          <input name="product" type="text" value="${productName}" readonly aria-readonly="true">
+        </label>
         <label>
           Name
           <input name="name" type="text" required autocomplete="name" placeholder="Your name">
@@ -502,42 +523,103 @@ if (productDetail) {
           <input name="email" type="email" required autocomplete="email" placeholder="you@example.com">
         </label>
         <label>
-          Phone (optional)
-          <input name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567">
-        </label>
-        <label>
           Message
-          <textarea name="message" placeholder="Tell us about your use case"></textarea>
+          <textarea name="message" required placeholder="Tell us what you need"></textarea>
         </label>
         <div class="product-form__actions">
           <button class="button button--secondary" type="button" data-product-modal-close>Cancel</button>
           <button class="button button--primary" type="submit">Send request</button>
         </div>
-        <p class="product-form__note" data-product-confirmation hidden>Thanks! We’ll reach out about ${productName}.</p>
+        <p class="product-form__note" data-product-confirmation hidden></p>
       </form>
     </div>
   `;
   document.body.appendChild(modal);
 
   const fabButton = fabContainer.querySelector("[data-product-fab]");
+  const dialog = modal.querySelector(".product-modal__dialog");
   const formEl = modal.querySelector("[data-product-form]");
   const confirmationEl = modal.querySelector("[data-product-confirmation]");
+  const productInput = modal.querySelector("input[name='product']");
+  const focusableSelectors = [
+    "a[href]",
+    "button:not([disabled])",
+    "input:not([disabled])",
+    "textarea:not([disabled])",
+    "select:not([disabled])",
+    "[tabindex]:not([tabindex='-1'])",
+  ];
+  let lastFocusedElement = null;
 
-  const openModal = () => {
-    modal.classList.add("is-visible");
-    modal.setAttribute("aria-hidden", "false");
-    const firstField = modal.querySelector("input[name='name']");
-    if (firstField) {
-      firstField.focus();
+  const setProductValue = () => {
+    if (productInput) {
+      productInput.value = productName;
+    }
+    if (confirmationEl) {
+      confirmationEl.hidden = true;
+      confirmationEl.textContent = "";
+    }
+  };
+
+  const getFocusableElements = () =>
+    Array.from(modal.querySelectorAll(focusableSelectors.join(","))).filter(
+      (el) => el.offsetParent !== null || el === document.activeElement
+    );
+
+  const trapFocus = (event) => {
+    if (event.key !== "Tab" || !modal.classList.contains("is-visible")) {
+      return;
+    }
+    const focusable = getFocusableElements();
+    if (!focusable.length) {
+      return;
+    }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const active = document.activeElement;
+
+    if (event.shiftKey) {
+      if (active === first || !modal.contains(active)) {
+        event.preventDefault();
+        last.focus();
+      }
+    } else if (active === last) {
+      event.preventDefault();
+      first.focus();
+    } else if (!modal.contains(active)) {
+      event.preventDefault();
+      first.focus();
     }
   };
 
   const closeModal = () => {
     modal.classList.remove("is-visible");
     modal.setAttribute("aria-hidden", "true");
-    if (fabButton) {
-      fabButton.focus();
+    fabButton?.setAttribute("aria-expanded", "false");
+    document.removeEventListener("keydown", handleKeydown);
+    const returnFocus =
+      lastFocusedElement instanceof HTMLElement ? lastFocusedElement : fabButton;
+    returnFocus?.focus();
+  };
+
+  const handleKeydown = (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeModal();
+      return;
     }
+    trapFocus(event);
+  };
+
+  const openModal = () => {
+    lastFocusedElement = document.activeElement;
+    modal.classList.add("is-visible");
+    modal.setAttribute("aria-hidden", "false");
+    fabButton?.setAttribute("aria-expanded", "true");
+    setProductValue();
+    document.addEventListener("keydown", handleKeydown);
+    const firstField = formEl?.querySelector("input[name='name']") || dialog;
+    firstField?.focus();
   };
 
   fabButton?.addEventListener("click", openModal);
@@ -545,30 +627,27 @@ if (productDetail) {
   modal.addEventListener("click", (event) => {
     const target = event.target;
     if (
-      target.dataset?.productModalClose !== undefined ||
-      target.classList.contains("product-modal__backdrop")
+      target instanceof HTMLElement &&
+      (target.dataset.productModalClose !== undefined ||
+        target.classList.contains("product-modal__backdrop"))
     ) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && modal.classList.contains("is-visible")) {
       closeModal();
     }
   });
 
   formEl?.addEventListener("submit", (event) => {
     event.preventDefault();
+    const nameValue = formEl.querySelector("input[name='name']")?.value || "you";
     if (confirmationEl) {
       confirmationEl.hidden = false;
-      confirmationEl.textContent = `Thanks! We’ll reach out about ${productName}.`;
+      confirmationEl.textContent = `Thanks, ${nameValue}! We will follow up about ${productName}.`;
     }
     setTimeout(() => {
       closeModal();
-    }, 800);
+    }, 1000);
   });
 }
+
 
 // Render category product grids from shared data
 const productsData = Array.isArray(window.productsData) ? window.productsData : [];
