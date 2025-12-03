@@ -1857,6 +1857,63 @@ html.contact-modal-open {
   margin-bottom: 0.5rem;
 }
 
+.product-page {
+  margin-top: 3rem;
+}
+
+.product-detail {
+  padding: 2.25rem;
+  border-radius: 28px;
+  background: var(--panel-background);
+  border: 1px solid var(--panel-border);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.product-detail__media {
+  display: grid;
+  place-items: center;
+  background: var(--card-figure-background);
+  border-radius: 20px;
+  border: 1px solid var(--card-figure-border);
+  padding: 1.25rem;
+}
+
+.product-detail__media img {
+  max-width: 86%;
+  max-height: 86%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.product-detail__info h1 {
+  margin: 0.2rem 0 0.65rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.product-detail__lede {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.product-detail__bullets {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.product-detail__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .category-page {
   margin-top: 3rem;
   padding: 2.5rem;
