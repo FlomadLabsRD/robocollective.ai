@@ -1104,6 +1104,17 @@ html.contact-modal-open {
   margin-right: auto;
 }
 
+.shop-product-card .shop-product__details {
+  align-items: center;
+  text-align: center;
+}
+
+.shop-product-card .shop-product__details p {
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .robotics-card-btn {
   width: 100%;
   max-width: 220px;
