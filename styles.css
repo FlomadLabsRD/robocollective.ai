@@ -1021,12 +1021,10 @@ html.contact-modal-open {
 
 .process-cards {
   margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
   width: 100%;
-  max-width: 960px;
   margin: 0 auto;
   align-items: stretch;
 }
@@ -1046,7 +1044,6 @@ html.contact-modal-open {
   height: 100%;
   justify-content: space-between;
   transition: transform 0.18s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  flex: 1 1 240px;
 }
 
 .process-card:hover {
@@ -1106,6 +1103,23 @@ html.contact-modal-open {
   margin-right: auto;
 }
 
+.process-section--families .process-cards {
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  max-width: 1200px;
+  gap: 1.25rem;
+}
+
+.process-section--families .process-card {
+  min-height: 280px;
+  justify-content: space-between;
+}
+
+.process-section--partner .process-cards {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  max-width: 900px;
+  gap: 1.25rem;
+}
+
 .shop-product-card .shop-product__details {
   align-items: center;
   text-align: center;
@@ -1125,21 +1139,15 @@ html.contact-modal-open {
   margin-top: auto;
 }
 
-@media (max-width: 1024px) {
-  .process-cards {
-    justify-content: center;
-  }
-}
-
 @media (max-width: 640px) {
   .process-cards {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     max-width: 520px;
   }
 }
 
 @media (min-width: 1200px) {
-  .process-cards {
+  .process-section--families .process-cards {
     max-width: none;
     grid-template-columns: repeat(5, minmax(200px, 1fr));
     gap: 1.25rem;
