@@ -469,3 +469,103 @@ const hideCookieConsent = () => {
       hideCookieConsent();
     });
   }
+
+const productDetail = document.querySelector(".product-detail");
+
+if (productDetail) {
+  const productName =
+    productDetail.querySelector(".product-detail__info h1")?.textContent?.trim() ||
+    "Product";
+
+  const fabContainer = document.createElement("div");
+  fabContainer.className = "product-fab";
+  fabContainer.innerHTML = `<button type="button" data-product-fab>Request info</button>`;
+  document.body.appendChild(fabContainer);
+
+  const modal = document.createElement("div");
+  modal.className = "product-modal";
+  modal.setAttribute("aria-hidden", "true");
+  modal.innerHTML = `
+    <div class="product-modal__backdrop" data-product-modal-close></div>
+    <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+      <button class="product-modal__close" type="button" data-product-modal-close aria-label="Close form">×</button>
+      <h3 id="product-modal-title">Request info</h3>
+      <p class="product-form__note">Product: ${productName}</p>
+      <form class="product-form" data-product-form>
+        <input type="hidden" name="product" value="${productName}">
+        <label>
+          Name
+          <input name="name" type="text" required autocomplete="name" placeholder="Your name">
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+        </label>
+        <label>
+          Phone (optional)
+          <input name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567">
+        </label>
+        <label>
+          Message
+          <textarea name="message" placeholder="Tell us about your use case"></textarea>
+        </label>
+        <div class="product-form__actions">
+          <button class="button button--secondary" type="button" data-product-modal-close>Cancel</button>
+          <button class="button button--primary" type="submit">Send request</button>
+        </div>
+        <p class="product-form__note" data-product-confirmation hidden>Thanks! We’ll reach out about ${productName}.</p>
+      </form>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const fabButton = fabContainer.querySelector("[data-product-fab]");
+  const formEl = modal.querySelector("[data-product-form]");
+  const confirmationEl = modal.querySelector("[data-product-confirmation]");
+
+  const openModal = () => {
+    modal.classList.add("is-visible");
+    modal.setAttribute("aria-hidden", "false");
+    const firstField = modal.querySelector("input[name='name']");
+    if (firstField) {
+      firstField.focus();
+    }
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("is-visible");
+    modal.setAttribute("aria-hidden", "true");
+    if (fabButton) {
+      fabButton.focus();
+    }
+  };
+
+  fabButton?.addEventListener("click", openModal);
+
+  modal.addEventListener("click", (event) => {
+    const target = event.target;
+    if (
+      target.dataset?.productModalClose !== undefined ||
+      target.classList.contains("product-modal__backdrop")
+    ) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-visible")) {
+      closeModal();
+    }
+  });
+
+  formEl?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (confirmationEl) {
+      confirmationEl.hidden = false;
+      confirmationEl.textContent = `Thanks! We’ll reach out about ${productName}.`;
+    }
+    setTimeout(() => {
+      closeModal();
+    }, 800);
+  });
+}
