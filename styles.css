@@ -2077,6 +2077,38 @@ html.contact-modal-open {
   font-size: 0.9rem;
 }
 
+.product-rich-content {
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: var(--panel-background);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  max-width: 1100px;
+  display: grid;
+  gap: 1rem;
+}
+
+.product-rich-content__body > *:first-child {
+  margin-top: 0;
+}
+
+.product-rich-content iframe {
+  width: 100%;
+  min-height: 360px;
+  border: none;
+  border-radius: 16px;
+}
+
+.product-rich-content h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.product-rich-content ul {
+  padding-left: 1.1rem;
+}
+
 .category-page {
   margin-top: 3rem;
   padding: 2.5rem;
