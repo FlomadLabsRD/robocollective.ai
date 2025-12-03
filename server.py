@@ -31,7 +31,7 @@ def api_contact():
     smtp_port = os.getenv("CONTACT_SMTP_PORT")
     smtp_user = os.getenv("CONTACT_SMTP_USER")
     smtp_pass = os.getenv("CONTACT_SMTP_PASS")
-    to_email = os.getenv("CONTACT_TO_EMAIL")
+    to_email = os.getenv("CONTACT_TO_EMAIL", "sales@robocollective.ai")
 
     if not all([smtp_host, smtp_port, smtp_user, smtp_pass, to_email]):
         return jsonify({"ok": False, "error": "Email service is not configured."}), 500
