@@ -676,3 +676,25 @@ if (productsData.length && productGrids.length) {
       .join("");
   });
 }
+
+// Normalize rich content layouts on product pages
+document.querySelectorAll(".product-rich-content__body").forEach((body) => {
+  // Wrap direct child iframes into responsive video containers if not already
+  body.querySelectorAll(":scope > iframe").forEach((iframe) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "product-video";
+    iframe.parentNode.insertBefore(wrapper, iframe);
+    wrapper.appendChild(iframe);
+  });
+
+  // Collect direct child images into a spec grid for cleaner layout
+  const directImages = Array.from(body.children).filter(
+    (el) => el.tagName === "IMG"
+  );
+  if (directImages.length) {
+    const grid = document.createElement("div");
+    grid.className = "product-spec-grid";
+    directImages.forEach((img) => grid.appendChild(img));
+    body.appendChild(grid);
+  }
+});
