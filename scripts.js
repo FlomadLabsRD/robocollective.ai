@@ -481,7 +481,7 @@ if (productPage && productDetail) {
   const modalId = "product-inquiry-modal";
 
   const fabContainer = document.createElement("div");
-  fabContainer.className = "product-fab";
+  fabContainer.className = "product-fab product-fab--inline";
   fabContainer.innerHTML = `
     <button
       type="button"
@@ -494,7 +494,12 @@ if (productPage && productDetail) {
       Get info
     </button>
   `;
-  document.body.appendChild(fabContainer);
+  const actionsContainer = productDetail.querySelector(".product-detail__actions");
+  if (actionsContainer) {
+    actionsContainer.appendChild(fabContainer);
+  } else {
+    document.body.appendChild(fabContainer);
+  }
 
   const modal = document.createElement("div");
   modal.className = "product-modal";

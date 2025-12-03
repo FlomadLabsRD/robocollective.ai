@@ -2022,6 +2022,18 @@ html.contact-modal-open {
   box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.22);
 }
 
+.product-fab--inline {
+  position: static;
+  right: auto;
+  bottom: auto;
+  z-index: auto;
+  display: inline-flex;
+}
+
+.product-fab--inline button {
+  margin-left: 0.25rem;
+}
+
 .product-modal {
   position: fixed;
   inset: 0;
