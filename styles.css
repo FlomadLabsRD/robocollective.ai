@@ -1171,6 +1171,19 @@ html.contact-modal-open {
   }
 }
 
+.process-section--families {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.process-section--families .section-heading {
+  padding: 0 0 1.5rem;
+}
+
 
 .blog-section {
   margin-top: 3rem;
