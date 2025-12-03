@@ -1,0 +1,61 @@
+window.productsData = [
+  { name: "Humanoid G1 (Base/EDU)", image: "assets/products_shop_images/Humanoid_G1__BaseEDU__3.png", category: "Educational" },
+  { name: "Humanoid H1", image: "assets/products_shop_images/Humanoid_H1_7.png", category: "Specialty" },
+  { name: "Humanoid Oli", image: "assets/products_shop_images/Humanoid Oli_1.webp", category: "Specialty" },
+  { name: "Humanoid R1", image: "assets/products_shop_images/Humanoid R1.webp", category: "Specialty" },
+  { name: "Humanoid Mini Hi", image: "assets/products_shop_images/Humanoid Mini Hi_1.webp", category: "Educational" },
+  { name: "Mini pi Bipedal Robot", image: "assets/products_shop_images/Mini p Bipedal Robot_1.webp", category: "Educational" },
+
+  { name: "Robodog B2", image: "assets/products_shop_images/Robodog B2.webp", category: "Specialty" },
+  { name: "Robodog (B2/B2-W)", image: "assets/products_shop_images/Robodog (B2B2-W)_1.webp", category: "Specialty" },
+  { name: "Robodog Go1", image: "assets/products_shop_images/Robodog Go1_1.webp", category: "Educational" },
+  { name: "Robodog (Go2/Go2-W)", image: "assets/products_shop_images/Robodog (Go2Go2-W)_1.webp", category: "Specialty" },
+  { name: "Robodog AlienGo", image: "assets/products_shop_images/Robodog AlienGo_1.webp", category: "Industrial" },
+  { name: "Tron 1", image: "assets/products_shop_images/Tron 1_1.webp", category: "Specialty" },
+
+  { name: "Dual Arm Compound Robot", image: "assets/products_shop_images/Dual_Arm_Compound_Robot.png", category: "Industrial" },
+  { name: "Base Chassis", image: "assets/products_shop_images/Base_Chassis_1.png", category: "Industrial" },
+  { name: "Disinfectant Mini Robot", image: "assets/products_shop_images/Disinfectant_Mini_Robot_1.png", category: "Service" },
+  { name: "Conveyor Robot", image: "assets/products_shop_images/Conveyor_Robot.png", category: "Industrial" },
+  { name: "Delivery Robot (closed type)", image: "assets/products_shop_images/Delivery_Robot__closed_type__1.png", category: "Service" },
+  { name: "Factory Delivery Robot", image: "assets/products_shop_images/Factory_Delivery_Robot_1.png", category: "Service" },
+
+  { name: "Hermes Chassis", image: "assets/products_shop_images/Hermes Chassis_1.png", category: "Industrial" },
+  { name: "Mars Smartbot", image: "assets/products_shop_images/Mars Smartbot_1.webp", category: "Service" },
+  { name: "Hotel Robot", image: "assets/products_shop_images/Hotel Robot_1.webp", category: "Service" },
+  { name: "Healthcare Robot", image: "assets/products_shop_images/Healthcare_Robot.png", category: "Service" },
+  { name: "Heavy Load AMR", image: "assets/products_shop_images/Heavy_Load_AMR_1.png", category: "Industrial" },
+  { name: "L Lift AMR", image: "assets/products_shop_images/L Lift AMR_1.webp", category: "Industrial" },
+
+  { name: "Smart Forklift", image: "assets/products_shop_images/Smart Forklift.webp", category: "Industrial" },
+  { name: "Sub Lift Robot", image: "assets/products_shop_images/Sub Lift Robot_1.webp", category: "Industrial" },
+  { name: "Water 2", image: "assets/products_shop_images/Water 2_1.png", category: "Service" },
+
+  { name: "Dex. Hand (RM56S2B) 2L/2R", image: "assets/products_shop_images/Dex._Hand__RM56S2B__2L2R_1.png", category: "Accessories" },
+  { name: "Gripper (ERG32-150)", image: "assets/products_shop_images/Gripper (ERG32-150).webp", category: "Accessories" },
+  { name: "Gripper (EVS08)", image: "assets/products_shop_images/Gripper__EVS08_1.png", category: "Accessories" },
+  { name: "Gripper (AG-160-95)", image: "assets/products_shop_images/Gripper__AG-160-95__1.png", category: "Accessories" },
+  { name: "Gripper (RGS2-050)", image: "assets/products_shop_images/Gripper__RG52-050.png", category: "Accessories" },
+  { name: "Gripper (RGI-100-30)", image: "assets/products_shop_images/Gripper__RGI-100-30.png", category: "Accessories" },
+
+  { name: "Camera (RM-MVQ)", image: "assets/products_shop_images/Camera_RM-MVQ__1.png", category: "Accessories" },
+  { name: "Robotic Arm (ECO62-B)", image: "assets/products_shop_images/Robotic Arm (ECO62-B).webp", category: "Industrial" },
+  { name: "Robotic Arm (ECO65-6F)", image: "assets/products_shop_images/Robotic Arm (ECO65-6F).webp", category: "Industrial" },
+  { name: "Robotic Arm (ECO65-B)", image: "assets/products_shop_images/Robotic Arm (ECO65-B).webp", category: "Industrial" },
+  { name: "Robotic Arm (GEN72-B)", image: "assets/products_shop_images/Robotic Arm (GEN72-B).webp", category: "Industrial" },
+  { name: "Robotic Arm (RM65-6F)", image: "assets/products_shop_images/Robotic Arm (RM65-6F).webp", category: "Industrial" },
+  { name: "Robotic Arm (RM65-B)", image: "assets/products_shop_images/Robotic Arm (RM65-B).webp", category: "Industrial" },
+  { name: "Robotic Arm (RM75-6F)", image: "assets/products_shop_images/Robotic Arm (RM75-6F).webp", category: "Industrial" },
+  { name: "Robotic Arm (RM75-B)", image: "assets/products_shop_images/Robotic Arm (RM75-B).webp", category: "Industrial" },
+  { name: "Robotic Arm (RML63-6F)", image: "assets/products_shop_images/Robotic Arm (RML63-6F).webp", category: "Industrial" },
+  { name: "Robotic Arm (RML63-B)", image: "assets/products_shop_images/Robotic Arm (RML63-B).webp", category: "Industrial" },
+
+  { name: "Single Arm Compound Robot - Precision, Mobility, and Versatility", image: "assets/products_shop_images/Single Arm Compound Robot - Precision, Mobility, and Versatility.png", category: "Industrial" },
+  { name: "Single Arm Lifting Compound Robot", image: "assets/products_shop_images/Single Arm Lifting Compound Robot_1.webp", category: "Industrial" },
+  { name: "Single Arm Compound Robot - Compact, Mobile, and Intelligent Automation", image: "assets/products_shop_images/Single Arm Compound Robot - Compact, Mobile, and Intelligent Automation.png", category: "Industrial" },
+
+  { name: "Camera (D435C)", image: "assets/products_shop_images/Camera__D435C.png", category: "Accessories" },
+  { name: "Camera (DaBai DCW)", image: "assets/products_shop_images/Camera__DaBai_DCW.png", category: "Accessories" },
+  { name: "Flexible Gripper (RM-SFG)", image: "assets/products_shop_images/Flexible_Gripper__RM-SFG.png", category: "Accessories" },
+  { name: "Gripper (EG2-SF16)", image: "assets/products_shop_images/Gripper__EG2-SF16__1.png", category: "Accessories" }
+];

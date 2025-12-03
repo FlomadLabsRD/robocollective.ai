@@ -569,3 +569,31 @@ if (productDetail) {
     }, 800);
   });
 }
+
+// Render category product grids from shared data
+const productsData = Array.isArray(window.productsData) ? window.productsData : [];
+const productGrids = document.querySelectorAll("[data-product-grid]");
+
+if (productsData.length && productGrids.length) {
+  productGrids.forEach((grid) => {
+    const category = grid.dataset.productGrid;
+    const items = productsData.filter((p) => p.category === category);
+    grid.innerHTML = items
+      .map(
+        (item) => `
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="${item.image}" alt="${item.name}">
+            </div>
+            <div class="product-card__body">
+              <h3>${item.name}</h3>
+            </div>
+            <div class="product-card__footer">
+              <a class="button button--primary product-cta" href="contact-us.html">Request info</a>
+            </div>
+          </article>
+        `
+      )
+      .join("");
+  });
+}
