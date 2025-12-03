@@ -1042,6 +1042,7 @@ html.contact-modal-open {
   align-items: center;
   text-align: center;
   gap: 0.5rem;
+  height: 100%;
 }
 
 .process-card .robotics-card-figure {
@@ -1081,6 +1082,7 @@ html.contact-modal-open {
   max-width: 220px;
   justify-content: center;
   border-radius: 999px;
+  margin-top: auto;
 }
 
 @media (max-width: 1024px) {
@@ -1092,6 +1094,14 @@ html.contact-modal-open {
 @media (max-width: 640px) {
   .process-cards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .process-cards {
+    max-width: none;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    gap: 1.25rem;
   }
 }
 
