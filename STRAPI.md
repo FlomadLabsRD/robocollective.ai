@@ -75,8 +75,8 @@ Once the model is saved, open the `Landing` single type and supply values matchi
     ],
     "ctaHeading": "Embed RoboCollective.ai inside your next launch.",
     "ctaBody": "Share your most strategic ambition, and we'll co-create a roadmap that combines automation, intelligence, and creative rigor.",
-    "ctaPrimaryLabel": "Plan a discovery call",
-    "ctaPrimaryUrl": "mailto:hello@robocollective.ai",
+    "ctaPrimaryLabel": "View our products",
+    "ctaPrimaryUrl": "/shop.html",
     "ctaSecondaryLabel": "Download capability overview",
     "ctaSecondaryUrl": "#"
   }
