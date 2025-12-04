@@ -1137,8 +1137,8 @@ html.contact-modal-open {
 }
 
 .process-section--partner .process-cards {
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
-  max-width: 1040px;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  max-width: 1400px;
   gap: 1.25rem;
 }
 
@@ -1173,8 +1173,20 @@ html.contact-modal-open {
   padding: 0.7rem 1.05rem;
 }
 
+@media (max-width: 1100px) {
+  .process-section--partner .process-cards {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    max-width: 900px;
+  }
+}
+
 @media (max-width: 640px) {
   .process-cards {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .process-section--partner .process-cards {
     grid-template-columns: 1fr;
     max-width: 520px;
   }
