@@ -1,24 +1,13 @@
 import os
 import smtplib
 from email.message import EmailMessage
-from flask import Flask, send_from_directory, request, jsonify, render_template_string
+from flask import Flask, send_from_directory, request, jsonify
 
 app = Flask(__name__, static_folder=".")
 
 @app.route("/")
 def index():
-    # Inject STRAPI_URL into index.html if environment variable is set
-    strapi_url = os.getenv("STRAPI_URL", "http://localhost:1337")
-    
-    # Read the index.html file
-    with open(os.path.join(app.static_folder, "index.html"), "r") as f:
-        content = f.read()
-    
-    # Inject the STRAPI_URL before the scripts.js line
-    injection = f'<script>window.STRAPI_URL = "{strapi_url}";</script>\n  <script src="scripts.js"></script>'
-    content = content.replace('<script src="scripts.js"></script>', injection)
-    
-    return content
+    return app.send_static_file("index.html")
 
 @app.route("/<path:path>")
 def static_proxy(path):
@@ -77,6 +66,4 @@ def api_contact():
     return jsonify({"ok": True}), 200
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 5001))
-    debug = os.getenv("FLASK_ENV") != "production"
-    app.run(debug=debug, host="0.0.0.0", port=port)
+    app.run(debug=True, host="0.0.0.0", port=5001)
