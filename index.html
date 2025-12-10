@@ -118,6 +118,13 @@
           </a>
         </div>
       </section>
+      <section class="products-section reveal" id="all-products">
+        <div class="section-heading">
+          <h2>Browse all products</h2>
+          <p>Scroll our full catalog of robots, grippers, cameras, and kits, alphabetized for quick scanning.</p>
+        </div>
+        <div class="product-grid" data-product-grid="all"></div>
+      </section>
       <section class="blog-section reveal" id="case-studies">
         <div class="section-heading">
           <h2>Read our latest posts</h2>
@@ -191,6 +198,7 @@
     // Default to localhost for development, override with environment variable for production
     window.STRAPI_URL = window.STRAPI_URL || "http://localhost:1337";
   </script>
+  <script src="products.js"></script>
   <script src="scripts.js"></script>
 
 </body>

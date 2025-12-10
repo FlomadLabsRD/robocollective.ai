@@ -652,7 +652,10 @@ const productGrids = document.querySelectorAll("[data-product-grid]");
 if (productsData.length && productGrids.length) {
   productGrids.forEach((grid) => {
     const category = grid.dataset.productGrid;
-    const items = productsData.filter((p) => p.category === category);
+    const items =
+      category && category.toLowerCase() === "all"
+        ? [...productsData].sort((a, b) => a.name.localeCompare(b.name))
+        : productsData.filter((p) => p.category === category);
     grid.innerHTML = items
       .map(
         (item) => `
