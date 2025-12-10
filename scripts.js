@@ -490,9 +490,9 @@ if (productPage && productDetail) {
       aria-haspopup="dialog"
       aria-controls="${modalId}"
       aria-expanded="false"
-    >
-      Get info
-    </button>
+      >
+      Request info and pricing
+      </button>
   `;
   const actionsContainer = productDetail.querySelector(".product-detail__actions");
   if (actionsContainer) {
@@ -512,13 +512,8 @@ if (productPage && productDetail) {
         <span aria-hidden="true">&times;</span>
         <span class="sr-only">Close</span>
       </button>
-      <h3 id="${modalId}-title">Request info</h3>
-      <p class="product-form__note">Product: ${productName}</p>
+      <h3 id="${modalId}-title">Request info and pricing</h3>
       <form class="product-form" data-product-form>
-        <label>
-          Product
-          <input name="product" type="text" value="${productName}" readonly aria-readonly="true">
-        </label>
         <label>
           Name
           <input name="name" type="text" required autocomplete="name" placeholder="Your name">
@@ -545,7 +540,6 @@ if (productPage && productDetail) {
   const dialog = modal.querySelector(".product-modal__dialog");
   const formEl = modal.querySelector("[data-product-form]");
   const confirmationEl = modal.querySelector("[data-product-confirmation]");
-  const productInput = modal.querySelector("input[name='product']");
   const focusableSelectors = [
     "a[href]",
     "button:not([disabled])",
@@ -557,9 +551,6 @@ if (productPage && productDetail) {
   let lastFocusedElement = null;
 
   const setProductValue = () => {
-    if (productInput) {
-      productInput.value = productName;
-    }
     if (confirmationEl) {
       confirmationEl.hidden = true;
       confirmationEl.textContent = "";
