@@ -2515,8 +2515,20 @@ html.contact-modal-open {
 
 .offer-tiles__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .offer-tiles__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .offer-tiles__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .offer-tiles__card {
