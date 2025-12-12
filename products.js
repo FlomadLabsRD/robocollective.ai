@@ -33,7 +33,6 @@ window.productsData = [
 
   // Industrial
   { name: "Base Chassis", image: "assets/products_shop_images/Base_Chassis_1.png", category: "Industrial", url: "base-chassis.html" },
-  { name: "Conveyor Robot", image: "assets/products_shop_images/Conveyor_Robot.png", category: "Industrial", url: "conveyor-robot.html" },
   { name: "Dual Arm Compound Robot", image: "assets/products_shop_images/Dual_Arm_Compound_Robot.png", category: "Industrial", url: "dual-arm-compound-robot.html" },
   { name: "Heavy Load AMR", image: "assets/products_shop_images/Heavy_Load_AMR_1.png", category: "Industrial", url: "heavy-load-amr.html" },
   { name: "L Lift AMR", image: "assets/products_shop_images/Factory_Delivery_Robot_1.png", category: "Industrial", url: "l-lift-amr.html" },
