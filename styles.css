@@ -2577,6 +2577,12 @@ html.contact-modal-open {
   gap: 1.25rem;
 }
 
+.products-section__cta {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+
 .product-card {
   background: var(--surface);
   border-radius: 20px;

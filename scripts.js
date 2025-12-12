@@ -671,8 +671,10 @@ const renderProductGrid = (grid) => {
   if (!items.length) {
     return;
   }
+  const limit = Number.parseInt(grid.dataset.productLimit, 10);
+  const visibleItems = Number.isFinite(limit) && limit > 0 ? items.slice(0, limit) : items;
 
-  const markup = items
+  const markup = visibleItems
     .map((item, index) => {
       const target = item.url || item.href || item.link || "contact-us.html";
       const name = item.name || "Product";
