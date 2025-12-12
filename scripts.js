@@ -649,31 +649,73 @@ if (productPage && productDetail) {
 const productsData = Array.isArray(window.productsData) ? window.productsData : [];
 const productGrids = document.querySelectorAll("[data-product-grid]");
 
+const productCategoryIndex = productsData.reduce(
+  (acc, item) => {
+    const categoryKey = (item.category || "").toLowerCase();
+    if (!acc[categoryKey]) {
+      acc[categoryKey] = [];
+    }
+    acc[categoryKey].push(item);
+    return acc;
+  },
+  {}
+);
+
+const allProductsSorted = [...productsData].sort((a, b) =>
+  (a.name || "").localeCompare(b.name || "")
+);
+
+const renderProductGrid = (grid) => {
+  const category = (grid.dataset.productGrid || "all").toLowerCase();
+  const items = category === "all" ? allProductsSorted : productCategoryIndex[category] || [];
+  if (!items.length) {
+    return;
+  }
+
+  const markup = items
+    .map((item) => {
+      const target = item.url || item.href || item.link || "contact-us.html";
+      const name = item.name || "Product";
+      const image = item.image || "";
+      return `
+        <article class="product-card">
+          <div class="product-card__image">
+            <img loading="lazy" decoding="async" width="320" height="170" src="${image}" alt="${name}">
+          </div>
+          <div class="product-card__body">
+            <h3>${name}</h3>
+          </div>
+          <div class="product-card__footer">
+            <a class="button button--primary product-cta" href="${target}">Read more</a>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+
+  grid.innerHTML = markup;
+};
+
 if (productsData.length && productGrids.length) {
-  productGrids.forEach((grid) => {
-    const category = grid.dataset.productGrid;
-    const items =
-      category && category.toLowerCase() === "all"
-        ? [...productsData].sort((a, b) => a.name.localeCompare(b.name))
-        : productsData.filter((p) => p.category === category);
-    grid.innerHTML = items
-      .map(
-        (item) => `
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="${item.image}" alt="${item.name}">
-            </div>
-            <div class="product-card__body">
-              <h3>${item.name}</h3>
-            </div>
-            <div class="product-card__footer">
-              <a class="button button--primary product-cta" href="${item.url || item.href || item.link || "contact-us.html"}">Read more</a>
-            </div>
-          </article>
-        `
-      )
-      .join("");
-  });
+  const supportsIntersectionObserver = typeof IntersectionObserver === "function";
+
+  if (supportsIntersectionObserver) {
+    const productGridObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            renderProductGrid(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "200px 0px" }
+    );
+
+    productGrids.forEach((grid) => productGridObserver.observe(grid));
+  } else {
+    productGrids.forEach(renderProductGrid);
+  }
 }
 
 // Normalize rich content layouts on product pages
