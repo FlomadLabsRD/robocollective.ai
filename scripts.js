@@ -703,25 +703,8 @@ const renderProductGrid = (grid) => {
 };
 
 if (productsData.length && productGrids.length) {
-  const supportsIntersectionObserver = typeof IntersectionObserver === "function";
-
-  if (supportsIntersectionObserver) {
-    const productGridObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            renderProductGrid(entry.target);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { rootMargin: "200px 0px" }
-    );
-
-    productGrids.forEach((grid) => productGridObserver.observe(grid));
-  } else {
-    productGrids.forEach(renderProductGrid);
-  }
+  // Render immediately so images begin loading without waiting for scroll observation
+  productGrids.forEach(renderProductGrid);
 }
 
 // Normalize rich content layouts on product pages
