@@ -2509,18 +2509,22 @@ html.contact-modal-open {
   margin: 4rem 0 2rem;
 }
 
+.offer-tiles .section-heading {
+  margin-bottom: 1.5rem;
+}
+
 .offer-tiles__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.25rem;
 }
 
 .offer-tiles__card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 1.5rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -2528,12 +2532,12 @@ html.contact-modal-open {
 
 .offer-tiles__card h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 .offer-tiles__list {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
   color: var(--text-muted);
   display: flex;
   flex-direction: column;
@@ -2541,7 +2545,7 @@ html.contact-modal-open {
 }
 
 .offer-tiles__list li {
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .offer-tiles__actions {
@@ -2552,6 +2556,7 @@ html.contact-modal-open {
   width: 100%;
   min-width: 0;
   border-radius: 999px;
+  justify-content: center;
 }
 
 .product-grid {
