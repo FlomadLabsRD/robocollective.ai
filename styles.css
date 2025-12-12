@@ -2505,6 +2505,55 @@ html.contact-modal-open {
   display: block;
 }
 
+.offer-tiles {
+  margin: 4rem 0 2rem;
+}
+
+.offer-tiles__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.offer-tiles__card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.offer-tiles__card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.offer-tiles__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.offer-tiles__list li {
+  line-height: 1.45;
+}
+
+.offer-tiles__actions {
+  margin-top: auto;
+}
+
+.offer-tiles .button--primary {
+  width: 100%;
+  min-width: 0;
+  border-radius: 999px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

@@ -665,6 +665,47 @@ const allProductsSorted = [...productsData].sort((a, b) =>
   (a.name || "").localeCompare(b.name || "")
 );
 
+const PRODUCT_IMG_PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+
+const lazyLoadProductImages = () => {
+  const lazyImages = Array.from(document.querySelectorAll("[data-product-img]")).filter(
+    (img) => !img.dataset.loaded
+  );
+  if (!lazyImages.length) {
+    return;
+  }
+
+  const hydrateImage = (img) => {
+    const source = img.dataset.src;
+    if (!source) {
+      img.dataset.loaded = "true";
+      return;
+    }
+    img.src = source;
+    img.dataset.loaded = "true";
+  };
+
+  if (typeof IntersectionObserver !== "function") {
+    lazyImages.forEach(hydrateImage);
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          hydrateImage(img);
+          observer.unobserve(img);
+        }
+      });
+    },
+    { rootMargin: "150px 0px" }
+  );
+
+  lazyImages.forEach((img) => io.observe(img));
+};
+
 const renderProductGrid = (grid) => {
   const category = (grid.dataset.productGrid || "all").toLowerCase();
   const items = category === "all" ? allProductsSorted : productCategoryIndex[category] || [];
@@ -677,10 +718,20 @@ const renderProductGrid = (grid) => {
       const target = item.url || item.href || item.link || "contact-us.html";
       const name = item.name || "Product";
       const image = item.image || "";
+      const dataSrc = image || "";
       return `
         <article class="product-card">
           <div class="product-card__image">
-            <img loading="lazy" decoding="async" width="320" height="170" src="${image}" alt="${name}">
+            <img
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low"
+              width="320"
+              height="170"
+              src="${PRODUCT_IMG_PLACEHOLDER}"
+              data-src="${dataSrc}"
+              data-product-img="true"
+              alt="${name}">
           </div>
           <div class="product-card__body">
             <h3>${name}</h3>
@@ -694,6 +745,7 @@ const renderProductGrid = (grid) => {
     .join("");
 
   grid.innerHTML = markup;
+  lazyLoadProductImages();
 };
 
 if (productsData.length && productGrids.length) {
