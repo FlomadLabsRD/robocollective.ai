@@ -2551,13 +2551,14 @@ html.contact-modal-open {
 
 .offer-tiles__list {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: 0;
   color: var(--text-muted);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  align-self: stretch;
-  text-align: left;
+  align-items: center;
+  list-style-position: inside;
+  text-align: center;
 }
 
 .offer-tiles__list li {
