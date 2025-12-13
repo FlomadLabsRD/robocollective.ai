@@ -2540,6 +2540,8 @@ html.contact-modal-open {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  align-items: center;
+  text-align: center;
 }
 
 .offer-tiles__card h3 {
@@ -2554,6 +2556,8 @@ html.contact-modal-open {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  align-self: stretch;
+  text-align: left;
 }
 
 .offer-tiles__list li {
@@ -2562,6 +2566,7 @@ html.contact-modal-open {
 
 .offer-tiles__actions {
   margin-top: auto;
+  width: 100%;
 }
 
 .offer-tiles .button--primary {
