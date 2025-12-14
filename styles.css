@@ -1854,8 +1854,8 @@ html.contact-modal-open {
 }
 
 .shop-product__meta {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 1.1rem;
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1864,14 +1864,8 @@ html.contact-modal-open {
 }
 
 .shop-product__meta li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.shop-product__meta li::before {
-  content: "-";
-  color: var(--text-muted);
+  display: list-item;
+  align-items: flex-start;
 }
 
 .shop-product__actions {
