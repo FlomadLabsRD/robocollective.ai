@@ -20,6 +20,13 @@
   --meet-caipo-background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.25), rgba(0, 0, 0, 0.35)) no-repeat, rgba(15, 23, 42, 0.7);
   --highlights-background: rgba(255, 255, 255, 0.04);
   --hero-overlay: linear-gradient(120deg, rgba(15, 23, 42, 0.25), rgba(15, 23, 42, 0.9));
+  --cookie-consent-bg: linear-gradient(135deg, rgba(6, 11, 27, 0.95), rgba(15, 23, 42, 0.95));
+  --cookie-consent-border: rgba(255, 255, 255, 0.08);
+  --cookie-consent-shadow: 0 25px 60px rgba(15, 23, 42, 0.65);
+  --cookie-consent-text: rgba(255, 255, 255, 0.92);
+  --cookie-consent-body: rgba(255, 255, 255, 0.85);
+  --cookie-consent-link: #c5c9ff;
+  --cookie-consent-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
   --dropdown-background: rgba(31, 41, 55, 0.95);
   --dropdown-hover: rgba(255, 255, 255, 0.05);
   --dropdown-border: rgba(255, 255, 255, 0.08);
@@ -96,6 +103,13 @@
   --meet-caipo-background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15), rgba(255, 255, 255, 0.9));
   --highlights-background: rgba(255, 255, 255, 0.9);
   --hero-overlay: linear-gradient(120deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.9));
+  --cookie-consent-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(226, 232, 240, 0.95));
+  --cookie-consent-border: rgba(15, 23, 42, 0.12);
+  --cookie-consent-shadow: 0 20px 55px rgba(15, 23, 42, 0.15);
+  --cookie-consent-text: rgba(15, 23, 42, 0.9);
+  --cookie-consent-body: rgba(15, 23, 42, 0.78);
+  --cookie-consent-link: #1d4ed8;
+  --cookie-consent-text-shadow: none;
   --dropdown-background: rgba(255, 255, 255, 0.95);
   --dropdown-hover: rgba(15, 23, 42, 0.1);
   --dropdown-border: rgba(15, 23, 42, 0.12);
@@ -1456,10 +1470,10 @@ html.contact-modal-open {
   width: min(92vw, 460px);
   padding: 1.25rem 1.5rem;
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(135deg, rgba(6, 11, 27, 0.95), rgba(15, 23, 42, 0.95));
-  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.65);
-  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--cookie-consent-border);
+  background: var(--cookie-consent-bg);
+  box-shadow: var(--cookie-consent-shadow);
+  color: var(--cookie-consent-text);
   font-size: 0.95rem;
   z-index: 250;
   flex-wrap: nowrap;
@@ -1469,14 +1483,14 @@ html.contact-modal-open {
   margin: 0;
   line-height: 1.5;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--cookie-consent-body);
   flex: 1;
   min-width: 200px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  text-shadow: var(--cookie-consent-text-shadow);
 }
 
 .cookie-consent__link {
-  color: #c5c9ff;
+  color: var(--cookie-consent-link);
   text-decoration: underline;
   font-weight: 600;
 }
