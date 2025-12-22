@@ -1496,16 +1496,25 @@ html.contact-modal-open {
   transform: translateY(-1px);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .cookie-consent {
     right: 1.25rem;
     left: 1.25rem;
     bottom: 1.5rem;
     max-width: none;
     min-width: auto;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
     gap: 0.9rem;
     width: calc(100% - 2.5rem);
+  }
+
+  .cookie-consent__body {
+    min-width: 0;
+  }
+
+  .cookie-consent__accept {
+    width: 100%;
   }
 }
 
@@ -2792,6 +2801,12 @@ html.contact-modal-open {
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .hero-content h1 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .hero-meta {

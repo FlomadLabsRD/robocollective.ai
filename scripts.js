@@ -661,13 +661,53 @@ const productCategoryIndex = productsData.reduce(
   {}
 );
 
+const normalizeProductName = (value) =>
+  (value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+// Curated homepage selection so robodogs and humanoids lead the grid.
+const FEATURED_PRODUCT_NAMES = [
+  "Robodog AlienGo",
+  "Robodog B2",
+  "Robodog (Go2/Go2-W)",
+  "Robodog Go1",
+  "Humanoid H1",
+  "Humanoid G1 (Base/EDU)",
+  "Humanoid Oli",
+  "Humanoid R1",
+];
+
 const allProductsSorted = [...productsData].sort((a, b) =>
   (a.name || "").localeCompare(b.name || "")
 );
 
+const featuredProducts = (() => {
+  if (!productsData.length) {
+    return [];
+  }
+  const picked = FEATURED_PRODUCT_NAMES.map((name) =>
+    productsData.find(
+      (item) => normalizeProductName(item.name) === normalizeProductName(name)
+    )
+  ).filter(Boolean);
+  if (!picked.length) {
+    return allProductsSorted;
+  }
+  const pickedSet = new Set(picked);
+  const fallback = allProductsSorted.filter((item) => !pickedSet.has(item));
+  return [...picked, ...fallback];
+})();
+
 const renderProductGrid = (grid) => {
   const category = (grid.dataset.productGrid || "all").toLowerCase();
-  const items = category === "all" ? allProductsSorted : productCategoryIndex[category] || [];
+  const items =
+    category === "featured"
+      ? featuredProducts
+      : category === "all"
+        ? allProductsSorted
+        : productCategoryIndex[category] || [];
   if (!items.length) {
     return;
   }
