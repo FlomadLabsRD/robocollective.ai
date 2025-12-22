@@ -2847,17 +2847,43 @@ html.contact-modal-open {
 }
 
 /* HubSpot form readability in dark theme */
-body:not(.theme-light) .hs-form,
-body:not(.theme-light) .hs-form fieldset,
-body:not(.theme-light) .hs-form legend,
-body:not(.theme-light) .hs-form label,
-body:not(.theme-light) .hs-form .hs-richtext,
-body:not(.theme-light) .hs-form .legal-consent-container {
+:root:not(.theme-light) #hubspot-form,
+:root:not(.theme-light) #hubspot-form .hs-form,
+:root:not(.theme-light) #hubspot-form .hs-form fieldset,
+:root:not(.theme-light) #hubspot-form .hs-form legend,
+:root:not(.theme-light) #hubspot-form .hs-form label,
+:root:not(.theme-light) #hubspot-form .hs-form p,
+:root:not(.theme-light) #hubspot-form .hs-form .hs-richtext,
+:root:not(.theme-light) #hubspot-form .hs-form .hs-richtext p,
+:root:not(.theme-light) #hubspot-form .hs-form .legal-consent-container,
+:root:not(.theme-light) #hubspot-form .hs-form .hs-error-msgs,
+:root:not(.theme-light) #hubspot-form .hs-form .hs-error-msgs label,
+:root:not(.theme-light) #hubspot-form .hs-form .inputs-list,
+:root:not(.theme-light) #hubspot-form .hs-form .inputs-list label {
   color: var(--secondary);
 }
 
-body:not(.theme-light) .hs-form .hs-input,
-body:not(.theme-light) .hs-form textarea,
-body:not(.theme-light) .hs-form select {
+:root:not(.theme-light) #hubspot-form .hs-form .hs-form-required {
+  color: #f87171;
+}
+
+/* HubSpot form readability in light theme */
+:root.theme-light #hubspot-form,
+:root.theme-light #hubspot-form .hs-form,
+:root.theme-light #hubspot-form .hs-form fieldset,
+:root.theme-light #hubspot-form .hs-form legend,
+:root.theme-light #hubspot-form .hs-form label,
+:root.theme-light #hubspot-form .hs-form p,
+:root.theme-light #hubspot-form .hs-form .hs-richtext,
+:root.theme-light #hubspot-form .hs-form .hs-richtext p,
+:root.theme-light #hubspot-form .hs-form .legal-consent-container,
+:root.theme-light #hubspot-form .hs-form .hs-error-msgs,
+:root.theme-light #hubspot-form .hs-form .hs-error-msgs label,
+:root.theme-light #hubspot-form .hs-form .inputs-list,
+:root.theme-light #hubspot-form .hs-form .inputs-list label {
   color: var(--secondary);
+}
+
+:root.theme-light #hubspot-form .hs-form .hs-form-required {
+  color: var(--red-600);
 }
