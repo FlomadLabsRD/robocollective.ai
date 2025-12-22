@@ -235,8 +235,26 @@ const applyLandingData = (landing = defaultLandingData) => {
   }
 };
 
-applyLandingData(defaultLandingData);
-setInterval(rotateHeroPhrase, 2800);
+const hasLandingContent =
+  heroPrefix ||
+  heroSuffix ||
+  heroLede ||
+  heroMetaContainer ||
+  serviceCards.length ||
+  processSteps.length ||
+  metricCards.length ||
+  caseCards.length ||
+  ctaHeading ||
+  ctaBody ||
+  ctaPrimaryAction ||
+  ctaSecondaryAction;
+
+if (hasLandingContent) {
+  applyLandingData(defaultLandingData);
+  if (heroDynamic) {
+    setInterval(rotateHeroPhrase, 2800);
+  }
+}
 
 const STRAPI_URL = (window.STRAPI_URL || "http://localhost:1337").replace(
   /\/$/,
@@ -301,7 +319,9 @@ const fetchLandingData = async () => {
   }
 };
 
-fetchLandingData();
+if (hasLandingContent) {
+  fetchLandingData();
+}
 
 const themeToggleButtons = document.querySelectorAll("[data-theme-toggle]");
 const THEME_STORAGE_KEY = "robocollective-theme";
