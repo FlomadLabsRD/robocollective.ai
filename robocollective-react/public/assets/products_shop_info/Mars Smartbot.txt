@@ -1,0 +1,35 @@
+[embed]https://youtu.be/8T2xnK0_30c?si=5Gg_nFXcRPt6QveP[/embed]
+
+RoboCo’s Mars Smartbot is a cutting‑edge autonomous delivery robot featuring advanced sensing and navigation technologies, engineered to deliver fast and efficient delivery services in diverse environments.
+
+Industry Leading 3D Smart Obstacle Avoidance for Safe and Precise Movement.
+-3D perception cameras
+-180 degrees visibility detection, no blind spots
+-Self-developed algorithms: AX-Memory, AX-Chaos multi-sensor fusion algorithm
+
+Smart Tray for Higher Automatic Efficiency
+Infrared sensor tray
+Modular detachable structure
+Smart light belt, 10+ lighting indication modes
+
+Adjustable Independent Suspension
+Precise Speed Control
+Fast and Smooth Delivery
+Remote Rapid Development of Mapping
+Multi-Task Dispatch
+
+Smooth AI Voice Interaction with a mic array and an AI speech chip.
+
+Robot Specs
+
+Robot Size: 58 x 49 x 129 (cm)
+Tray size: 43 x 40 (cm)
+Max payload: 40Kg
+Velocity: .3 - 1.2m/s
+Min passing space: 65cm
+Network: 4G/wifi
+Battery: 15Ah
+Operational Time: up to 10h
+Charging Time: 3h
+
+&nbsp;

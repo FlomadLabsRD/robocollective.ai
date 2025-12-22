@@ -1,0 +1,33 @@
+<iframe title="YouTube video player" src="https://www.youtube.com/embed/72WwXuuE72A?si=bQgVZeW6hnRHBOM7" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+This gripper adopts an innovative linear drive linkage design, with force-position control, large opening, light weight, power-off self-locking and support for ROS. As the end effector of a cooperative robotic arm, it is mainly used in fields such as loading and unloading, sorting, unmanned retail, teaching and research.
+
+<strong>Clamping force</strong>
+0-20N
+
+<strong>Clamping force adjustment accuracy</strong>
+±1N
+
+<strong>Repeatability</strong>
+±0.5mm
+
+<strong>Total travel</strong>
+0-70mm
+
+<strong>Full closing time</strong>
+1.3s
+
+<strong>Weight</strong>
+231g
+
+<strong>Communication interface</strong>
+RS485
+
+<strong>Working voltage</strong>
+24V DC±10％
+
+<strong>Peak current</strong>
+0.7A
+
+<strong>Protection level</strong>
+IP40
