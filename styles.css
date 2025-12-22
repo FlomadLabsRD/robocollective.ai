@@ -155,7 +155,8 @@ a:focus-visible {
 
 .site-nav {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 0.5rem 0 1.5rem;
   position: relative;
@@ -587,7 +588,8 @@ a:focus-visible {
 
 .hero-meta {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.75rem;
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -843,7 +845,8 @@ a:focus-visible {
   inset: 0;
   z-index: 105;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -1079,7 +1082,8 @@ html.contact-modal-open {
   border-radius: 16px;
   background: var(--card-figure-background);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px var(--card-figure-border);
@@ -1445,7 +1449,8 @@ html.contact-modal-open {
   right: 2rem;
   bottom: 2rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 1.25rem;
   min-width: 340px;
   max-width: 460px;
@@ -1488,6 +1493,7 @@ html.contact-modal-open {
   letter-spacing: 0.02em;
   font-weight: 700;
   box-shadow: 0 20px 40px rgba(21, 128, 61, 0.32);
+  align-self: flex-start;
   white-space: nowrap;
 }
 
@@ -1582,7 +1588,8 @@ html.contact-modal-open {
   border-radius: 20px;
   background: var(--card-figure-background);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px var(--card-figure-border);
@@ -2492,7 +2499,8 @@ html.contact-modal-open {
 
 .category-sort {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.75rem;
 }
 
@@ -2608,7 +2616,8 @@ html.contact-modal-open {
   background: var(--panel-background);
   padding: 1rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
 }
 
