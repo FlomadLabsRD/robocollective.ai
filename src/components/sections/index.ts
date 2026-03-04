@@ -8,3 +8,4 @@ export * from './Footer';
 export * from './about';
 export * from './shop';
 export * from './contact';
+export * from './product';

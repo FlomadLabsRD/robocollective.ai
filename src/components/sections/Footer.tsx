@@ -1,6 +1,7 @@
 "use client";
 
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google';
+import Image from "next/image";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] });
@@ -15,7 +16,7 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-2 mb-6">
-                            <div className="w-8 h-8 rounded-md bg-[#00DBFF]" />
+                            <Image src="/assets/logo-dark.png" alt="RoboCollective Logo" width={32} height={32} className="w-8 h-8 object-contain" />
                             <span className={`${spaceGrotesk.className} text-xl font-bold tracking-tight`}>ROBOCOLLECTIVE</span>
                         </div>
                         <p className="text-neutral-400 max-w-sm mb-8">
@@ -49,7 +50,7 @@ export function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-neutral-500">
-                    <p>© {new Date().getFullYear()} RoboCollective. All rights reserved.</p>
+                    <p> {new Date().getFullYear()} RoboCollective.</p>
                     <div className="flex items-center gap-6 mt-4 md:mt-0">
                         <a href="https://robocollective.ai/about.html#privacy" className="hover:text-white transition-colors">Privacy</a>
                         <a href="https://robocollective.ai/about.html#terms" className="hover:text-white transition-colors">Terms</a>

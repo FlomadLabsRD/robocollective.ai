@@ -35,7 +35,7 @@ const products = [
         icon: <Dog className="w-6 h-6 text-black" />,
         image: "https://www.robocollective.ai/assets/products_shop_images/Robodog_B2.png",
         microCopy: "UNITREE_B2_REV4",
-        className: "md:col-span-2 md:row-span-2 bg-neutral-900 border-white/5",
+        className: "bg-neutral-900 border-white/5",
         glow: "from-cyan-500/20 to-transparent",
         largeText: true,
         specs: [
@@ -49,7 +49,7 @@ const products = [
         icon: <User className="w-6 h-6 text-black" />,
         image: "https://www.robocollective.ai/assets/products_shop_images/Humanoid_H1_1.png",
         microCopy: "BIPEDAL_CTRL_SYS",
-        className: "md:col-span-1 md:row-span-1 bg-neutral-900 border-white/5",
+        className: "bg-neutral-900 border-white/5",
         glow: "from-blue-500/20 to-transparent",
         specs: [
             { label: "Platform", value: "Bipedal", icon: <Activity className="w-4 h-4 text-neutral-400" /> },
@@ -61,7 +61,7 @@ const products = [
         icon: <Plane className="w-6 h-6 text-black" />,
         image: "https://www.robocollective.ai/assets/products_shop_images/flapper-nimble-starter-kit_1.png",
         microCopy: "AERIAL_INTEL_ON",
-        className: "md:col-span-1 md:row-span-1 bg-neutral-900 border-white/5",
+        className: "bg-neutral-900 border-white/5",
         glow: "from-white/10 to-transparent",
         specs: [
             { label: "Flight", value: "45m", icon: <Battery className="w-4 h-4 text-neutral-400" /> },
@@ -73,7 +73,7 @@ const products = [
         icon: <ConciergeBell className="w-6 h-6 text-black" />,
         image: "https://www.robocollective.ai/assets/products_shop_images/Robodog__Go2Go2-W__1.png",
         microCopy: "LIDAR_NAV_OK",
-        className: "md:col-span-1 md:row-span-1 bg-neutral-900 border-white/5",
+        className: "bg-neutral-900 border-white/5",
         glow: "from-emerald-500/10 to-transparent",
         specs: [
             { label: "Autonomy", value: "Lvl 4", icon: <Zap className="w-4 h-4 text-neutral-400" /> },
@@ -85,7 +85,7 @@ const products = [
         icon: <Truck className="w-6 h-6 text-black" />,
         image: "https://www.robocollective.ai/assets/products_shop_images/Robodog_Go1_1.png",
         microCopy: "OMNI_WHEEL_DRV",
-        className: "md:col-span-1 md:row-span-1 bg-neutral-900 border-white/5",
+        className: "bg-neutral-900 border-white/5",
         glow: "from-orange-500/15 to-transparent",
         specs: [
             { label: "Mobility", value: "Omni", icon: <Activity className="w-4 h-4 text-neutral-400" /> },
@@ -97,7 +97,7 @@ const products = [
         icon: <Factory className="w-6 h-6 text-black" />,
         image: "https://www.robocollective.ai/assets/products_shop_images/Robotic_Arm__RM65-B.png",
         microCopy: "6_AXIS_PRECISION",
-        className: "md:col-span-2 md:row-span-1 bg-neutral-900 border-[#00DBFF]/20",
+        className: "bg-neutral-900 border-[#00DBFF]/20",
         glow: "from-[#00DBFF]/20 to-transparent",
         specs: [
             { label: "Payload", value: "12kg+", icon: <Weight className="w-4 h-4 text-[#00DBFF]" /> },
@@ -109,7 +109,7 @@ const products = [
         icon: <BookOpen className="w-6 h-6 text-black" />,
         image: "https://www.robocollective.ai/assets/products_shop_images/Humanoid_G1__BaseEDU__1.png",
         microCopy: "OPEN_API_READY",
-        className: "md:col-span-1 md:row-span-1 bg-neutral-900 border-white/5",
+        className: "bg-neutral-900 border-white/5",
         glow: "from-purple-500/15 to-transparent",
         specs: [
             { label: "API", value: "Open", icon: <Cpu className="w-4 h-4 text-neutral-400" /> },
@@ -120,7 +120,7 @@ const products = [
         description: "Unique platforms, niche applications, and interchangeable sensors.",
         icon: <Wrench className="w-6 h-6 text-black" />,
         microCopy: "UNIVERSAL_MNT",
-        className: "md:col-span-1 md:row-span-1 bg-neutral-900 border-white/5",
+        className: "bg-neutral-900 border-white/5",
         glow: "from-white/5 to-transparent",
         specs: [
             { label: "Mount", value: "Universal", icon: <Shield className="w-4 h-4 text-neutral-400" /> },
@@ -160,7 +160,7 @@ export function BentoProducts() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-4 gap-4"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
                 >
                     {products.map((product, index) => (
                         <motion.div
@@ -173,7 +173,7 @@ export function BentoProducts() {
                                 border border-white/5 overflow-hidden
                                 transition-all duration-500 ease-out
                                 hover:border-white/20
-                                flex flex-col min-h-[350px] md:min-h-[400px]
+                                flex flex-col min-h-[450px] md:min-h-[500px]
                                 ${product.className}
                             `}
                         >
@@ -213,7 +213,7 @@ export function BentoProducts() {
 
                             {/* Layered Text Overlays (Reverted layout) */}
                             <motion.div
-                                className="absolute inset-0 z-20 p-6 md:p-8 flex flex-col justify-between"
+                                className="relative z-20 p-6 md:p-8 flex flex-col justify-between h-full"
                             >
                                 <div className="flex justify-between items-start mb-2 relative">
                                     <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
@@ -240,29 +240,33 @@ export function BentoProducts() {
                                     <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-white transition-colors transform group-hover:-rotate-45 duration-300" />
                                 </div>
 
-                                <div className="mt-auto max-w-[70%]">
-                                    <h3 className={`${spaceGrotesk.className} ${product.largeText ? 'text-2xl md:text-4xl' : 'text-xl md:text-3xl'} font-bold mb-3 tracking-tight text-white drop-shadow-md`}>
+                                <div className="mt-auto w-full transition-all duration-500 rounded-2xl p-5 border border-transparent group-hover:bg-black/60 group-hover:backdrop-blur-xl group-hover:border-white/10 group-hover:shadow-2xl">
+                                    <h3 className={`${spaceGrotesk.className} ${product.largeText ? 'text-2xl md:text-3xl lg:text-3xl' : 'text-xl md:text-2xl'} font-bold tracking-tight text-white drop-shadow-md`}>
                                         {product.title}
                                     </h3>
-                                    <p className="hidden md:block text-neutral-300 text-sm mb-4 leading-relaxed line-clamp-3 drop-shadow-md">
-                                        {product.description}
-                                    </p>
 
-                                    {product.specs.length > 0 && (
-                                        <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
-                                            {product.specs.map((spec, idx) => (
-                                                <div key={idx} className={`${jetbrainsMono.className} flex items-center gap-1 md:gap-2 bg-black/60 backdrop-blur-md px-2 md:px-3 py-1.5 rounded-full text-[10px] md:text-xs font-medium border border-white/10`}>
-                                                    <span className="text-white">{spec.icon}</span>
-                                                    <span className="text-neutral-400 hidden sm:inline">{spec.label}: </span><span className="text-white font-bold">{spec.value}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
+                                    {/* Revealable Content */}
+                                    <div className="max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-h-[500px] group-hover:opacity-100 group-hover:mt-4">
+                                        <p className="text-neutral-300 text-sm mb-4 leading-relaxed drop-shadow-md">
+                                            {product.description}
+                                        </p>
 
-                                    {/* View Details CTA Button - Fill on hover */}
-                                    <button className={`${jetbrainsMono.className} flex w-fit items-center gap-2 px-4 py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#00DBFF] border border-[#00DBFF]/50 rounded-full group-hover:bg-[#00DBFF] group-hover:text-black group-hover:border-[#00DBFF] group-hover:shadow-[0_0_15px_rgba(0,219,255,0.4)] transition-all duration-300`}>
-                                        View Details <ArrowRight className="w-3 h-3 transform group-hover:translate-x-1 transition-transform" />
-                                    </button>
+                                        {product.specs.length > 0 && (
+                                            <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
+                                                {product.specs.map((spec, idx) => (
+                                                    <div key={idx} className={`${jetbrainsMono.className} flex items-center gap-1 md:gap-2 bg-black/60 backdrop-blur-md px-2 md:px-3 py-1.5 rounded-full text-[10px] md:text-xs font-medium border border-white/10`}>
+                                                        <span className="text-white">{spec.icon}</span>
+                                                        <span className="text-neutral-400 hidden sm:inline">{spec.label}: </span><span className="text-white font-bold">{spec.value}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* View Details CTA Button - Fill on hover */}
+                                        <button className={`${jetbrainsMono.className} flex w-fit items-center gap-2 px-4 py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#00DBFF] border border-[#00DBFF]/50 rounded-full group-hover:bg-[#00DBFF] group-hover:text-black group-hover:border-[#00DBFF] group-hover:shadow-[0_0_15px_rgba(0,219,255,0.4)] transition-all duration-300`}>
+                                            View Details <ArrowRight className="w-3 h-3 transform group-hover:translate-x-1 transition-transform" />
+                                        </button>
+                                    </div>
                                 </div>
                             </motion.div>
 

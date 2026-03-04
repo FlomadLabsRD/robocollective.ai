@@ -4,10 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
     { name: "About", href: "/about" },
-    { name: "Shop", href: "/shop" },
+    { name: "Products", href: "/products" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
     { name: "Internships", href: "https://hephaestus.international/", external: true },
@@ -42,7 +43,7 @@ export function Nav() {
 
                 {/* Logo */}
                 <Link href="/" className="relative z-50 flex items-center gap-2 group">
-                    <div className="w-8 h-8 bg-gradient-to-tr from-[#00DBFF] to-blue-500 rounded-sm transform group-hover:rotate-12 transition-transform duration-300" />
+                    <Image src="/assets/logo-dark.png" alt="RoboCollective Logo" width={32} height={32} className="w-8 h-8 object-contain transform group-hover:rotate-12 transition-transform duration-300" />
                     <span className="text-xl font-bold tracking-tight text-white uppercase">
                         Robo<span className="text-neutral-400">Collective</span>
                     </span>

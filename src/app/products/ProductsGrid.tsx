@@ -1,12 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { useRef, MouseEvent, useState, useEffect } from "react";
+import { useRef, MouseEvent } from "react";
 
-// --- Categories (Tabs) Data ---
+// Reuse categories and catalogData from ShopCategories but flatten the data
 const categories = [
+    { id: "all", title: "All Products", color: "from-neutral-400 to-neutral-600" },
     { id: "drones", title: "Nimble Drones", color: "from-sky-400 to-blue-600" },
     { id: "educational", title: "Educational Robots", color: "from-emerald-400 to-teal-600" },
     { id: "industrial", title: "Industrial Robots", color: "from-orange-400 to-red-600" },
@@ -14,7 +16,6 @@ const categories = [
     { id: "specialty", title: "Specialty Robots", color: "from-pink-400 to-rose-600" }
 ];
 
-// --- Mock Product Data organized by Sub-categories ---
 const catalogData: Record<string, { id: string, title: string, products: any[] }[]> = {
     drones: [
         {
@@ -98,66 +99,19 @@ const catalogData: Record<string, { id: string, title: string, products: any[] }
     ]
 };
 
-// --- Spotlight Main Tab Component ---
-function CategoryTab({
-    category,
-    isActive,
-    onClick
-}: {
-    category: typeof categories[0],
-    isActive: boolean,
-    onClick: () => void
-}) {
-    const tabRef = useRef<HTMLButtonElement>(null);
-    const mouseX = useRef(0);
-    const mouseY = useRef(0);
+// Flatten all products into a single list
+const allProducts = Object.entries(catalogData).flatMap(([categoryId, subCategories]) =>
+    subCategories.flatMap(sub =>
+        sub.products.map(product => ({
+            ...product,
+            categoryId,
+            colorClass: categories.find(c => c.id === categoryId)?.color || categories[0].color,
+            subCategoryTitle: sub.title
+        }))
+    )
+);
 
-    const handleMouseMove = ({ clientX, clientY }: MouseEvent) => {
-        if (!tabRef.current) return;
-        const { left, top } = tabRef.current.getBoundingClientRect();
-        mouseX.current = clientX - left;
-        mouseY.current = clientY - top;
-        tabRef.current.style.setProperty("--mouse-x", `${mouseX.current}px`);
-        tabRef.current.style.setProperty("--mouse-y", `${mouseY.current}px`);
-    };
-
-    return (
-        <motion.button
-            ref={tabRef}
-            onClick={onClick}
-            onMouseMove={handleMouseMove}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className={`
-                group relative overflow-hidden rounded-xl border p-4 text-left transition-all duration-300 flex-1 min-w-[200px]
-                ${isActive
-                    ? 'bg-neutral-800/80 border-white/20 shadow-lg'
-                    : 'bg-neutral-900/50 border-neutral-800 hover:border-neutral-600'
-                }
-            `}
-        >
-            {/* Spotlight Hover Effect */}
-            <div
-                className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{
-                    background: "radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.08), transparent 40%)"
-                }}
-            />
-
-            {/* Glowing Accent Line */}
-            <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${category.color} ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-50'} transition-opacity duration-300`} />
-
-            <div className="relative z-10 flex items-center justify-between">
-                <span className={`font-bold ${isActive ? 'text-white' : 'text-neutral-400 group-hover:text-neutral-200'} transition-colors duration-300`}>
-                    {category.title}
-                </span>
-            </div>
-        </motion.button>
-    );
-}
-
-// --- Product Card Component ---
-function ProductCard({ product, colorClass }: { product: any, colorClass: string }) {
+function ProductCard({ product }: { product: any }) {
     const cardRef = useRef<HTMLDivElement>(null);
     const mouseX = useRef(0);
     const mouseY = useRef(0);
@@ -178,11 +132,12 @@ function ProductCard({ product, colorClass }: { product: any, colorClass: string
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
+            className="flex"
         >
             <div
                 ref={cardRef}
                 onMouseMove={handleMouseMove}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-[#0a0a0a] border border-neutral-800 p-8 h-full min-h-[320px] hover:border-neutral-700 transition-colors duration-500 cursor-pointer"
+                className="group w-full relative flex flex-col justify-between overflow-hidden rounded-2xl bg-[#0a0a0a] border border-neutral-800 p-8 hover:border-neutral-700 transition-colors duration-500 cursor-pointer"
             >
                 {/* Spotlight Hover Effect */}
                 <div
@@ -194,9 +149,12 @@ function ProductCard({ product, colorClass }: { product: any, colorClass: string
 
                 <div className="relative z-10">
                     <div className="flex justify-between items-start mb-6">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br ${colorClass} bg-opacity-10`}>
+                        <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br ${product.colorClass} bg-opacity-10`}>
                             <div className="w-4 h-4 rounded-full bg-white opacity-90 shadow-lg" />
                         </div>
+                        <span className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500 bg-neutral-900 border border-neutral-800 px-3 py-1 rounded-full">
+                            {product.subCategoryTitle}
+                        </span>
                     </div>
 
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#00DBFF] transition-colors duration-300">
@@ -217,85 +175,57 @@ function ProductCard({ product, colorClass }: { product: any, colorClass: string
     );
 }
 
-// --- Main Container ---
-export function ShopCategories() {
-    const [activeMainTab, setActiveMainTab] = useState(categories[0].id);
-    const [activeSubTab, setActiveSubTab] = useState("");
+export function ProductsGrid() {
+    const [activeFilter, setActiveFilter] = useState("all");
 
-    // Initialize sub-tab when main tab changes
-    useEffect(() => {
-        const subCategories = catalogData[activeMainTab];
-        if (subCategories && subCategories.length > 0) {
-            setActiveSubTab(subCategories[0].id);
-        } else {
-            setActiveSubTab(""); // Clear sub-tab if no sub-categories
-        }
-    }, [activeMainTab]);
-
-    const activeMainCategoryData = categories.find(c => c.id === activeMainTab);
-    const subCategories = catalogData[activeMainTab] || [];
-
-    // Get the products for the currently selected sub-category
-    const currentSubCategory = subCategories.find(sub => sub.id === activeSubTab);
-    const currentProducts = currentSubCategory ? currentSubCategory.products : [];
+    // Filter products based on selected tab
+    const filteredProducts = activeFilter === "all"
+        ? allProducts
+        : allProducts.filter(p => p.categoryId === activeFilter);
 
     return (
         <section className="relative w-full py-24 px-6 md:px-12 lg:px-24 bg-black min-h-screen">
             <div className="max-w-7xl mx-auto flex flex-col gap-12">
 
-                {/* Main Category Tabs Array */}
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-4">
+                <div className="flex flex-col gap-4">
+                    <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
+                        Hardware <span className="text-neutral-500">Catalog</span>
+                    </h2>
+                    <p className="text-neutral-400 max-w-2xl">
+                        Filter by category to explore specific robotics solutions ranging from educational kits to industrial arms.
+                    </p>
+                </div>
+
+                {/* Filter Tabs */}
+                <div className="sticky top-[80px] z-40 bg-black/80 backdrop-blur-md py-4 px-6 -mx-6 md:px-12 md:-mx-12 lg:px-24 lg:-mx-24 flex flex-wrap items-center gap-3 border-b border-neutral-800 mb-8 shadow-2xl">
                     {categories.map((category) => (
-                        <CategoryTab
+                        <button
                             key={category.id}
-                            category={category}
-                            isActive={activeMainTab === category.id}
-                            onClick={() => setActiveMainTab(category.id)}
-                        />
+                            onClick={() => setActiveFilter(category.id)}
+                            className={`px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 border
+                                ${activeFilter === category.id
+                                    ? `bg-white text-black border-transparent shadow-[0_0_30px_rgba(255,255,255,0.1)]`
+                                    : 'bg-transparent text-neutral-400 border-neutral-800 hover:border-neutral-600 hover:text-white'
+                                }
+                            `}
+                        >
+                            {category.title}
+                        </button>
                     ))}
                 </div>
 
-                {/* Sub-Category section */}
-                {subCategories.length > 0 && (
-                    <div className="border border-neutral-800 rounded-2xl bg-neutral-900/40 p-6 backdrop-blur-sm">
+                {/* Products Grid */}
+                <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <AnimatePresence mode="popLayout">
+                        {filteredProducts.map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
+                    </AnimatePresence>
+                </motion.div>
 
-                        <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8 justify-between">
-                            <h2 className="text-2xl font-bold text-white uppercase tracking-tight">
-                                {activeMainCategoryData?.title}
-                            </h2>
-
-                            {/* Sub-category Pills */}
-                            <div className="flex flex-wrap gap-2">
-                                {subCategories.map((sub) => (
-                                    <button
-                                        key={sub.id}
-                                        onClick={() => setActiveSubTab(sub.id)}
-                                        className={`px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300
-                                            ${activeSubTab === sub.id
-                                                ? 'bg-white text-black shadow-md'
-                                                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white'
-                                            }
-                                        `}
-                                    >
-                                        {sub.title}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Animated Products Display */}
-                        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <AnimatePresence mode="popLayout">
-                                {currentProducts.map((product) => (
-                                    <ProductCard
-                                        key={product.id}
-                                        product={product}
-                                        colorClass={activeMainCategoryData?.color || "from-neutral-400 to-neutral-600"}
-                                    />
-                                ))}
-                            </AnimatePresence>
-                        </motion.div>
-
+                {filteredProducts.length === 0 && (
+                    <div className="py-20 text-center text-neutral-500">
+                        No products found for this category.
                     </div>
                 )}
             </div>
