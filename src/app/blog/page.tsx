@@ -14,14 +14,14 @@ const posts = [
         excerpt: "Restaurants streamline delivery, inventory, and customer experience with automation that understands service flow. We break down how robotics paired with predictive staffing keeps food on time and guests delighted.",
         category: "Industry Insights",
         date: "September 25, 2025",
-        href: "https://robocollective.ai/blog/how-robots-help-restaurants-cut-costs.html",
+        href: "/blog/how-robots-help-restaurants-cut-costs",
     },
     {
         title: "Robot Rental for Events: Elevate Experiences with Cutting-Edge Robotics",
         excerpt: "Interactive robots forge unforgettable moments whether you are hosting university showcases, grand openings, or entertainment launches. Learn how rental fleets can flex with every venue.",
         category: "Use Cases",
         date: "August 8, 2025",
-        href: "https://robocollective.ai/blog/robot-rental-for-events.html",
+        href: "/blog/robot-rental-for-events",
     }
 ];
 
@@ -58,8 +58,8 @@ export default function BlogPage() {
                             <motion.a
                                 key={index}
                                 href={post.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                
+                                
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 + 0.3, duration: 0.5 }}

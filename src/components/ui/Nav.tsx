@@ -8,7 +8,6 @@ import Image from "next/image";
 
 const navLinks = [
     { name: "About", href: "/about" },
-    { name: "Products", href: "/products" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
     { name: "Internships", href: "https://hephaestus.international/", external: true },

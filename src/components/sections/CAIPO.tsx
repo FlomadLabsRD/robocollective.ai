@@ -1,7 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 
 export function CAIPO() {
     return (
@@ -24,12 +23,11 @@ export function CAIPO() {
                         href="https://caipo-new-website.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 mt-6 text-[#00DBFF] font-semibold hover:underline"
+                        className="inline-flex items-center gap-2 mt-8 px-8 py-4 text-sm font-bold uppercase tracking-widest text-black bg-[#00DBFF] rounded-full hover:bg-white transition-colors duration-300"
                     >
                         Learn more about CAIPO
                     </a>
                 </motion.div>
-
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -39,29 +37,26 @@ export function CAIPO() {
                 />
             </div>
 
-            {/* Right Content - 3D Spline */}
+            {/* Right Content - CAIPO Image */}
             <div className="w-full md:w-1/2 h-[50vh] md:h-screen relative flex items-center justify-center mt-12 md:mt-0">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#00DBFF]/10 blur-[100px] rounded-full pointer-events-none" />
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.2 }}
-                    className="absolute inset-0 w-full h-full pointer-events-auto cursor-grab active:cursor-grabbing"
+                    transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                    className="relative z-10 w-[340px] md:w-[480px] lg:w-[580px] drop-shadow-[0_0_80px_rgba(0,219,255,0.2)]"
                 >
-                    {/* Spline iframe embed - 100% crash proof alternative to @splinetool/react-spline */}
-                    <iframe
-                        src="https://my.spline.design/iWYqI71r83hJvW67/"
-                        frameBorder="0"
-                        width="100%"
-                        height="100%"
-                        className="absolute inset-0 w-full h-full"
+                    <Image
+                        src="/assets/CAIPO_Wearable.webp"
+                        alt="CAIPO Wearable Device"
+                        width={440}
+                        height={600}
+                        className="w-full h-auto object-contain"
+                        priority
                     />
                 </motion.div>
-
-                {/* Subtle Glow behind the model */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#00DBFF]/10 blur-[100px] rounded-full pointer-events-none" />
             </div>
-
         </section>
     );
 }

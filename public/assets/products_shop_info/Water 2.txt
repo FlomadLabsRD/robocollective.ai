@@ -1,0 +1,51 @@
+<iframe title="YouTube video player" src="https://www.youtube.com/embed/Sxr_brx59Jg?si=_M03p9HDmMjDDoxN" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+Water 2 Mobile Chassis is a wheeled robot platform with complete and mature perception, cognition and positioning navigation capabilities. It has strong anti-overturning ability, supports in situ rotation, adopts the robot CAN communication protocol and has super-strong positioning and anti-interference capabilities, autonomous path planning, autonomous obstacle avoidance, and multiple secondary research and development support capabilities.
+
+<strong>Navigation mode</strong>
+Laser navigation
+
+<strong>Size</strong>
+diameter 505 mm x height 280 mm
+
+<strong>Self-weight</strong>
+45kg
+
+<strong>Rated load</strong>
+50kg
+
+<strong>Maximum load</strong>
+80 kg flat
+
+<strong>Rotation radius</strong>
+252.5mm
+
+<strong>Maximum speed</strong>
+1m/s
+
+<strong>Maximum threshold-crossing</strong>
+18mm
+
+<strong>Maximum climbing</strong>
+10°
+
+<strong>Maximum ditch-crossing</strong>
+30mm
+.
+<strong>Minimum passing distance</strong>
+70cm
+
+<strong>Movement accuracy</strong>
+±5cm
+
+<strong>Battery capacity</strong>
+25.2V，32Ah
+
+<strong>Control interface</strong>
+TCP socket (Ethernet/WiFi)
+
+<strong>Sensors</strong>
+LiDAR, 3D visual sensor, ultrasonic sensor, attitude sensor, infrared sensor, collision avoidance sensor
+
+<strong>Function</strong>
+Scan to create images and automatically recharge

@@ -1,0 +1,45 @@
+<iframe title="YouTube video player" src="https://www.youtube.com/embed/kbytZ9WvS4U?si=Kp3KHYTLG99CBOQs" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+This five-finger dexterous hand, also known as the piano hand, moves quickly and has a slightly smaller grip. It has an integrated force sensor, 6 degrees of freedom, 12 motion joints and supports ROS. It can simulate complex movements like playing the piano and guessing boxing by combining it with a force-position hybrid control algorithm.
+
+<strong>Control interface</strong>
+RS485
+
+<strong>Degree of freedom</strong>
+6
+
+<strong>Number of joints</strong>
+12
+
+<strong>Weight</strong>
+530g
+
+<strong>Working voltage</strong>
+24V DC±10％
+
+<strong>Peak current</strong>
+2A
+
+<strong>Repeatability</strong>
+±0.2mm
+
+<strong>Maximum thumb grip</strong>
+15N
+
+<strong>Four-finger thumb grip</strong>
+10N
+
+<strong>Grip resolution</strong>
+0.5N
+
+<strong>Thumb lateral rotation range</strong>
+＞65°
+
+<strong>Thumb lateral swing speed</strong>
+107°/s
+
+<strong>Thumb bending speed</strong>
+70°/s
+
+<strong>Four-finger bending speed</strong>
+260°/s

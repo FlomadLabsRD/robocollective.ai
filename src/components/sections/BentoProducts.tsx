@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Battery, Weight, Factory, ShoppingCart, Cpu, Wrench, Shield, Zap, ArrowRight, Plane, BookOpen, ConciergeBell, Truck, Activity, User, Dog, Mountain, Box } from "lucide-react";
-import Image from "next/image";
+import { Battery, Weight, Factory, Cpu, Wrench, Shield, Zap, ArrowRight, Plane, BookOpen, ConciergeBell, Truck, Activity, User, Dog, Mountain } from "lucide-react";
+import { bentoCategoryImages } from "@/data/productImages";
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -33,7 +33,7 @@ const products = [
         title: "Quadruped Robots",
         description: "Agile, multi-terrain quadruped robots for exploration, inspection, and security.",
         icon: <Dog className="w-6 h-6 text-black" />,
-        image: "https://www.robocollective.ai/assets/products_shop_images/Robodog_B2.png",
+        image: bentoCategoryImages["Quadruped Robots"],
         microCopy: "UNITREE_B2_REV4",
         className: "bg-neutral-900 border-white/5",
         glow: "from-cyan-500/20 to-transparent",
@@ -47,7 +47,7 @@ const products = [
         title: "Humanoid Robots",
         description: "Bipedal platforms designed for general-purpose tasks and human environment interaction.",
         icon: <User className="w-6 h-6 text-black" />,
-        image: "https://www.robocollective.ai/assets/products_shop_images/Humanoid_H1_1.png",
+        image: bentoCategoryImages["Humanoid Robots"],
         microCopy: "BIPEDAL_CTRL_SYS",
         className: "bg-neutral-900 border-white/5",
         glow: "from-blue-500/20 to-transparent",
@@ -59,7 +59,7 @@ const products = [
         title: "Nimble Drones",
         description: "Flapping-wing drones, bundles, and accessories for agile aerial intelligence.",
         icon: <Plane className="w-6 h-6 text-black" />,
-        image: "https://www.robocollective.ai/assets/products_shop_images/flapper-nimble-starter-kit_1.png",
+        image: bentoCategoryImages["Nimble Drones"],
         microCopy: "AERIAL_INTEL_ON",
         className: "bg-neutral-900 border-white/5",
         glow: "from-white/10 to-transparent",
@@ -71,7 +71,7 @@ const products = [
         title: "Service Robots",
         description: "Hospitality, delivery, and customer-facing assistants.",
         icon: <ConciergeBell className="w-6 h-6 text-black" />,
-        image: "https://www.robocollective.ai/assets/products_shop_images/Robodog__Go2Go2-W__1.png",
+        image: bentoCategoryImages["Service Robots"],
         microCopy: "LIDAR_NAV_OK",
         className: "bg-neutral-900 border-white/5",
         glow: "from-emerald-500/10 to-transparent",
@@ -83,7 +83,7 @@ const products = [
         title: "AMRs & Chassis",
         description: "Autonomous mobile robots and versatile bases for heavy load transport.",
         icon: <Truck className="w-6 h-6 text-black" />,
-        image: "https://www.robocollective.ai/assets/products_shop_images/Robodog_Go1_1.png",
+        image: bentoCategoryImages["AMRs & Chassis"],
         microCopy: "OMNI_WHEEL_DRV",
         className: "bg-neutral-900 border-white/5",
         glow: "from-orange-500/15 to-transparent",
@@ -95,7 +95,7 @@ const products = [
         title: "Industrial Arms",
         description: "High-precision robotic arms for automation, inspection, and material handling.",
         icon: <Factory className="w-6 h-6 text-black" />,
-        image: "https://www.robocollective.ai/assets/products_shop_images/Robotic_Arm__RM65-B.png",
+        image: bentoCategoryImages["Industrial Arms"],
         microCopy: "6_AXIS_PRECISION",
         className: "bg-neutral-900 border-[#00DBFF]/20",
         glow: "from-[#00DBFF]/20 to-transparent",
@@ -107,7 +107,7 @@ const products = [
         title: "Educational",
         description: "Kits and companions for classrooms and advanced robotics labs.",
         icon: <BookOpen className="w-6 h-6 text-black" />,
-        image: "https://www.robocollective.ai/assets/products_shop_images/Humanoid_G1__BaseEDU__1.png",
+        image: bentoCategoryImages["Educational"],
         microCopy: "OPEN_API_READY",
         className: "bg-neutral-900 border-white/5",
         glow: "from-purple-500/15 to-transparent",
@@ -119,6 +119,7 @@ const products = [
         title: "Accessories",
         description: "Unique platforms, niche applications, and interchangeable sensors.",
         icon: <Wrench className="w-6 h-6 text-black" />,
+        image: bentoCategoryImages["Accessories"],
         microCopy: "UNIVERSAL_MNT",
         className: "bg-neutral-900 border-white/5",
         glow: "from-white/5 to-transparent",

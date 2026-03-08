@@ -1,0 +1,36 @@
+<h2 data-start="596" data-end="688"><iframe title="YouTube video player" src="https://www.youtube.com/embed/TRjefVQ9gT4?si=0CAKRbrMMtd0EBCs&amp;controls=0" width="185" height="335" frameborder="1" allowfullscreen="allowfullscreen"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>﻿</span><span data-mce-type="bookmark" p="">
+</span></iframe></h2>
+<h2 data-start="596" data-end="688">Mini Pi Bipedal Robot – High-Performance, Compact, and Cost-Effective Robotics Platform</h2>
+<p data-start="690" data-end="1020">The <strong data-start="694" data-end="719">Mini Pi Bipedal Robot</strong> is a next-generation humanoid platform built for <strong data-start="769" data-end="811">researchers, developers, and educators</strong> who need cutting-edge robotics at an affordable price. With <strong data-start="872" data-end="903">12 degrees of freedom (DOF)</strong> and precise joint actuation, it delivers stable, human-like walking and balance in a lightweight, portable design.</p>
+
+<h3 data-start="1022" data-end="1052">Key Features at a Glance</h3>
+<ul data-start="1053" data-end="1336">
+ 	<li data-start="1053" data-end="1114">
+<p data-start="1055" data-end="1114"><strong data-start="1055" data-end="1066">Height:</strong> 520 mm | <strong data-start="1076" data-end="1087">Weight:</strong> 7 kg (including battery)</p>
+</li>
+ 	<li data-start="1115" data-end="1149">
+<p data-start="1117" data-end="1149"><strong data-start="1117" data-end="1135">Load capacity:</strong> Up to 15 kg</p>
+</li>
+ 	<li data-start="1150" data-end="1189">
+<p data-start="1152" data-end="1189"><strong data-start="1152" data-end="1162">Speed:</strong> 1.5 m/s walking velocity</p>
+</li>
+ 	<li data-start="1190" data-end="1238">
+<p data-start="1192" data-end="1238"><strong data-start="1192" data-end="1204">Battery:</strong> 24V, 5000 mAh long-life battery</p>
+</li>
+ 	<li data-start="1239" data-end="1286">
+<p data-start="1241" data-end="1286"><strong data-start="1241" data-end="1255">Processor:</strong> High-performance RK3588S CPU</p>
+</li>
+ 	<li data-start="1287" data-end="1336">
+<p data-start="1289" data-end="1336"><strong data-start="1289" data-end="1297">DOF:</strong> 12 for advanced mobility and control</p>
+</li>
+</ul>
+<h3 data-start="1338" data-end="1364">Compact but Powerful</h3>
+<p data-start="1365" data-end="1632">Weighing only <strong data-start="1379" data-end="1387">7 kg</strong>, the Mini Pi is designed for <strong data-start="1417" data-end="1464">easy handling, transport, and classroom use</strong>. Despite its small size, it supports heavy loads and provides <strong data-start="1527" data-end="1548">high-speed motion</strong>, making it ideal for <strong data-start="1570" data-end="1629">AI algorithm training, robotics R&amp;D, and STEM education</strong>.</p>
+
+<h3 data-start="1634" data-end="1660">Ready for Developers</h3>
+<p data-start="1661" data-end="1923">The Mini Pi supports <strong data-start="1682" data-end="1725">secondary development and customization</strong> through an <strong data-start="1737" data-end="1749">open SDK</strong>, advanced IMUs, and motor controllers. This gives users full access to hardware and software for <strong data-start="1847" data-end="1920">locomotion research, AI learning, and human–robot interaction testing</strong>.</p>
+
+<h3 data-start="1925" data-end="1969">Built for Affordability and Innovation</h3>
+<p data-start="1970" data-end="2181">With its <strong data-start="1979" data-end="2046">cost-effective design, flexible integration, and high stability</strong>, the Mini Pi represents an ideal entry point for universities, startups, and research labs looking to expand into humanoid robotics.</p>
+<p data-start="2183" data-end="2251"><strong data-start="2183" data-end="2249">Mini Pi Bipedal Robot – where small size meets big innovation.</strong></p>
+&nbsp;

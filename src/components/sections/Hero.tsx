@@ -83,7 +83,7 @@ export function Hero() {
                             <div className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
                         </a>
 
-                        <a href="#contact" className="px-8 py-4 bg-transparent border border-neutral-600 text-white font-bold uppercase tracking-wider rounded-none hover:bg-white hover:text-black transition-all active:scale-95 text-sm md:text-base">
+                        <a href="/contact" className="px-8 py-4 bg-transparent border border-neutral-600 text-white font-bold uppercase tracking-wider rounded-none hover:bg-white hover:text-black transition-all active:scale-95 text-sm md:text-base">
                             Talk to an Expert
                         </a>
                     </motion.div>

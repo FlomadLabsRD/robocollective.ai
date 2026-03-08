@@ -1,0 +1,5 @@
+[embed]https://youtu.be/wSj6I31hyJs?si=Zw6yQmpxoA8pmhkj[/embed]
+
+RoboCo's Smart Forklift is an autonomous electric or diesel forklift capable of lifting 2 tons, featuring electromagnetic braking, intelligent navigation (SLAM), optimized routing, and collision avoidance, engineered for high-capacity logistics in warehousing, manufacturing, retail, and cold storage.
+
+&nbsp;

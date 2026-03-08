@@ -5,6 +5,19 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useRef, MouseEvent, useState, useEffect } from "react";
 
+// Product images: short paths under public/images/products/
+const PRODUCT_IMAGE: Record<string, string> = {
+  d1: "/images/products/d1.png", d2: "/images/products/d2.png", d3: "/images/products/d3.png",
+  d4: "/images/products/d4.png", d5: "/images/products/d5.png", d6: "/images/products/d6.png",
+  d7: "/images/products/d7.png", d8: "/images/products/d8.png", d9: "/images/products/d9.png",
+  d10: "/images/products/d10.png", d11: "/images/products/d11.png", d12: "/images/products/d12.png",
+  d13: "/images/products/d13.png", d14: "/images/products/d14.png",
+  g1: "/images/products/g1.png", e1: "/images/products/e1.png", e2: "/images/products/e2.png",
+  i1: "/images/products/i1.png", i2: "/images/products/i2.png", i3: "/images/products/i3.png",
+  s1: "/images/products/s1.png", s2: "/images/products/s2.png", s3: "/images/products/s3.png",
+  sp1: "/images/products/sp1.png", sp2: "/images/products/sp2.png",
+};
+
 // --- Categories (Tabs) Data ---
 const categories = [
     { id: "drones", title: "Nimble Drones", color: "from-sky-400 to-blue-600" },
@@ -19,22 +32,28 @@ const catalogData: Record<string, { id: string, title: string, products: any[] }
     drones: [
         {
             id: "kits", title: "Kits & Bundles", products: [
-                { id: "d1", name: "Nimble Base Kit", description: "Flight-ready Nimble drone with charger and spare wings. Perfect for live demos and immediate takeoff.", price: "$350" },
-                { id: "d2", name: "Nimble Starter Kit", description: "Everything in the base kit plus more wings and shells so teams can experiment longer.", price: "$500" },
-                { id: "d3", name: "Lighthouse Bundle", description: "Complete bundle with Lighthouse deck and base stations for precise indoor positioning.", price: "$850" }
+                { id: "d1", name: "Nimble Base Kit", description: "Flight-ready Nimble drone with charger and spare wings. Perfect for live demos, outreach, and immediate takeoff. Includes charger, spare set of wings, and protective shells; factory tuned hover with minimal setup.", price: "$350" },
+                { id: "d2", name: "Nimble Starter Kit", description: "Everything in the base kit plus more wings and shells so teams can experiment longer between maintenance cycles. Extra wing set and body shells included; ready for campus demos and small swarm pilots.", price: "$500" },
+                { id: "d3", name: "Nimble Lighthouse Bundle", description: "Complete bundle with Lighthouse deck and base stations for precise indoor positioning and repeatable trajectories. Includes Lighthouse deck and dual base stations; great for swarm coordination and waypoint flight.", price: "$850" }
             ]
         },
         {
-            id: "fleets", title: "Scale to Fleets", products: [
-                { id: "d4", name: "Base Multi Kit (2x)", description: "Two base kits for tandem flight experiments.", price: "$650" },
-                { id: "d5", name: "Nimble Swarm Bundle (x4)", description: "Scale to teaching labs with a 4x base kit bundle and unified charging dock.", price: "$1,200" }
+            id: "fleets", title: "Scale to Fleets and Teaching Labs", products: [
+                { id: "d4", name: "Base Multi Kit (2x)", description: "Two flight-ready Nimbles with spare wings, chargers, and shells so pairs can prototype quickly. Matched pair for mirrored experiments; includes shared tools for fast turnaround.", price: "$650" },
+                { id: "d9", name: "Base Multi Kit (3x)", description: "Three drones, spare wings, and chargers for small teams and formation trials. Great starter pack for lab courses; ships with extra wings and shells.", price: "$950" },
+                { id: "d5", name: "Nimble Swarm Bundle (x4)", description: "Four Nimbles, Lighthouse positioning gear, radios, and spares for swarm choreographies and indoor fleets. Includes Lighthouse positioning stack; four Crazyradio 2.0 links for multi-operator control.", price: "$1,200" }
             ]
         },
         {
-            id: "spares", title: "Spare Parts", products: [
-                { id: "d6", name: "Crazyradio 2.0", description: "Low latency long range radio dongle for sending commands.", price: "$40" },
-                { id: "d7", name: "Nimble Battery", description: "High capacity LiPo cell for extended flight times.", price: "$15" },
-                { id: "d8", name: "Wing Set", description: "Replacement flapping wings, perfectly balanced.", price: "$20" }
+            id: "spares", title: "Accessories and Spares", products: [
+                { id: "d6", name: "Crazyradio 2.0", description: "Low-latency radio link for commanding single drones or swarms.", price: "$40" },
+                { id: "d10", name: "Lighthouse Base Station", description: "Indoor positioning beacons for centimeter-level tracking.", price: "—" },
+                { id: "d11", name: "Lighthouse Support Kit", description: "Mounts, plates, and wiring to attach Lighthouse decks securely.", price: "—" },
+                { id: "d7", name: "Nimble Battery", description: "Stock up on extra flight packs to extend sorties.", price: "$15" },
+                { id: "d8", name: "Wing Set", description: "Replacement wings to keep every airframe ready for flight.", price: "$20" },
+                { id: "d12", name: "2.4 GHz Transmitter", description: "EdgeTX handheld transmitter for manual flight and training.", price: "—" },
+                { id: "d13", name: "FrSky Receiver", description: "Bind to your preferred transmitter for manual modes.", price: "—" },
+                { id: "d14", name: "Nimble Shells", description: "Fresh shells to refresh fleets after heavy use.", price: "—" }
             ]
         }
     ],
@@ -192,17 +211,33 @@ function ProductCard({ product, colorClass }: { product: any, colorClass: string
                     }}
                 />
 
-                <div className="relative z-10">
-                    <div className="flex justify-between items-start mb-6">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br ${colorClass} bg-opacity-10`}>
-                            <div className="w-4 h-4 rounded-full bg-white opacity-90 shadow-lg" />
+                <div className="relative z-10 flex flex-col h-full">
+                    {PRODUCT_IMAGE[product.id] ? (
+                        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-neutral-900 shrink-0">
+                            <img
+                                src={PRODUCT_IMAGE[product.id]}
+                                alt={product.name}
+                                className="w-full h-full object-contain"
+                            />
                         </div>
+                    ) : (
+                        <div className="flex justify-between items-start mb-4">
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br ${colorClass} bg-opacity-10`}>
+                                <div className="w-4 h-4 rounded-full bg-white opacity-90 shadow-lg" />
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="flex justify-between items-start mb-3">
+                        <span className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500 bg-neutral-900 border border-neutral-800 px-3 py-1 rounded-full">
+                            {product.subCategoryTitle}
+                        </span>
                     </div>
 
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#00DBFF] transition-colors duration-300">
                         {product.name}
                     </h3>
-                    <p className="text-neutral-400 text-sm leading-relaxed">
+                    <p className="text-neutral-400 text-sm leading-relaxed flex-1">
                         {product.description}
                     </p>
                 </div>
@@ -289,7 +324,7 @@ export function ShopCategories() {
                                 {currentProducts.map((product) => (
                                     <ProductCard
                                         key={product.id}
-                                        product={product}
+                                        product={{ ...product, subCategoryTitle: currentSubCategory?.title }}
                                         colorClass={activeMainCategoryData?.color || "from-neutral-400 to-neutral-600"}
                                     />
                                 ))}

@@ -34,7 +34,7 @@ export function RentResell() {
                             <p className="text-neutral-300 text-lg mb-8 max-w-sm leading-relaxed">
                                 Deploy advanced hardware for events, temporary projects, or pilot programs without the capital investment.
                             </p>
-                            <Link href="https://robocollective.ai/rent.html" className={`${jetbrainsMono.className} inline-flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-widest text-black bg-[#00DBFF] rounded-full hover:bg-white transition-colors duration-300`}>
+                            <Link href="/rent" className={`${jetbrainsMono.className} inline-flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-widest text-black bg-[#00DBFF] rounded-full hover:bg-white transition-colors duration-300`}>
                                 See more <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>
@@ -61,7 +61,7 @@ export function RentResell() {
                             <p className="text-neutral-300 text-lg mb-8 max-w-sm leading-relaxed">
                                 Ready to upgrade? We buy back and refurbish used robotics platforms to keep the ecosystem moving.
                             </p>
-                            <Link href="https://robocollective.ai/resell.html" className={`${jetbrainsMono.className} inline-flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-widest text-black bg-emerald-500 rounded-full hover:bg-white transition-colors duration-300`}>
+                            <Link href="/resell" className={`${jetbrainsMono.className} inline-flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-widest text-black bg-emerald-500 rounded-full hover:bg-white transition-colors duration-300`}>
                                 See more <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>
@@ -89,7 +89,7 @@ export function RentResell() {
                                 <li>• Rent your robot.</li>
                                 <li>• Sell your robot.</li>
                             </ul>
-                            <Link href="https://robocollective.ai/contact-us.html" className={`${jetbrainsMono.className} inline-flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-widest text-black bg-amber-500 rounded-full hover:bg-white transition-colors duration-300`}>
+                            <Link href="/contact" className={`${jetbrainsMono.className} inline-flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-widest text-black bg-amber-500 rounded-full hover:bg-white transition-colors duration-300`}>
                                 Request info and pricing <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>

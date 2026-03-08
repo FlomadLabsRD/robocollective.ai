@@ -29,10 +29,10 @@ export function Footer() {
                             Platform
                         </h4>
                         <ul className="space-y-4">
-                            <li><a href="https://robocollective.ai/shop.html" className="text-neutral-400 hover:text-white transition-colors">Shop</a></li>
+                            <li><a href="/" className="text-neutral-400 hover:text-white transition-colors">Shop</a></li>
                             <li><a href="https://caipo-new-website.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">CAIPO</a></li>
-                            <li><a href="https://robocollective.ai/rent.html" className="text-neutral-400 hover:text-white transition-colors">Rentals</a></li>
-                            <li><a href="https://robocollective.ai/resell.html" className="text-neutral-400 hover:text-white transition-colors">Resell Program</a></li>
+                            <li><a href="/rent" className="text-neutral-400 hover:text-white transition-colors">Rentals</a></li>
+                            <li><a href="/resell" className="text-neutral-400 hover:text-white transition-colors">Resell Program</a></li>
                         </ul>
                     </div>
 
@@ -41,9 +41,9 @@ export function Footer() {
                             Company
                         </h4>
                         <ul className="space-y-4">
-                            <li><a href="https://robocollective.ai/about.html" className="text-neutral-400 hover:text-white transition-colors">About</a></li>
-                            <li><a href="https://robocollective.ai/blog.html" className="text-neutral-400 hover:text-white transition-colors">Blog</a></li>
-                            <li><a href="https://robocollective.ai/contact-us.html" className="text-neutral-400 hover:text-white transition-colors">Contact</a></li>
+                            <li><a href="/about" className="text-neutral-400 hover:text-white transition-colors">About</a></li>
+                            <li><a href="/blog" className="text-neutral-400 hover:text-white transition-colors">Blog</a></li>
+                            <li><a href="/contact" className="text-neutral-400 hover:text-white transition-colors">Contact</a></li>
                             <li><a href="https://hephaestus.international/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">Internships</a></li>
                         </ul>
                     </div>
@@ -52,8 +52,8 @@ export function Footer() {
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-neutral-500">
                     <p> {new Date().getFullYear()} RoboCollective.</p>
                     <div className="flex items-center gap-6 mt-4 md:mt-0">
-                        <a href="https://robocollective.ai/about.html#privacy" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="https://robocollective.ai/about.html#terms" className="hover:text-white transition-colors">Terms</a>
+                        <a href="/about" className="hover:text-white transition-colors">Privacy</a>
+                        <a href="/about" className="hover:text-white transition-colors">Terms</a>
                     </div>
                 </div>
             </div>

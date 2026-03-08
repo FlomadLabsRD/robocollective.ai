@@ -1,0 +1,11 @@
+https://youtu.be/9_0EydhH__k?si=5ZEcM3_gzTKT3fky
+<h1>Smart Factory Mobile Production Line Solution</h1>
+The conveyor hybrid robots can meet the internal logistics handling needs, flexibility in lines, and conveyor systems to achieve flexible material handling and docking between production lines. These robots are suitable for the automated transport of factory logistics, supporting various types of materials such as palletized goods and cartons, significantly improving workshop logistics efficiency.
+
+Maximum load/weight: 100kg
+Max speed: 1.2m/s
+Navigation: Lidar
+Positioning accuracy: 10mm
+Robot weight: 60kg
+Battery Endurance: 8hrs
+Adjustable conveyor height: 550-1000mm
