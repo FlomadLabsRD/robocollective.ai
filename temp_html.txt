@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Search Console Verification -->
+  <meta name="google-site-verification"
+        content="m-L9bDEve96SpdkHWhqyJJjeRUXiBrs6NNQyrCV0EPw" />
+ <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BL291KR301"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BL291KR301');
+  </script>
+  <title>RoboCollective.ai - Intelligent Digital Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/dark/Logo 4 dark.png" data-theme-href="Logo 4 dark.png" data-theme-href-dark="Logo 4 dark.png" data-theme-href-light="Logo 4 light.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/dark/Logo 4 dark.png" data-theme-href="Logo 4 dark.png" data-theme-href-dark="Logo 4 dark.png" data-theme-href-light="Logo 4 light.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-nav">
+      <a class="logo-mark site-logo" href="index.html" aria-label="RoboCollective.ai home">
+        <img src="assets/light/Logo 4 light.png" alt="RoboCollective.ai logo" data-theme-img="Logo 4 light.png" data-theme-img-dark="Logo 4 dark.png" data-theme-img-light="Logo 4 light.png">
+      </a>
+      <a class="logo-copy" href="index.html">
+        <strong>RoboCollective.ai</strong>
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <div class="shop-menu">
+          <a class="nav-link" href="shop.html">
+            Shop
+
+          </a>
+          <div class="shop-dropdown">
+            <a href="shop.html">Main shop</a>
+            <a href="nimble-drones.html">Nimble Drones</a>
+            <a href="educational.html">Educational Robots</a>
+            <a href="industrial.html">Industrial Robots</a>
+            <a href="service.html">Service Robots</a>
+            <a href="specialty.html">Specialty Robots</a>
+            <a href="accessories.html">Accessories</a>
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="contact-us.html">Contact</a>
+        <a class="nav-link" href="https://hephaestus.international/" target="_blank" rel="noopener">Internships</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle data-theme="dark" aria-label="Switch to light mode" aria-pressed="false">
+        <span class="theme-toggle-icon" aria-hidden="true">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.5 7.5-1.4-1.4M7.9 7.9 6.5 6.5m12 0-1.4 1.4M7.9 16.1 6.5 17.5"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"></path>
+          </svg>
+        </span>
+        <span class="theme-toggle-text" data-theme-toggle-text>Dark</span>
+      </button>
+    </header>
+    <header class="hero hero--video">
+      <div class="hero-video" aria-hidden="true">
+        <video
+          class="hero-video__source"
+          autoplay
+          preload="metadata"
+          muted
+          loop
+          playsinline
+          aria-hidden="true"
+        >
+          <source src="assets/dark/hero-futuristic-quadrup.mp4" type="video/mp4" data-theme-src="hero-futuristic-quadrup.mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-video__overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1>
+          <span data-hero-heading-prefix>Exclusive Brands & Models</span>
+          <span data-hero-heading-suffix>Explore Our Most Advanced Robots at RoboCollective.ai</span>
+        </h1>
+        <p class="hero-lede" data-hero-lede>
+          Buy robots for sale from trusted makers worldwide – delivered, professionally set up, and fully supported wherever you are. Explore industrial, service, and educational robots all in one place at RoboCollective.ai
+        </p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="#services" data-cta-action-primary>See our expertise</a>
+          <a class="button button--secondary" href="#case-studies" data-cta-action-secondary>View case studies</a>
+        </div>
+        <div class="hero-meta" data-hero-meta>
+          <span>Trusted by engineering, product, and operations teams</span>
+          <div class="hero-meta-divider"></div>
+          <span>Dynamic pricing, predictable ROI</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="highlights reveal">
+      <article>
+        <h3>Premium Robots</h3>
+        <p>We offer high-quality robots and accessories built for real work.</p>
+      </article>
+      <article>
+        <h3>Expert Support</h3>
+        <p>Talk to a specialist. We'll help you compare models and plan deployment.</p>
+      </article>
+      <article>
+        <h3>We Deliver To You</h3>
+        <p>Global shipping, customs guidance, and on-site or remote setup.</p>
+      </article>
+    </section>
+
+    <main>
+      <section class="meet-caipo reveal">
+        <div class="meet-caipo__frame">
+          <h2>Meet CAIPO</h2>
+          <p>CAIPO combines tactile sensors, gesture intelligence, and a holographic interface to help teams experience next-generation robotic presence.</p>
+        </div>
+        <div class="meet-caipo__visual">
+          <a href="https://caipo-new-website.vercel.app/" target="_blank" rel="noopener">
+          <img src="assets/dark/meet caipo_home_page.png" alt="Meet CAIPO" loading="lazy" data-theme-img="meet caipo_home_page.png" />
+          </a>
+        </div>
+      </section>
+      <section class="offer-tiles reveal">
+        <div class="offer-tiles__grid">
+          <article class="offer-tiles__card">
+            <h3>Rent</h3>
+            <div class="offer-tiles__actions">
+              <a class="button button--primary" href="rent.html">See more</a>
+            </div>
+          </article>
+          <article class="offer-tiles__card">
+            <h3>Resell Program</h3>
+            <div class="offer-tiles__actions">
+              <a class="button button--primary" href="resell.html">See more</a>
+            </div>
+          </article>
+          <article class="offer-tiles__card">
+            <h3>List with us</h3>
+            <ul class="offer-tiles__list">
+              <li>Rent your robot.</li>
+              <li>Sell your robot.</li>
+            </ul>
+            <div class="offer-tiles__actions">
+              <a class="button button--primary" href="contact-us.html">Request info and pricing</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="products-section reveal" id="all-products">
+        <div class="section-heading">
+          <h2>Browse Our Products</h2>
+        </div>
+        <div class="product-grid" data-product-grid="featured" data-product-limit="8"></div>
+        <div class="products-section__cta">
+          <a class="button button--primary" href="shop.html">View all products</a>
+        </div>
+      </section>
+      <section class="blog-section reveal" id="case-studies">
+        <div class="section-heading">
+          <h2>Read our latest posts</h2>
+          <p>Guides &amp; insights for choosing the right robot, delivered with customer research and product direction.</p>
+        </div>
+        <div class="blog-posts">
+          <article class="blog-post">
+            <div class="blog-post__image">
+              <img src="assets/dark/blog_25_sep.webp" alt="Robotic arms on a line" loading="lazy"
+                data-theme-img="blog_25_sep.webp" data-theme-img-dark="blog_25_sep.webp" data-theme-img-light="blog_25_sep.webp" />
+            </div>
+            <div class="blog-post__content">
+              <div class="blog-post__meta">September 25, 2025</div>
+              <h3>How Robots Help Restaurants Cut Costs: Embracing Restaurant Automation</h3>
+              <p>
+                Restaurants streamline delivery, inventory, and customer experience with automation that understands
+                service flow. We break down how robotics paired with predictive staffing keeps food on time and guests
+                delighted.
+              </p>
+              <a class="blog-post__footer" href="blog/how-robots-help-restaurants-cut-costs.html">Read more...</a>
+            </div>
+          </article>
+          <article class="blog-post">
+            <div class="blog-post__image">
+              <img src="assets/dark/blog_8_august.jpg" alt="Collection of specialty robots" loading="lazy"
+                data-theme-img="blog_8_august.jpg" data-theme-img-dark="blog_8_august.jpg" data-theme-img-light="blog_8_august.jpg" />
+            </div>
+            <div class="blog-post__content">
+              <div class="blog-post__meta">August 8, 2025</div>
+              <h3>Robot Rental for Events: Elevate Experiences with Cutting-Edge Robotics</h3>
+              <p>
+                Interactive robots forge unforgettable moments whether you are hosting university showcases, grand
+                openings, or entertainment launches. Learn how rental fleets can flex with every venue.
+              </p>
+              <a class="blog-post__footer" href="blog/robot-rental-for-events.html">Read more...</a>
+            </div>
+          </article>
+          </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+          </footer>
+  </div>
+
+  <div class="cookie-consent" data-cookie-consent hidden>
+    <p class="cookie-consent__body">
+      This website uses cookies to enhance the user experience. By using our site, you agree to our use of cookies.
+      <a class="cookie-consent__link" href="about.html#privacy">Learn more</a>
+    </p>
+    <button class="button button--primary cookie-consent__accept" type="button" data-cookie-accept>Accept</button>
+  </div>
+
+  <!-- Strapi Configuration: Update STRAPI_URL to point to your deployed Strapi instance -->
+  <script>
+    // Default to localhost for development, override with environment variable for production
+    window.STRAPI_URL = window.STRAPI_URL || "http://localhost:1337";
+  </script>
+  <script src="products.js"></script>
+  <script src="scripts.js"></script>
+
+</body>
+</html>
