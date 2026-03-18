@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <main className="bg-black">
       <Hero />
-      <HomeProducts />
       <CAIPO />
+      <HomeProducts />
       <Services />
       <RentResell />
       <Blog />
