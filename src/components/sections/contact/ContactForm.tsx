@@ -6,11 +6,23 @@ import { useEffect } from "react";
 export function ContactForm() {
     useEffect(() => {
         const script = document.createElement("script");
-        script.src = "https://js.hsforms.net/forms/embed/45023159.js";
-        script.defer = true;
+        script.src = "https://js.hsforms.net/forms/v2.js";
+        script.async = true;
+        script.onload = () => {
+            if (window.hbspt) {
+                window.hbspt.forms.create({
+                    region: "na1",
+                    portalId: "45023159",
+                    formId: "ec2d8bcf-7b45-40ab-8055-b76d06ec37ff",
+                    target: "#hubspot-form-container",
+                });
+            }
+        };
         document.body.appendChild(script);
         return () => {
-            document.body.removeChild(script);
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
         };
     }, []);
 
@@ -31,12 +43,7 @@ export function ContactForm() {
                     </p>
                 </div>
                 <div className="relative z-10">
-                    <div
-                        className="hs-form-frame"
-                        data-region="na1"
-                        data-form-id="ec2d8bcf-7b45-40ab-8055-b76d06ec37ff"
-                        data-portal-id="45023159"
-                    />
+                    <div id="hubspot-form-container" />
                 </div>
             </div>
         </motion.div>
