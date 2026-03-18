@@ -9,8 +9,10 @@ export function ContactForm() {
         script.src = "https://js.hsforms.net/forms/v2.js";
         script.async = true;
         script.onload = () => {
-            if (window.hbspt) {
-                window.hbspt.forms.create({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const hbspt = (window as any).hbspt;
+            if (hbspt) {
+                hbspt.forms.create({
                     region: "na1",
                     portalId: "45023159",
                     formId: "ec2d8bcf-7b45-40ab-8055-b76d06ec37ff",
