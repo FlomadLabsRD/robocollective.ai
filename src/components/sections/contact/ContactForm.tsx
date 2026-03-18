@@ -17,6 +17,59 @@ export function ContactForm() {
                     portalId: "45023159",
                     formId: "ec2d8bcf-7b45-40ab-8055-b76d06ec37ff",
                     target: "#hubspot-form-container",
+                    onFormReady: () => {
+                        const style = document.createElement("style");
+                        style.innerHTML = `
+                            #hubspot-form-container .hs-form fieldset { max-width: 100% !important; }
+                            #hubspot-form-container .hs-form .hs-input {
+                                width: 100% !important;
+                                background-color: #111 !important;
+                                border: 1px solid #333 !important;
+                                border-radius: 8px !important;
+                                color: #fff !important;
+                                padding: 12px 16px !important;
+                                font-size: 15px !important;
+                                outline: none !important;
+                            }
+                            #hubspot-form-container .hs-form .hs-input:focus {
+                                border-color: #00DBFF !important;
+                            }
+                            #hubspot-form-container .hs-form label {
+                                color: #aaa !important;
+                                font-size: 14px !important;
+                                margin-bottom: 6px !important;
+                                display: block !important;
+                            }
+                            #hubspot-form-container .hs-form .hs-error-msgs label {
+                                color: #ff4d4d !important;
+                            }
+                            #hubspot-form-container .hs-form .hs-button {
+                                background-color: #00DBFF !important;
+                                color: #000 !important;
+                                font-weight: 700 !important;
+                                font-size: 15px !important;
+                                padding: 14px 32px !important;
+                                border-radius: 999px !important;
+                                border: none !important;
+                                cursor: pointer !important;
+                                margin-top: 8px !important;
+                                transition: opacity 0.2s !important;
+                            }
+                            #hubspot-form-container .hs-form .hs-button:hover { opacity: 0.85 !important; }
+                            #hubspot-form-container .hs-form .hs-richtext,
+                            #hubspot-form-container .hs-form .hs-field-desc {
+                                color: #888 !important;
+                                font-size: 13px !important;
+                            }
+                            #hubspot-form-container .submitted-message {
+                                color: #00DBFF !important;
+                                font-size: 16px !important;
+                                font-weight: 600 !important;
+                                padding: 16px 0 !important;
+                            }
+                        `;
+                        document.head.appendChild(style);
+                    },
                 });
             }
         };
