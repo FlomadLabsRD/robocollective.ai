@@ -54,7 +54,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     return (
         <main className="bg-black min-h-screen">
             <ProductHero product={productDetails} />
-            <ProductSpecs specs={productDetails.specs} themeColor={productDetails.themeColor} />
+            <ProductSpecs product={productDetails} />
             <Footer />
         </main>
     );
