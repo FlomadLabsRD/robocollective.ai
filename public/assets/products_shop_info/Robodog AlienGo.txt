@@ -1,5 +1,5 @@
 <iframe title="YouTube video player" src="https://www.youtube.com/embed/ICObEUV1oOg?si=SvhpCLGZq7q8sRiA" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<h2 data-start="198" data-end="258"><strong data-start="201" data-end="258">Unitree AlienGo – Advanced Industrial Quadruped Robot</strong></h2>
+<h2 data-start="198" data-end="258"><strong data-start="201" data-end="258">Unitree AlienGo: Advanced Industrial Quadruped Robot</strong></h2>
 <p data-start="260" data-end="524">The Unitree AlienGo is a high-performance quadruped robot designed for agility, intelligence, and real-world operation. It combines advanced sensing, high mobility, and strong durability, making it ideal for research, inspection, security, and rescue applications.</p>
 
 <h3 data-start="526" data-end="546"><strong data-start="530" data-end="546">Key Features</strong></h3>
@@ -29,7 +29,7 @@
 <p data-start="1604" data-end="1710"><strong data-start="1604" data-end="1627">Developer-Friendly:</strong> Supports C/C++ and ROS, allowing full-level control and algorithm customization.</p>
 </li>
  	<li data-start="1711" data-end="1839">
-<p data-start="1713" data-end="1839"><strong data-start="1713" data-end="1744">Strong Payload &amp; Endurance:</strong> Carries up to 13 kg of payload and operates for 2.5–4.6 hours depending on load and terrain.</p>
+<p data-start="1713" data-end="1839"><strong data-start="1713" data-end="1744">Strong Payload &amp; Endurance:</strong> Carries up to 13 kg of payload and operates for 2.5 to 4.6 hours depending on load and terrain.</p>
 </li>
 </ul>
 <h3 data-start="1841" data-end="1863"><strong data-start="1845" data-end="1863">Specifications</strong></h3>
@@ -53,7 +53,7 @@
 <p data-start="2075" data-end="2106"><strong data-start="2075" data-end="2096">Payload Capacity:</strong> ≈ 13 kg</p>
 </li>
  	<li data-start="2107" data-end="2139">
-<p data-start="2109" data-end="2139"><strong data-start="2109" data-end="2123">Endurance:</strong> 2.5–4.6 hours</p>
+<p data-start="2109" data-end="2139"><strong data-start="2109" data-end="2123">Endurance:</strong> 2.5 to 4.6 hours</p>
 </li>
 </ul>
 <h3 data-start="2141" data-end="2161"><strong data-start="2145" data-end="2161">Applications</strong></h3>

@@ -1,5 +1,5 @@
 <h2 data-start="2110" data-end="2167"><iframe title="YouTube video player" src="https://www.youtube.com/embed/q8JMX6PGRoI?si=5TbTbfuFzCCeLO_5" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></h2>
-<h2 data-start="2110" data-end="2167">Unitree H1 Humanoid Robot – Dynamic Motion and Power</h2>
+<h2 data-start="2110" data-end="2167">Unitree H1 Humanoid Robot: Dynamic Motion and Power</h2>
 <p data-start="2168" data-end="2449">With <strong data-start="2173" data-end="2203">360 Nm torque-dense joints</strong>, the Unitree H1 humanoid robot delivers advanced movements such as <strong data-start="2271" data-end="2302">running, jumping, and flips</strong>. Its strong design ensures stable locomotion in challenging environments, setting new benchmarks for humanoid mobility research and development.</p>
 
 <h2 data-start="2456" data-end="2492">Advanced Perception and Sensing</h2>
@@ -38,6 +38,6 @@
  	<li data-start="3439" data-end="3492">Power: <strong data-start="3446" data-end="3490">Swappable batteries for extended runtime</strong></li>
 </ul>
 <h2 data-start="3499" data-end="3545">Why Choose the Unitree H1 Humanoid Robot?</h2>
-<p data-start="3546" data-end="3786">By uniting <strong data-start="3557" data-end="3608">raw power, agile mobility, and advanced sensing</strong>, the <strong data-start="3614" data-end="3643">Unitree H1 humanoid robot</strong> is more than a research platform—it is a <strong data-start="3685" data-end="3719">future-ready robotics solution</strong> for AI innovation, humanoid locomotion, and advanced automation.</p>
+<p data-start="3546" data-end="3786">By uniting <strong data-start="3557" data-end="3608">raw power, agile mobility, and advanced sensing</strong>, the <strong data-start="3614" data-end="3643">Unitree H1 humanoid robot</strong> is more than a research platform it is a <strong data-start="3685" data-end="3719">future-ready robotics solution</strong> for AI innovation, humanoid locomotion, and advanced automation.</p>
 <p data-start="3788" data-end="3971">Looking for complementary solutions? Explore our <a class="decorated-link cursor-pointer" target="_new" rel="noopener" data-start="3837" data-end="3916">RML63-6F Robotic Arm</a> for precision manipulation in research and industry.</p>
 &nbsp;

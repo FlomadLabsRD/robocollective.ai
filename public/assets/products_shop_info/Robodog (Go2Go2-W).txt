@@ -9,10 +9,10 @@
 <p data-start="614" data-end="866"><strong data-start="614" data-end="647">Embodied AI &amp; GPT Integration</strong><br data-start="647" data-end="650" />Infused with large-model GPT-style AI, the Go2 delivers interactive and intuitive experiences, simulating behaviors reminiscent of a real pet while being powerfully responsive</p>
 </li>
  	<li data-start="868" data-end="1154">
-<p data-start="870" data-end="1154"><strong data-start="870" data-end="903">4D Ultra-Wide LIDAR L1 System</strong><br data-start="903" data-end="906" />Equipped with Unitree’s proprietary 4D LIDAR L1, the Go2 offers 360°×90° hemispherical scanning, near-zero blind spots, and detection capabilities as close as 0.05 m—ideal for precise all-terrain recognition</p>
+<p data-start="870" data-end="1154"><strong data-start="870" data-end="903">4D Ultra-Wide LIDAR L1 System</strong><br data-start="903" data-end="906" />Equipped with Unitree’s proprietary 4D LIDAR L1, the Go2 offers 360°×90° hemispherical scanning, near-zero blind spots, and detection capabilities as close as 0.05 m ideal for precise all-terrain recognition</p>
 </li>
  	<li data-start="868" data-end="1154">
-<p data-start="870" data-end="1154"><strong data-start="1158" data-end="1180">Mobility &amp; Agility</strong><br data-start="1180" data-end="1183" />The Go2 can walk, trot, run (~2.5–3.7 m/s depending on the model), climb slopes up to 40°, and perform expressive or acrobatic movements like rolling, stretching, and crouching</p>
+<p data-start="870" data-end="1154"><strong data-start="1158" data-end="1180">Mobility &amp; Agility</strong><br data-start="1180" data-end="1183" />The Go2 can walk, trot, run (~2.5 to 3.7 m/s depending on the model), climb slopes up to 40°, and perform expressive or acrobatic movements like rolling, stretching, and crouching</p>
 </li>
  	<li data-start="1402" data-end="1775">
 <p data-start="1404" data-end="1472"><strong data-start="1404" data-end="1436">Variations to Fit Your Needs</strong><br data-start="1436" data-end="1439" />Available in multiple versions:</p>
@@ -58,13 +58,13 @@
 <p data-start="2676" data-end="2713"><strong data-start="2676" data-end="2697">Peak Joint Torque</strong>: Around 45 Nm</p>
 </li>
  	<li data-start="2716" data-end="2835">
-<p data-start="2718" data-end="2835"><strong data-start="2718" data-end="2734">Battery Life</strong>: Typically 2–4 hours (depending on configuration and usage)</p>
+<p data-start="2718" data-end="2835"><strong data-start="2718" data-end="2734">Battery Life</strong>: Typically 2 to 4 hours (depending on configuration and usage)</p>
 </li>
 </ul>
 </li>
 </ul>
 <h3 data-start="2837" data-end="2869">Use Cases &amp; Market Position</h3>
-<p data-start="2870" data-end="3112">The Unitree Go2 stands out as one of the most affordable, accessible quadruped robots offering rich functionality—traditionally limited to high-end or industrial platforms. Its key applications include:</p>
+<p data-start="2870" data-end="3112">The Unitree Go2 stands out as one of the most affordable, accessible quadruped robots offering rich functionality traditionally limited to high-end or industrial platforms. Its key applications include:</p>
 
 <ul data-start="3114" data-end="3448">
  	<li data-start="3114" data-end="3215">

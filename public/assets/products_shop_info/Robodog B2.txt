@@ -1,6 +1,6 @@
 <iframe title="YouTube video player" src="https://www.youtube.com/embed/-0n_MFLKD3M?si=5a7RqaO4qyY5-Bxz" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 <h2 data-start="191" data-end="243"></h2>
-<h2 data-start="191" data-end="243"><strong data-start="194" data-end="243">Unitree B2 – Industrial-Grade Quadruped Robot</strong></h2>
+<h2 data-start="191" data-end="243"><strong data-start="194" data-end="243">Unitree B2: Industrial-Grade Quadruped Robot</strong></h2>
 <p data-start="245" data-end="497">The Unitree B2 represents a major leap in industrial-grade robotic mobility. Designed for all-terrain adaptability, high payload capacity, and long-duration missions, it redefines how enterprises approach inspection, maintenance, and rescue operations.</p>
 
 <h3 data-start="499" data-end="519"><strong data-start="503" data-end="519">Key Features</strong></h3>
