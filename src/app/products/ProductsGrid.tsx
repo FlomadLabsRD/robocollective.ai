@@ -8,6 +8,20 @@ import { useRef, MouseEvent } from "react";
 
 // Product images: short paths under public/images/products/ (e.g. /images/products/d1.png)
 const PRODUCT_IMAGE: Record<string, string> = {
+    // ── Humanoid Robots ────────────────────────────
+    h1:  "/assets/products/Humanoid_G1__BaseEDU__1.png",
+    h2:  "/assets/products/Humanoid_H1_1.png",
+    h3:  "/assets/products/Humanoid_Oli_1.png",
+    h4:  "/assets/products/Humanoid_R1.png",
+    h5:  "/assets/products/Humanoid_Mini_Hi_1.png",
+  
+    // ── Robodogs ───────────────────────────────────
+    r1:  "/assets/products/Robodog_Go1_1.png",
+    r2:  "/assets/products/Robodog_B2.png",
+    r3:  "/assets/products/Robodog_AlienGo_1.png",
+    r4:  "/assets/products/Robodog__B2B2-W__1.png",
+    r5:  "/assets/products/Robodog__Go2Go2-W__1.png",
+
     // ── Nimble Drones ──────────────────────────────
     d1:  "/assets/products/flapper-nimble-base-kit_1.png",
     d2:  "/assets/products/flapper-nimble-starter-kit_1.png",
@@ -47,14 +61,38 @@ const PRODUCT_IMAGE: Record<string, string> = {
 // Reuse categories and catalogData from ShopCategories but flatten the data
 const categories = [
     { id: "all", title: "All Products", color: "from-neutral-400 to-neutral-600" },
-    { id: "drones", title: "Nimble Drones", color: "from-sky-400 to-blue-600" },
-    { id: "educational", title: "Educational Robots", color: "from-emerald-400 to-teal-600" },
+    { id: "humanoid", title: "Humanoid Robots", color: "from-violet-400 to-purple-600" },
+    { id: "robodog", title: "Robodogs", color: "from-amber-400 to-orange-600" },
     { id: "industrial", title: "Industrial Robots", color: "from-orange-400 to-red-600" },
     { id: "service", title: "Service Robots", color: "from-purple-400 to-indigo-600" },
-    { id: "specialty", title: "Specialty Robots", color: "from-pink-400 to-rose-600" }
+    { id: "specialty", title: "Specialty Robots", color: "from-pink-400 to-rose-600" },
+    { id: "educational", title: "Educational Robots", color: "from-emerald-400 to-teal-600" },
+    { id: "drones", title: "Nimble Drones", color: "from-sky-400 to-blue-600" },
 ];
 
 const catalogData: Record<string, { id: string, title: string, products: any[] }[]> = {
+    humanoid: [
+        {
+            id: "robots", title: "Humanoid Robots", products: [
+                { id: "h1", name: "Humanoid G1 (Base/EDU)", description: "Next-generation bipedal platform with up to 43 DOF, 120 Nm joints, and modular configurations for education and research.", price: "Quote" },
+                { id: "h2", name: "Humanoid H1", description: "High-performance full-size humanoid robot with 3D LiDAR, depth cameras, and whole-body motion control for advanced research.", price: "Quote" },
+                { id: "h3", name: "Humanoid Oli", description: "Compact humanoid designed for human-robot interaction research and social robotics applications.", price: "Quote" },
+                { id: "h4", name: "Humanoid R1", description: "Versatile humanoid platform built for manipulation tasks and real-world deployment in structured environments.", price: "Quote" },
+                { id: "h5", name: "Humanoid Mini Hi", description: "Miniature humanoid robot ideal for educational settings, algorithm testing, and lightweight locomotion research.", price: "Quote" },
+            ]
+        },
+    ],
+    robodog: [
+        {
+            id: "robots", title: "Quadruped Robots", products: [
+                { id: "r1", name: "Robodog Go1", description: "Agile quadruped robot with AI-powered navigation, ideal for education, research, and inspection tasks.", price: "Quote" },
+                { id: "r2", name: "Robodog B2", description: "Industrial-grade quadruped with high payload capacity and rugged all-terrain mobility for demanding environments.", price: "Quote" },
+                { id: "r3", name: "Robodog AlienGo", description: "Advanced quadruped research platform with high-DOF legs and full ROS support for locomotion experiments.", price: "Quote" },
+                { id: "r4", name: "Robodog (B2/B2-W)", description: "Wheeled-leg hybrid quadruped combining the stability of wheels with the versatility of legged locomotion.", price: "Quote" },
+                { id: "r5", name: "Robodog (Go2/Go2-W)", description: "Next-gen Go2 series with enhanced AI, better terrain adaptability, and optional wheeled configuration.", price: "Quote" },
+            ]
+        },
+    ],
     drones: [
         {
             id: "kits", title: "Kits & Bundles", products: [
@@ -73,13 +111,13 @@ const catalogData: Record<string, { id: string, title: string, products: any[] }
         {
             id: "spares", title: "Accessories and Spares", products: [
                 { id: "d6", name: "Crazyradio 2.0", description: "Low-latency radio link for commanding single drones or swarms.", price: "$40" },
-                { id: "d10", name: "Lighthouse Base Station", description: "Indoor positioning beacons for centimeter-level tracking.", price: "—" },
-                { id: "d11", name: "Lighthouse Support Kit", description: "Mounts, plates, and wiring to attach Lighthouse decks securely.", price: "—" },
+                { id: "d10", name: "Lighthouse Base Station", description: "Indoor positioning beacons for centimeter-level tracking." },
+                { id: "d11", name: "Lighthouse Support Kit", description: "Mounts, plates, and wiring to attach Lighthouse decks securely." },
                 { id: "d7", name: "Nimble Battery", description: "Stock up on extra flight packs to extend sorties.", price: "$15" },
                 { id: "d8", name: "Wing Set", description: "Replacement wings to keep every airframe ready for flight.", price: "$20" },
-                { id: "d12", name: "2.4 GHz Transmitter", description: "EdgeTX handheld transmitter for manual flight and training.", price: "—" },
-                { id: "d13", name: "FrSky Receiver", description: "Bind to your preferred transmitter for manual modes.", price: "—" },
-                { id: "d14", name: "Nimble Shells", description: "Fresh shells to refresh fleets after heavy use.", price: "—" }
+                { id: "d12", name: "2.4 GHz Transmitter", description: "EdgeTX handheld transmitter for manual flight and training." },
+                { id: "d13", name: "FrSky Receiver", description: "Bind to your preferred transmitter for manual modes." },
+                { id: "d14", name: "Nimble Shells", description: "Fresh shells to refresh fleets after heavy use." }
             ]
         }
     ],

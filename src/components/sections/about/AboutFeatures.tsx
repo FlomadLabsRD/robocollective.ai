@@ -11,7 +11,7 @@ export function AboutFeatures() {
         },
         {
             title: "Easy to Use",
-            description: "Simple voice, touch, or gesture controls — absolutely no complicated setup required.",
+            description: "Simple voice, touch, or gesture controls - absolutely no complicated setup required.",
             delay: 0.2
         },
         {

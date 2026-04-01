@@ -180,7 +180,7 @@ export function HomeProducts() {
             <span className="text-[#00DBFF]">Products</span>
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl">
-            High-quality robots and accessories built for real work — deploy individually or as a unified autonomous workforce.
+            High-quality robots and accessories built for real work and deploy individually or as a unified autonomous workforce.
           </p>
         </div>
 

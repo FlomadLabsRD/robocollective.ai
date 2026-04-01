@@ -47,13 +47,13 @@ const catalogData: Record<string, { id: string, title: string, products: any[] }
         {
             id: "spares", title: "Accessories and Spares", products: [
                 { id: "d6", name: "Crazyradio 2.0", description: "Low-latency radio link for commanding single drones or swarms.", price: "$40" },
-                { id: "d10", name: "Lighthouse Base Station", description: "Indoor positioning beacons for centimeter-level tracking.", price: "—" },
-                { id: "d11", name: "Lighthouse Support Kit", description: "Mounts, plates, and wiring to attach Lighthouse decks securely.", price: "—" },
+                { id: "d10", name: "Lighthouse Base Station", description: "Indoor positioning beacons for centimeter-level tracking." },
+                { id: "d11", name: "Lighthouse Support Kit", description: "Mounts, plates, and wiring to attach Lighthouse decks securely." },
                 { id: "d7", name: "Nimble Battery", description: "Stock up on extra flight packs to extend sorties.", price: "$15" },
                 { id: "d8", name: "Wing Set", description: "Replacement wings to keep every airframe ready for flight.", price: "$20" },
-                { id: "d12", name: "2.4 GHz Transmitter", description: "EdgeTX handheld transmitter for manual flight and training.", price: "—" },
-                { id: "d13", name: "FrSky Receiver", description: "Bind to your preferred transmitter for manual modes.", price: "—" },
-                { id: "d14", name: "Nimble Shells", description: "Fresh shells to refresh fleets after heavy use.", price: "—" }
+                { id: "d12", name: "2.4 GHz Transmitter", description: "EdgeTX handheld transmitter for manual flight and training." },
+                { id: "d13", name: "FrSky Receiver", description: "Bind to your preferred transmitter for manual modes." },
+                { id: "d14", name: "Nimble Shells", description: "Fresh shells to refresh fleets after heavy use." }
             ]
         }
     ],

@@ -10,7 +10,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: "RoboCollective.ai - Intelligent Digital Operations",
-  description: "Buy robots for sale from trusted makers worldwide – delivered, professionally set up, and fully supported. Explore industrial, service, and educational robots at RoboCollective.ai",
+  description: "Buy robots for sale from trusted makers worldwide and delivered, professionally set up, and fully supported. Explore industrial, service, and educational robots at RoboCollective.ai",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

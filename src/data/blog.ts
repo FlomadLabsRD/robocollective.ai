@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     date: "September 25, 2025",
     content: [
       { type: 'h2', text: "The Restaurant Automation Revolution" },
-      { type: 'p', text: "Rising labor costs, high turnover, and growing customer expectations are pushing restaurants to look for smarter solutions. Robotics and automation are no longer futuristic — they are actively reshaping how food service businesses operate today." },
+      { type: 'p', text: "Rising labor costs, high turnover, and growing customer expectations are pushing restaurants to look for smarter solutions. Robotics and automation are no longer futuristic and they are actively reshaping how food service businesses operate today." },
       { type: 'h3', text: "Where Robots Are Making the Biggest Impact" },
       { type: 'ul', items: [
         "Front-of-house delivery robots reduce trips for servers and improve table turnover",
@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
       { type: 'p', text: "Service robots like the Delivery Robot (Closed Type) from RoboCollective are now being deployed in restaurants across Asia, Europe, and North America. These robots handle food and drink delivery to tables, freeing human staff to focus on hospitality, upselling, and customer experience." },
       { type: 'example', question: "al example:", answer: "A mid-sized Asian fusion restaurant reduced server walking distance by 40% after deploying two delivery robots during peak dinner service, translating to faster table turnover and higher tip averages for remaining staff." },
       { type: 'h2', text: "The Economics of Restaurant Automation" },
-      { type: 'p', text: "The upfront cost of a delivery robot typically ranges from $5,000 to $15,000. At a labor cost of $18–$25 per hour for a server, a robot working 8-hour shifts pays for itself within 12 to 18 months — without benefits, sick days, or turnover costs." },
+      { type: 'p', text: "The upfront cost of a delivery robot typically ranges from $5,000 to $15,000. At a labor cost of $18 to $25 per hour for a server, a robot working 8-hour shifts pays for itself within 12 to 18 months and without benefits, sick days, or turnover costs." },
       { type: 'h3', text: "Key Cost Areas Where Robots Help" },
       { type: 'ol', items: [
         "Labor reduction in repetitive delivery and bussing tasks",
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
       ]},
       { type: 'h2', text: "Getting Starteth Restaurant Robotics" },
       { type: 'p', text: "Not every restaurant needs a full fleet. Many operators start with a single delivery robot for a trial period to measure impact on staff workload and guest satisfaction before scaling up." },
-      { type: 'faq', question: "Can I rent a robot before committing to a purchase?", answer: "Yes — RoboCollective.ai offers rental programs that let restaurants pilot service robots during peak seasons or specific events before making a capital investment." },
+      { type: 'faq', question: "Can I rent a robot before committing to a purchase?", answer: "Yes and RoboCollective.ai offers rental programs that let restaurants pilot service robots during peak seasons or specific events before making a capital investment." },
       { type: 'faq', question: "Do delivery robots work in small spaces?", answer: "Modern service robots are designed with lidar navigation and obstacle avoidance, making them effective in spaces as narrow as 80cm wide. Most restaurant environments are compatible." },
       { type: 'h2', text: "What to Look for When Choosing a Restaurant Robot" },
       { type: 'ul', items: [
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     date: "August 8, 2025",
     content: [
       { type: 'h2', text: "Why Robots Belong at Your Next Event" },
-      { type: 'p', text: "Events live or die by the moments people share afterward. A well-placed robot — whether it is a humanoid greeting guests, a quadruped navigating the floor, or a drone putting on a light show — creates the kind of memorable experience that spreads through photos, videos, and word of mouth long after the event ends." },
+      { type: 'p', text: "Events live or die by the moments people share afterward. A well-placed robot and whether it is a humanoid greeting guests, a quadruped navigating the floor, or a drone putting on a light show and creates the kind of memorable experience that spreads through photos, videos, and word of mouth long after the event ends." },
       { type: 'h3', text: "Types of Events That Benefit from Robotics" },
       { type: 'ul', items: [
     "University open days and STEM showcases",
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
         "Hackathons and robotics competitions"
       ]},
       { type: 'h2', text: "What Robots Can Do at Events" },
-      { type: 'p', text: "Modern robots are no longer just static displays. Today's platforms interact, perform, navigate crowds, and even respond to voice commands and gestures. The right robot for your event depends on your goals — entertainment, education, or operational support." },
+      { type: 'p', text: "Modern robots are no longer just static displays. Today's platforms interact, perform, navigate crowds, and even respond to voice commands and gestures. The right robot for your event depends on your goals and entertainment, education, or operational support." },
       { type: 'example', question: "Entertainment use case:", answer: "A tech company used a Unitree H1 humanoid robot at their annual conference to demonstrate AI-driven motion. Attendees lined up to interact with it, generating over 2,000 social media posts in a single afternoon." },
       { type: 'h2', text: "The Case for Renting Instead of Buying" },
       { type: 'p', text: "Most event organizers do not need a robot permanently. Renting gives you access to cutting-edge hardware for exactly the window you need, without the capital cost, maintenance burden, or storage overhead of ownership." },
@@ -92,10 +92,10 @@ export const blogPosts: BlogPost[] = [
       { type: 'faq', question: "Do I need technical staff on-site?", answer: "For most event deployments, our team provides a technical liaison who handles setup, operation, and troubleshooting. You do not need your own robotics engineers on the ground." },
       { type: 'h2', text: "Popular Robots for Events" },
       { type: 'ul', items: [
-        "Humanoid G1 — crowd-pleasing bipedal robot that walks, interacts, and demonstrates AI motion",
-        "Robodog Go1 / Go2 — agile quadrupeds that navigate floors and engage attendees",
-        "Nimble Drones — indoor flapping-wing drones for aerial demonstrations",
-        "Delivery Robot — operational robots that serve drinks or branded materials at booths"
+        "Humanoid G1 and crowd-pleasing bipedal robot that walks, interacts, and demonstrates AI motion",
+        "Robodog Go1 / Go2 and agile quadrupeds that navigate floors and engage attendees",
+        "Nimble Drones and indoor flapping-wing drones for aerial demonstrations",
+        "Delivery Robot and operational robots that serve drinks or branded materials at booths"
       ]},
       { type: 'h2', text: "Making the Most of Your Robot Rental" },
       { type: 'p', text: "The best robot activations are designed into the event flow, not dropped in terthought. Think about where the robot will spend most of its time, what interaction you want guests to have, and how you will capture the moment through content and social media." },
